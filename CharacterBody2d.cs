@@ -1,16 +1,26 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class Player : CharacterBody2D
 {
     [Export] public PackedScene Clone;
+    [Export] public int MaxClones = 1;
+
     [Export] public float MoveSpeed = 150f;
     [Export] public float JumpForce = 350f;
     [Export] public float Gravity = 1000f;
     [Export] public float MaxFallSpeed = 1000f;
     [Export] public float JumpCutMultiplier = 0.5f; // Soltar o pulo "corta" o impulso
 
+    //Velocidade
     private Vector2 _velocity;
+
+    //Contador atual
+    private int _currentClones = 0;
+
+    //Lista para gerenciar clones
+    private List<Clone> _activeClones = new();
 
     public override void _PhysicsProcess(double delta)
     {
@@ -82,50 +92,78 @@ public partial class Player : CharacterBody2D
     }
 
     //Summona um clone onde o player está.
-private void SummonClone()
-{
-    if (Clone == null)
+    private void SummonClone()
     {
-        GD.PrintErr("Cena do clone não atribuída!");
-        return;
-    }
+        //Verifica se pode criar mais clones
+        if (_currentClones >= MaxClones)
+        {
+            GD.Print("Limite de clones atingido");
+            return;
+        }
 
-    // 1. Instancia corretamente mantendo o tipo original
-    var newClone = Clone.Instantiate();
-    
-    // 2. Verifica e converte o tipo adequadamente
-    if (newClone is CharacterBody2D characterBody)
-    {
-        // Configuração do clone
-        characterBody.Name = "PlayerClone";
-        characterBody.AddToGroup("PlayerGroup");
-        characterBody.GlobalPosition = GlobalPosition;
+        if (Clone == null)
+        {
+            GD.PrintErr("Cena do clone não atribuída!");
+            return;
+        }
+
+        // 1. Instancia corretamente mantendo o tipo original
+        var newClone = Clone.Instantiate();
+        if(newClone != null)
+        {
+            _currentClones++;
+        }
         
-        // Adiciona à cena
-        GetParent().AddChild(characterBody);
-        
-        // Força atualização física
-        characterBody.ForceUpdateTransform();
-        
-        GD.Print($"Clone CharacterBody2D criado: {characterBody.Name}");
+        // 2. Verifica e converte o tipo adequadamente
+        if (newClone is CharacterBody2D characterBody)
+        {
+            // Configuração do clone
+            characterBody.Name = "PlayerClone";
+            characterBody.AddToGroup("PlayerGroup");
+            characterBody.GlobalPosition = GlobalPosition;
+            
+            // Copia o flip do sprite do jogador para o clone
+            AnimatedSprite2D playerSprite = GetNode<AnimatedSprite2D>("Anim");
+            if (characterBody.HasNode("Anim"))
+            {
+                AnimatedSprite2D cloneSprite = characterBody.GetNode<AnimatedSprite2D>("Anim");
+                cloneSprite.FlipH = playerSprite.FlipH;
+            }
+            
+            // Adiciona à cena
+            GetParent().AddChild(characterBody);
+            
+            // Força atualização física
+            characterBody.ForceUpdateTransform();
+            
+            GD.Print($"Clone CharacterBody2D criado: {characterBody.Name}, Flip: {playerSprite.FlipH}");
+        }
+        else if (newClone is Node2D node2d)
+        {
+            // Configuração do clone
+            node2d.Name = "PlayerClone";
+            node2d.AddToGroup("PlayerGroup");
+            node2d.GlobalPosition = GlobalPosition;
+            
+            // Copia o flip do sprite do jogador para o clone
+            AnimatedSprite2D playerSprite = GetNode<AnimatedSprite2D>("Anim");
+            if (node2d.HasNode("Anim"))
+            {
+                AnimatedSprite2D cloneSprite = node2d.GetNode<AnimatedSprite2D>("Anim");
+                cloneSprite.FlipH = playerSprite.FlipH;
+            }
+            
+            GetParent().AddChild(node2d);
+            node2d.ForceUpdateTransform();
+            
+            GD.Print($"Clone Node2D criado: {node2d.Name}, Flip: {playerSprite.FlipH}");
+        }
+        else
+        {
+            GD.PrintErr($"Tipo de clone não suportado: {newClone.GetType()}");
+            return;
+        }
     }
-    else if (newClone is Node2D node2d)
-    {
-        // Fallback para Node2D se necessário
-        node2d.Name = "PlayerClone";
-        node2d.AddToGroup("PlayerGroup");
-        node2d.GlobalPosition = GlobalPosition;
-        GetParent().AddChild(node2d);
-        node2d.ForceUpdateTransform();
-        
-        GD.Print($"Clone Node2D criado: {node2d.Name}");
-    }
-    else
-    {
-        GD.PrintErr($"Tipo de clone não suportado: {newClone.GetType()}");
-        return;
-    }
-}
     private void ConfigureCloneCollision(Node2D clone)
     {
         // Garante que está no grupo correto

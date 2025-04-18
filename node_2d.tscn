@@ -1259,7 +1259,7 @@ debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["PlayerGroup"]]
 texture_filter = 1
-position = Vector2(196, 137)
+position = Vector2(28, 330)
 script = ExtResource("3_0hol4")
 Clone = ExtResource("8_ta5nu")
 
