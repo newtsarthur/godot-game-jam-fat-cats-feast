@@ -79,6 +79,17 @@ public partial class Player : CharacterBody2D
         
         Velocity = _velocity;
         MoveAndSlide();
+
+        for (int i = 0; i < GetSlideCollisionCount(); i++)
+        {
+            var collision = GetSlideCollision(i);
+            if (collision.GetCollider() is Node body && body.IsInGroup("EnemyGroup"))
+            {
+                GD.Print("Player morreu");
+                ReloadScene();
+                break;
+            }
+        }
     }
 
     //Recarrega a cena atual
@@ -171,5 +182,13 @@ public partial class Player : CharacterBody2D
         
         // Debug para verificar
         GD.Print($"Clone instanciado - Pos: {clone.GlobalPosition}, Grupos: {string.Join(", ", clone.GetGroups())}");
+    }
+
+    private void OnBodyEntered(Node body)
+    {
+        if (body.IsInGroup("EnemyGroup"))
+        {
+            GD.Print("Player morreu");
+        }
     }
 }

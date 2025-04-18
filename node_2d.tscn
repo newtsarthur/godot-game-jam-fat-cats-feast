@@ -1290,7 +1290,7 @@ frame_progress = 0.246501
 position = Vector2(215, 143.5)
 shape = SubResource("RectangleShape2D_rj586")
 
-[node name="Mouse" type="CharacterBody2D" parent="."]
+[node name="Mouse" type="CharacterBody2D" parent="." groups=["EnemyGroup"]]
 position = Vector2(47, 73)
 script = ExtResource("14_k73cj")
 

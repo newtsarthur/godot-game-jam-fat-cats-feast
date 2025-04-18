@@ -35,6 +35,7 @@ public partial class Mouse : CharacterBody2D
             _wallDetector.TargetPosition = new Vector2(RayLength * _direction, 0);
             _wallDetector.Enabled = true;
         }
+        
     }
 
     public override void _PhysicsProcess(double delta)
@@ -75,12 +76,32 @@ public partial class Mouse : CharacterBody2D
         {
             _floorDetector.TargetPosition = new Vector2(RayLength * _direction, 20);
             _floorDetector.ForceRaycastUpdate();
+            
+            if (_floorDetector.IsColliding())
+            {
+                var collider = _floorDetector.GetCollider();
+                if (collider is CollisionObject2D collisionObj && collisionObj.IsInGroup("PlayerGroup"))
+                {
+                    // Adiciona exceção corretamente
+                    _floorDetector.AddException(collisionObj);
+                }
+            }
         }
         
         if (_wallDetector != null)
         {
             _wallDetector.TargetPosition = new Vector2(RayLength * _direction, 0);
             _wallDetector.ForceRaycastUpdate();
+            
+            if (_wallDetector.IsColliding())
+            {
+                var collider = _wallDetector.GetCollider();
+                if (collider is CollisionObject2D collisionObj && collisionObj.IsInGroup("PlayerGroup"))
+                {
+                    // Adiciona exceção corretamente
+                    _wallDetector.AddException(collisionObj);
+                }
+            }
         }
     }
 
@@ -104,4 +125,5 @@ public partial class Mouse : CharacterBody2D
             UpdateRaycasts();
         }
     }
+
 }
