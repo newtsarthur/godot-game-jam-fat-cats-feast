@@ -31,6 +31,7 @@ project/assembly_name="Grabty"
 [global_group]
 
 PlayerGroup=""
+Ground=""
 
 [input]
 

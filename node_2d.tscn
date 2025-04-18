@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://v02yeebxddth"]
+[gd_scene load_steps=41 format=4 uid="uid://v02yeebxddth"]
 
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="2_0h7mo"]
@@ -10,11 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://dtiftdj5scvvp" path="res://sprites/Crow.png" id="6_kdubu"]
 [ext_resource type="Texture2D" uid="uid://db5ap6lk8gjm8" path="res://sprites/Crow2.png" id="7_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="7_d21ai"]
+[ext_resource type="Script" uid="uid://iwgs1ib2tqti" path="res://Button2.cs" id="7_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="8_rj586"]
 [ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://clone.tscn" id="8_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="9_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="11_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="12_0h7mo"]
+[ext_resource type="Script" uid="uid://ccunsf06kjtm0" path="res://Mouse.cs" id="14_k73cj"]
+[ext_resource type="Script" uid="uid://bdcpigxghkq8b" path="res://Thorn.cs" id="16_flf07"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdubu"]
 texture = ExtResource("4_0hol4")
@@ -1188,7 +1191,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
-size = Vector2(15, 9)
+size = Vector2(11, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4d7sh"]
 size = Vector2(15, 4)
@@ -1217,7 +1220,7 @@ tile_set = SubResource("TileSet_d2bti")
 tile_map_data = PackedByteArray("AAARAAIAAAAKAAMAAAAQAAIAAAAKAAMAAAASAAIAAAAKAAMAAAA=")
 tile_set = SubResource("TileSet_rj586")
 
-[node name="Ground" type="TileMapLayer" parent="Level Design"]
+[node name="Ground" type="TileMapLayer" parent="Level Design" groups=["Ground"]]
 visibility_layer = 2
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAAABUAAQAGAAkAABABABUAAQAFAAQAAAACABUAAQAFAAQAAAADABUAAQAFAAQAAAAEABUAAQAFAAQAAAAFABUAAQAFAAQAAAAGABUAAQAFAAQAAAAHABUAAQAFAAQAAAAIABUAAQAFAAQAAAAJABUAAQAFAAQAAAAKABUAAQAFAAQAAAALABUAAQAFAAQAAAAMABUAAQAFAAQAAAANABUAAQAFAAQAAAAOABUAAQAFAAQAAAAPABUAAQAFAAQAAAAQABUAAQAFAAQAAAARABUAAQAFAAQAAAASABUAAQAFAAQAAAATABUAAQAFAAQAAAAUABUAAQAFAAQAAAAVABUAAQAGAAkAAAAMABIAAQAIAAQAAAANABIAAQAJAAQAAAAOABIAAQAJAAQAAAAPABIAAQAKAAQAAAAQAAwAAQAIAAQAAAARAAwAAQAJAAQAAAASAAwAAQAKAAQAAAAEAA8AAQAIAAQAAAAFAA8AAQAJAAQAAAAGAA8AAQAKAAQAAAAVABQAAQAFAAQAAGAVABMAAQAFAAQAAGAVABIAAQAFAAQAAGAVABEAAQAFAAQAAGAVABAAAQAFAAQAAGAVAA8AAQAFAAQAAGAVAA4AAQAFAAQAAGAVAA0AAQAFAAQAAGAVAAwAAQAFAAQAAGAVAAsAAQAFAAQAAGAVAAoAAQAFAAQAAGAVAAkAAQAFAAQAAGAVAAgAAQAFAAQAAGAVAAcAAQAFAAQAAGAVAAYAAQAFAAQAAGAVAAUAAQAFAAQAAGAVAAQAAQAFAAQAAGAVAAMAAQAFAAQAAGAVAAIAAQAFAAQAAGAVAAEAAQAFAAQAAGAVAAAAAQAGAAkAACAUAAAAAQAFAAYAAAATAAAAAQAFAAYAAAASAAAAAQAFAAYAAAARAAAAAQAFAAYAAAAQAAAAAQAFAAYAAAAPAAAAAQAFAAYAAAAOAAAAAQAFAAYAAAANAAAAAQAFAAYAAAAMAAAAAQAFAAYAAAALAAAAAQAFAAYAAAAKAAAAAQAFAAYAAAAJAAAAAQAFAAYAAAAIAAAAAQAFAAYAAAAHAAAAAQAFAAYAAAAGAAAAAQAFAAYAAAAFAAAAAQAFAAYAAAAEAAAAAQAFAAYAAAADAAAAAQAFAAYAAAACAAAAAQAFAAYAAAABAAAAAQAFAAYAAAAAAAAAAQAGAAkAADAAAAEAAQAFAAQAAFAAAAIAAQAFAAQAAFAAAAMAAQAFAAQAAFAAAAQAAQAFAAQAAFAAAAUAAQAFAAQAAFAAAAYAAQAFAAQAAFAAAAcAAQAFAAQAAFAAAAgAAQAFAAQAAFAAAAkAAQAFAAQAAFAAAAoAAQAFAAQAAFAAAAsAAQAFAAQAAFAAAAwAAQAFAAQAAFAAAA0AAQAFAAQAAFAAAA4AAQAFAAQAAFAAAA8AAQAFAAQAAFAAABAAAQAFAAQAAFAAABEAAQAFAAQAAFAAABIAAQAFAAQAAFAAABMAAQAFAAQAAFAAABQAAQAFAAQAAFAPAAIAAQAMAAYAAAAPAAMAAQAJAAQAAAATAAIAAQAMAAYAAAATAAMAAQAJAAQAAAAOAAMAAQAIAAQAAAAPAAEAAQAMAAUAAAAQAAMAAQAJAAQAAAARAAMAAQAJAAQAAAASAAMAAQAJAAQAAAATAAEAAQAMAAUAAAAUAAMAAQAKAAQAAAACAAUAAQAIAAQAAAADAAUAAQAJAAQAAAAEAAUAAQAJAAQAAAAFAAUAAQAJAAQAAAAGAAUAAQAKAAQAAAADAAIAAQAIAAQAAAAEAAIAAQAJAAQAAAAFAAIAAQAKAAQAAAALAAkAAQAIAAQAAAAMAAkAAQAJAAQAAAANAAkAAQAKAAQAAAASAAYAAQAIAAQAAAATAAYAAQAKAAQAAAA=")
@@ -1242,10 +1245,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_d2bti")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("Thorn")]
 position = Vector2(311, 89)
-script = ExtResource("4_nr8wp")
-Chao = NodePath("../Level Design/InvisibleGround")
+script = ExtResource("7_ta5nu")
+Thorn = NodePath("../Thorn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button2"]
 sprite_frames = SubResource("SpriteFrames_nr8wp")
@@ -1288,18 +1291,20 @@ position = Vector2(215, 143.5)
 shape = SubResource("RectangleShape2D_rj586")
 
 [node name="Mouse" type="CharacterBody2D" parent="."]
-position = Vector2(71, 72)
+position = Vector2(47, 73)
+script = ExtResource("14_k73cj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mouse"]
 sprite_frames = SubResource("SpriteFrames_rj586")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse"]
-position = Vector2(-0.5, 3.5)
+position = Vector2(-1.5, 5)
 shape = SubResource("RectangleShape2D_d21ai")
 
 [node name="Thorn" type="Area2D" parent="."]
 position = Vector2(71, 56)
+script = ExtResource("16_flf07")
 
 [node name="Sprite2D" type="Sprite2D" parent="Thorn"]
 rotation = 3.14159

@@ -15,7 +15,9 @@ public partial class Button : Area2D
         BodyExited += OnBodyExited;
 
         if (Chao != null)
+        {
             Chao.Enabled = false;
+        }
     }
 
     private void OnBodyEntered(Node body)
