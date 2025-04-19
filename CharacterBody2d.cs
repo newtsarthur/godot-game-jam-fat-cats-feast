@@ -18,6 +18,9 @@ public partial class Player : CharacterBody2D
 
     //Contador atual
     private int _currentClones = 0;
+    public int ClonesCurrent { get; private set; } = 0;
+    public int ClonesMax { get; private set; } = 0;
+
 
     //Lista para gerenciar clones
     private List<Clone> _activeClones = new();
@@ -90,6 +93,9 @@ public partial class Player : CharacterBody2D
                 break;
             }
         }
+        ClonesCurrent = _currentClones;
+        ClonesMax = MaxClones;
+
     }
 
     //Recarrega a cena atual
