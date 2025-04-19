@@ -1302,7 +1302,14 @@ autoplay = "default"
 position = Vector2(-1.5, 5)
 shape = SubResource("RectangleShape2D_d21ai")
 
-[node name="Thorn" type="Area2D" parent="."]
+[node name="Hurtbox" type="Area2D" parent="Mouse"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse/Hurtbox"]
+position = Vector2(-1.5, 5)
+shape = SubResource("RectangleShape2D_d21ai")
+debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
+
+[node name="Thorn" type="Area2D" parent="." groups=["ThornGroup"]]
 position = Vector2(71, 56)
 script = ExtResource("16_flf07")
 

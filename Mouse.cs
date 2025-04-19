@@ -11,7 +11,7 @@ public partial class Mouse : CharacterBody2D
     private RayCast2D _floorDetector;
     private RayCast2D _wallDetector;
     private AnimatedSprite2D _sprite;
-    
+    private Area2D _hurtbox;
     public override void _Ready()
     {
         _floorDetector = GetNodeOrNull<RayCast2D>("FloorDetector");
@@ -35,9 +35,10 @@ public partial class Mouse : CharacterBody2D
             _wallDetector.TargetPosition = new Vector2(RayLength * _direction, 0);
             _wallDetector.Enabled = true;
         }
+        _hurtbox = GetNode<Area2D>("Hurtbox");
+        _hurtbox.AreaEntered += OnAreaEntered;
         
     }
-
     public override void _PhysicsProcess(double delta)
     {
         Vector2 velocity = Velocity;
@@ -125,5 +126,14 @@ public partial class Mouse : CharacterBody2D
             UpdateRaycasts();
         }
     }
+    private void OnAreaEntered(Area2D area)
+    {
+        if (area.IsInGroup("ThornGroup") && area is Thorn thorn && !thorn.HasTouchedGround)
+        {
+            GD.Print("Rato morreu (Area2D)");
+            QueueFree();
+        }
+    }
+
 
 }
