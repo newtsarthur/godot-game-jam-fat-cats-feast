@@ -3,6 +3,7 @@ using System;
 
 public partial class Mouse : CharacterBody2D
 {
+    [Export] public TileMapLayer Grid;
     [Export] public float MoveSpeed = 30f;
     [Export] public float Gravity = 980f;
     [Export] public float RayLength = 30f;
@@ -130,10 +131,12 @@ public partial class Mouse : CharacterBody2D
     {
         if (area.IsInGroup("ThornGroup") && area is Thorn thorn && !thorn.HasTouchedGround)
         {
+            var buttonTwo = GetNode<Button2>("../Button2");
+            buttonTwo.MouseDeath += 1;
+            GD.Print($"Rato mortes: {buttonTwo.MouseDeath}");
             GD.Print("Rato morreu (Area2D)");
+            Grid.Enabled = false;
             QueueFree();
         }
     }
-
-
 }

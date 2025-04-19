@@ -3,11 +3,12 @@ using Godot;
 public partial class Thorn : Area2D
 {
     [Export] public float FallSpeed = 300f;
+    [Export] public TileMapLayer Reload;
+
     private bool _shouldFall = false;
     private Vector2 _originalPosition;
     // private int touchGround = 0;
     public bool HasTouchedGround { get; private set; } = false;
-
     public override void _Ready()
     {
         _originalPosition = Position;
@@ -51,6 +52,14 @@ public partial class Thorn : Area2D
             _shouldFall = false;
             GD.Print("Thorn atingiu o chão/tilemap");
             HasTouchedGround = true;
+            var buttonTwo = GetNode<Button2>("../Button2");
+            if(buttonTwo.MouseDeath != 0)
+            {
+                GD.Print("Acabou o jogo");
+            }else {
+                GD.Print("Não acabou o jogo");
+                Reload.Visible = true;
+            }
         }
     }
 
