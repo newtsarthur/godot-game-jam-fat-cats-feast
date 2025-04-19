@@ -5,7 +5,7 @@ public partial class Button2 : Area2D
     [Export] public Thorn Thorn;
     private AnimatedSprite2D _sprite;
     private int _playersInArea = 0;
-
+    public int MouseDeath {get; set;} = 0;
     public override void _Ready()
     {
         _sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
