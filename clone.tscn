@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2rkakww600vu"]
+
+[ext_resource type="Script" uid="uid://2cc6oihbuq3c" path="res://Clone.cs" id="1_cqhld"]
+[ext_resource type="Texture2D" uid="uid://bag38ekunxdly" path="res://sprites/CatClone.png" id="1_wmkvi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqhld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wmkvi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsaem"]
+size = Vector2(12, 10)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["PlayerGroup"]]
+visibility_layer = 2
+script = ExtResource("1_cqhld")
+
+[node name="Anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_cqhld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_hsaem")
