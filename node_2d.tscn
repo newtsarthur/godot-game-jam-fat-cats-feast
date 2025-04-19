@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://v02yeebxddth"]
+[gd_scene load_steps=65 format=4 uid="uid://v02yeebxddth"]
 
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="2_0h7mo"]
@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://ccunsf06kjtm0" path="res://Mouse.cs" id="14_k73cj"]
 [ext_resource type="Script" uid="uid://bdcpigxghkq8b" path="res://Thorn.cs" id="16_flf07"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="24_2nhjh"]
+[ext_resource type="Script" uid="uid://btwxos3vabpbt" path="res://Fade.cs" id="27_1fr6y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdubu"]
 texture = ExtResource("4_0hol4")
@@ -1535,3 +1536,12 @@ texture = ExtResource("8_rj586")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Thorn"]
 position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_4d7sh")
+
+[node name="Fade" type="CanvasLayer" parent="."]
+script = ExtResource("27_1fr6y")
+
+[node name="ColorRect" type="ColorRect" parent="Fade"]
+texture_filter = 1
+offset_right = 352.0
+offset_bottom = 352.0
+color = Color(0.129412, 0.117647, 0.2, 1)

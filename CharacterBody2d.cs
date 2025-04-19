@@ -11,23 +11,17 @@ public partial class Player : CharacterBody2D
     [Export] public float JumpForce = 350f;
     [Export] public float Gravity = 1000f;
     [Export] public float MaxFallSpeed = 1000f;
-    [Export] public float JumpCutMultiplier = 0.5f; // Soltar o pulo "corta" o impulso
+    [Export] public float JumpCutMultiplier = 0.5f;
 
-    //Velocidade
     private Vector2 _velocity;
-
-    //Contador atual
     private int _currentClones = 0;
     public int ClonesCurrent { get; private set; } = 0;
     public int ClonesMax { get; private set; } = 0;
 
-
-    //Lista para gerenciar clones
     private List<Clone> _activeClones = new();
 
     public override void _PhysicsProcess(double delta)
     {
-        // GD.Print("IsOnFloor: " + IsOnFloor() + " Velocity: " + _velocity);
         float dt = (float)delta;
 
         // MOVIMENTO HORIZONTAL
@@ -37,7 +31,6 @@ public partial class Player : CharacterBody2D
         // Flipar o sprite dependendo da direção
         if (direction != 0)
         {
-            // Pega o Sprite2D (ou AnimatedSprite2D)
             AnimatedSprite2D sprite = GetNode<AnimatedSprite2D>("Anim");
             sprite.FlipH = direction > 0;
         }
@@ -47,13 +40,11 @@ public partial class Player : CharacterBody2D
         {
             _velocity.Y += Gravity * dt;
 
-            // Limitar a velocidade de queda
             if (_velocity.Y > MaxFallSpeed)
                 _velocity.Y = MaxFallSpeed;
         }
         else
         {
-            // Resetar a velocidade de queda ao tocar o chão
             _velocity.Y = 0;
 
             // PULO
@@ -62,14 +53,14 @@ public partial class Player : CharacterBody2D
                 _velocity.Y = -JumpForce;
             }
 
-            //Verifica se o shift foi pressionado
-            if(IsOnFloor() && Input.IsActionJustPressed("summon_clone"))
+            // Verifica se o shift foi pressionado
+            if (IsOnFloor() && Input.IsActionJustPressed("summon_clone"))
             {
                 SummonClone();
             }
         }
 
-        // CORTE DE PULO (estilo Hollow Knight)
+        // CORTE DE PULO
         if (Input.IsActionJustReleased("jump") && _velocity.Y < 0)
         {
             _velocity.Y *= JumpCutMultiplier;
@@ -77,9 +68,9 @@ public partial class Player : CharacterBody2D
 
         if (Input.IsActionJustPressed("reload"))
         {
-            ReloadScene();
+            GetNode<Fade>("../Fade").StartDeathFade(OnDeathFadeComplete);
         }
-        
+
         Velocity = _velocity;
         MoveAndSlide();
 
@@ -89,29 +80,29 @@ public partial class Player : CharacterBody2D
             if (collision.GetCollider() is Node body && body.IsInGroup("EnemyGroup"))
             {
                 GD.Print("Player morreu");
-                ReloadScene();
-                break;
+                GetNode<Fade>("../Fade").StartDeathFade(OnDeathFadeComplete);
             }
         }
         ClonesCurrent = _currentClones;
         ClonesMax = MaxClones;
-
     }
 
-    //Recarrega a cena atual
+    // Callback quando o fade terminar
+    private void OnDeathFadeComplete()
+    {
+        GD.Print("Fade completo. Recarregando cena...");
+        ReloadScene();
+    }
+
     private void ReloadScene()
     {
         string currentScenePath = GetTree().CurrentScene.SceneFilePath;
-
         GetTree().ChangeSceneToFile(currentScenePath);
-
         GD.Print("Cena recarregada");
     }
 
-    //Summona um clone onde o player está.
     private void SummonClone()
     {
-        //Verifica se pode criar mais clones
         if (_currentClones >= MaxClones)
         {
             GD.Print("Limite de clones atingido");
@@ -124,77 +115,50 @@ public partial class Player : CharacterBody2D
             return;
         }
 
-        // 1. Instancia corretamente mantendo o tipo original
         var newClone = Clone.Instantiate();
-        if(newClone != null)
+        if (newClone != null)
         {
             _currentClones++;
         }
-        
-        // 2. Verifica e converte o tipo adequadamente
+
         if (newClone is CharacterBody2D characterBody)
         {
-            // Configuração do clone
             characterBody.Name = "PlayerClone";
             characterBody.AddToGroup("PlayerGroup");
             characterBody.GlobalPosition = GlobalPosition;
-            
-            // Copia o flip do sprite do jogador para o clone
+
             AnimatedSprite2D playerSprite = GetNode<AnimatedSprite2D>("Anim");
             if (characterBody.HasNode("Anim"))
             {
                 AnimatedSprite2D cloneSprite = characterBody.GetNode<AnimatedSprite2D>("Anim");
                 cloneSprite.FlipH = playerSprite.FlipH;
             }
-            
-            // Adiciona à cena
+
             GetParent().AddChild(characterBody);
-            
-            // Força atualização física
             characterBody.ForceUpdateTransform();
-            
             GD.Print($"Clone CharacterBody2D criado: {characterBody.Name}, Flip: {playerSprite.FlipH}");
         }
         else if (newClone is Node2D node2d)
         {
-            // Configuração do clone
             node2d.Name = "PlayerClone";
             node2d.AddToGroup("PlayerGroup");
             node2d.GlobalPosition = GlobalPosition;
-            
-            // Copia o flip do sprite do jogador para o clone
+
             AnimatedSprite2D playerSprite = GetNode<AnimatedSprite2D>("Anim");
             if (node2d.HasNode("Anim"))
             {
                 AnimatedSprite2D cloneSprite = node2d.GetNode<AnimatedSprite2D>("Anim");
                 cloneSprite.FlipH = playerSprite.FlipH;
             }
-            
+
             GetParent().AddChild(node2d);
             node2d.ForceUpdateTransform();
-            
             GD.Print($"Clone Node2D criado: {node2d.Name}, Flip: {playerSprite.FlipH}");
         }
         else
         {
             GD.PrintErr($"Tipo de clone não suportado: {newClone.GetType()}");
             return;
-        }
-    }
-    private void ConfigureCloneCollision(Node2D clone)
-    {
-        // Garante que está no grupo correto
-        clone.AddToGroup("PlayerGroup");
-        
-        // Debug para verificar
-        GD.Print($"Clone instanciado - Pos: {clone.GlobalPosition}, Grupos: {string.Join(", ", clone.GetGroups())}");
-    }
-
-    private void OnBodyEntered(Node body)
-    {
-        if (body.IsInGroup("EnemyGroup"))
-        {
-            GD.Print("Player morreu");
         }
     }
 }
