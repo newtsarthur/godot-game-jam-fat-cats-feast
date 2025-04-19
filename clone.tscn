@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2rkakww600vu"]
+[gd_scene load_steps=7 format=3 uid="uid://b2rkakww600vu"]
 
 [ext_resource type="Script" uid="uid://2cc6oihbuq3c" path="res://Clone.cs" id="1_cqhld"]
 [ext_resource type="Texture2D" uid="uid://bag38ekunxdly" path="res://sprites/CatClone.png" id="1_wmkvi"]
+[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_hsaem"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xjn1f"]
+shader = ExtResource("2_hsaem")
+shader_parameter/WindStrength = 2.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cqhld"]
 animations = [{
@@ -24,6 +29,7 @@ visibility_layer = 2
 script = ExtResource("1_cqhld")
 
 [node name="Anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
+material = SubResource("ShaderMaterial_xjn1f")
 sprite_frames = SubResource("SpriteFrames_cqhld")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
