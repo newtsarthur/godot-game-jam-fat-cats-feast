@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b2rkakww600vu"]
 
-[ext_resource type="Script" uid="uid://2cc6oihbuq3c" path="res://Clone.cs" id="1_cqhld"]
+[ext_resource type="Script" uid="uid://2cc6oihbuq3c" path="res://scripts/Clone.cs" id="1_cqhld"]
 [ext_resource type="Texture2D" uid="uid://bag38ekunxdly" path="res://sprites/CatClone.png" id="1_wmkvi"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_hsaem"]
 
