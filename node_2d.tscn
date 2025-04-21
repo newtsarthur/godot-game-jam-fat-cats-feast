@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://v02yeebxddth"]
+[gd_scene load_steps=79 format=4 uid="uid://v02yeebxddth"]
 
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="2_0h7mo"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="4_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="4_24dk6"]
 [ext_resource type="Texture2D" uid="uid://d0u5g3jbk1g84" path="res://sprites/Ballon.png" id="4_fs4d3"]
+[ext_resource type="Script" uid="uid://ynbmty74ic0j" path="res://scripts/Cutscene.cs" id="4_kq1c5"]
 [ext_resource type="Script" uid="uid://7svd1p80cdha" path="res://scripts/Button.cs" id="4_nr8wp"]
 [ext_resource type="Texture2D" uid="uid://cce26jplrt58v" path="res://sprites/Shift.png" id="5_7vxoj"]
 [ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="5_mryly"]
@@ -53,6 +54,176 @@ sources/0 = SubResource("TileSetAtlasSource_kdubu")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e8dv2"]
 shader = ExtResource("2_e8dv2")
 shader_parameter/WindStrength = 2.0
+
+[sub_resource type="Animation" id="Animation_mryly"]
+resource_name = "EndTutorial"
+length = 16.0
+step = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene Caracters/Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.993333, 2.06407, 2.99333, 3.53333, 4.4, 5.17, 6.03333, 7.52667, 8.43333, 9.56667, 10.3767, 11.09, 11.91, 12.8467, 13.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-98, 0), Vector2(-48, 0), Vector2(-48, 0), Vector2(-45, -36), Vector2(-60, -53), Vector2(-102, -48), Vector2(-115, -122), Vector2(-145, -112), Vector2(-87, -154), Vector2(-57, -144), Vector2(-75, -192), Vector2(-95, -209), Vector2(-137, -192), Vector2(-132, -256), Vector2(-124, -296), Vector2(-91, -288)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene Caracters/Sprite2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.35, 1.97333, 6, 6.28, 8.43333, 8.56667, 10.9333, 11.0349),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cutscene Caracters/Sprite2D4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.4577, 2.21927, 3.13333, 4.23371, 5.3267, 5.92207, 6.63333, 7, 8.13333, 9.9602, 11.5771, 12.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-253, 0), Vector2(-194, 0), Vector2(-179, -64), Vector2(-144, -65), Vector2(-109, -48), Vector2(-97, -90), Vector2(-95, -134), Vector2(-86, -165), Vector2(-56, -156), Vector2(-58, -144), Vector2(-85.6793, -232.574), Vector2(-139, -192), Vector2(-124, -298), Vector2(-103, -288)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cutscene Caracters/Sprite2D4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(6.93333, 7.0077, 9.88131, 9.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cutscene Caracters/Sprite2D5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.566667, 0.933333, 1.36667, 1.83333, 2.23333, 2.66667, 3.2, 5.30024, 5.5669, 5.8669, 6.23357, 6.6669, 7.13357, 7.53357, 7.9669, 8.50024, 11.4454, 11.712, 12.012, 12.3787, 12.812, 13.2787, 13.6787, 14.112, 14.6454),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene Caracters/Sprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.93333, 2.1999, 2.5, 2.86667, 3.3025, 3.76696, 4.16667, 4.6, 5.13333, 6.26667, 6.53323, 6.83333, 7.2, 7.63583, 8.1003, 8.5, 8.93333, 9.46667, 12.0355, 12.3021, 12.6022, 12.9689, 13.4047, 13.8692, 14.2689, 14.7022, 15.2355),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kq1c5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene Caracters/Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-98, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene Caracters/Sprite2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cutscene Caracters/Sprite2D4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-253, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cutscene Caracters/Sprite2D4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cutscene Caracters/Sprite2D5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-158, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cutscene Caracters/Sprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-57, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ornx7"]
+_data = {
+&"EndTutorial": SubResource("Animation_mryly"),
+&"RESET": SubResource("Animation_kq1c5")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kq1c5"]
+shader = ExtResource("2_e8dv2")
+shader_parameter/WindStrength = 2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ornx7"]
+shader = ExtResource("2_e8dv2")
+shader_parameter/WindStrength = 2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cnnru"]
+shader = ExtResource("2_e8dv2")
+shader_parameter/WindStrength = 5.67
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mryly"]
 shader = ExtResource("2_e8dv2")
@@ -1382,23 +1553,35 @@ scale = Vector2(0.923295, 0.974432)
 texture = ExtResource("2_0h7mo")
 
 [node name="Cutscene" type="Node2D" parent="Level Design"]
+script = ExtResource("4_kq1c5")
+animationName = "EndTutorial"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level Design/Cutscene"]
+libraries = {
+&"": SubResource("AnimationLibrary_ornx7")
+}
 
 [node name="Cutscene Caracters" type="Node2D" parent="Level Design/Cutscene"]
 position = Vector2(334, 328)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
+material = SubResource("ShaderMaterial_kq1c5")
 position = Vector2(-98, 0)
-scale = Vector2(-1, 1)
 texture = ExtResource("5_mryly")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
+material = SubResource("ShaderMaterial_ornx7")
 position = Vector2(-253, 0)
 scale = Vector2(-1, 1)
 texture = ExtResource("7_ornx7")
 
+[node name="Sprite2D5" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
+material = SubResource("ShaderMaterial_ornx7")
+position = Vector2(-158, 0)
+texture = ExtResource("6_kq1c5")
+
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
+material = SubResource("ShaderMaterial_cnnru")
 position = Vector2(-57, 0)
 texture = ExtResource("4_24dk6")
 
@@ -1623,7 +1806,6 @@ position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_4d7sh")
 
 [node name="Fade" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("27_1fr6y")
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]

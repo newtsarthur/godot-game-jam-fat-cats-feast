@@ -55,7 +55,19 @@ public partial class Thorn : Area2D
             var buttonTwo = GetNode<Button2>("../Button2");
             if(buttonTwo.MouseDeath != 0)
             {
-                GD.Print("Acabou o jogo");
+                Node cutsceneNode = GetNode("../Level Design/Cutscene");
+
+                if (cutsceneNode is Cutscene cutscene)
+                {
+                    GetNode<Fade>("../Fade").StartFade();
+                    cutscene.PlayCutscene();
+                    GD.Print("Acabou o jogo");
+                }
+                else
+                {
+                    GD.PrintErr("Falha ao encontrar ou fazer cast para Cutscene");
+                    GD.PrintErr("Tipo real do nó: ", cutsceneNode?.GetType().ToString() ?? "null");
+                }
             }else {
                 GD.Print("Não acabou o jogo");
                 Reload.Visible = true;

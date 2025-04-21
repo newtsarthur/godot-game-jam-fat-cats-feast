@@ -140,6 +140,7 @@ public partial class Mouse : CharacterBody2D
             if (playerNode != null)
             {
                 playerNode.MoveSpeed = 0;
+                playerNode.JumpForce = 0;
             }
             QueueFree();
         }
