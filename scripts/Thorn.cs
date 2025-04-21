@@ -7,6 +7,7 @@ public partial class Thorn : Area2D
 
     private bool _shouldFall = false;
     private Vector2 _originalPosition;
+    private bool isSkipping = false;
     // private int touchGround = 0;
     public bool HasTouchedGround { get; private set; } = false;
     public override void _Ready()

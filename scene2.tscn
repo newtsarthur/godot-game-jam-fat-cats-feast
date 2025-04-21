@@ -1593,6 +1593,7 @@ shape = SubResource("RectangleShape2D_py7ct")
 
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("18_fgt4w")]
 position = Vector2(189, 328)
+JumpForce = 300.0
 
 [node name="Fade" type="CanvasLayer" parent="."]
 script = ExtResource("15_un2r7")
