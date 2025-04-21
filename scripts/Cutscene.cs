@@ -22,6 +22,7 @@ public partial class Cutscene : Node2D
     {
         if (animationPlayer != null && animationPlayer.HasAnimation(animationName))
         {
+            animationPlayer.AnimationFinished += OnAnimationFinished;
             animationPlayer.Play(animationName);
         }
         else
@@ -29,4 +30,15 @@ public partial class Cutscene : Node2D
             GD.PrintErr("AnimationPlayer não encontrado ou animação inválida.");
         }
     }
+    private void OnAnimationFinished(StringName name)
+{
+    if (name == animationName)
+    {
+        GD.Print("Animação terminou, emitindo sinal...");
+        EmitSignal(SignalName.CutsceneFinished);
+    }
+}
+    [Signal]
+    public delegate void CutsceneFinishedEventHandler();
+
 }
