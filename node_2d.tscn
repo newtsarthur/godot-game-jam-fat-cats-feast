@@ -1457,15 +1457,15 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_d2bti")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Balance" type="Area2D" parent="."]
+[node name="Balance" type="Area2D" parent="." groups=["BalanceGroup"]]
 texture_filter = 1
 position = Vector2(73, 24)
+script = ExtResource("13_gt76g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Balance"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_gt76g")
 texture = ExtResource("24_2nhjh")
-script = ExtResource("13_gt76g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Balance"]
 shape = SubResource("RectangleShape2D_bjha6")
@@ -1538,6 +1538,7 @@ position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_4d7sh")
 
 [node name="Fade" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("27_1fr6y")
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
