@@ -62,6 +62,7 @@ public partial class Thorn : Area2D
                     GetNode<Fade>("../Fade").StartFade();
                     cutscene.PlayCutscene();
                     GD.Print("Acabou o jogo");
+                    GetNode<Fade>("../Fade").StartFade();
                 }
                 else
                 {

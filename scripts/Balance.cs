@@ -4,9 +4,11 @@ using System;
 public partial class Balance : Area2D
 {
     private Tween blinkTween;
+    private Sprite2D sprite;
 
     public override void _Ready()
     {
+        sprite = GetNode<Sprite2D>("Sprite2D"); // ou o nome exato do nó
         StartBlinkIdle();
         BodyEntered += OnBodyEntered;
     }
@@ -36,12 +38,12 @@ public partial class Balance : Area2D
 
     public void SetShaderBlinkIntensity(float value)
     {
-
-        if (Material is ShaderMaterial shaderMaterial)
+        if (sprite.Material is ShaderMaterial shaderMaterial)
         {
             shaderMaterial.SetShaderParameter("blink_intensity", value);
         }
     }
+
     private void OnBodyEntered(Node body)
     {
         if(body.IsInGroup("PlayerGroup"))
