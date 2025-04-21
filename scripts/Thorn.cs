@@ -45,7 +45,7 @@ public partial class Thorn : Area2D
         GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred("disabled", true);
     }
 
-    private void OnBodyEntered(Node2D body)
+    private async void OnBodyEntered(Node2D body)
     {
         if (body is TileMap || body.IsInGroup("Ground") || body.IsInGroup("Platform"))
         {
@@ -53,7 +53,8 @@ public partial class Thorn : Area2D
             GD.Print("Thorn atingiu o chão/tilemap");
             HasTouchedGround = true;
             var buttonTwo = GetNode<Button2>("../Button2");
-            if(buttonTwo.MouseDeath != 0)
+
+            if (buttonTwo.MouseDeath != 0)
             {
                 Node cutsceneNode = GetNode("../Level Design/Cutscene");
 
@@ -61,19 +62,41 @@ public partial class Thorn : Area2D
                 {
                     GetNode<Fade>("../Fade").StartFade();
                     cutscene.PlayCutscene();
+
+                    // Evita múltiplas conexões
+                    if (!cutscene.IsConnected(Cutscene.SignalName.CutsceneFinished, new Callable(this, nameof(OnCutsceneFinished))))
+                    {
+                        await GetNode<Fade>("../Fade").StartFade();
+
+                        cutscene.Connect(Cutscene.SignalName.CutsceneFinished, new Callable(this, nameof(OnCutsceneFinished)));
+                    }
                     GD.Print("Acabou o jogo");
-                    GetNode<Fade>("../Fade").StartFade();
                 }
                 else
                 {
                     GD.PrintErr("Falha ao encontrar ou fazer cast para Cutscene");
                     GD.PrintErr("Tipo real do nó: ", cutsceneNode?.GetType().ToString() ?? "null");
                 }
-            }else {
+
+            }
+            else
+            {
                 GD.Print("Não acabou o jogo");
                 Reload.Visible = true;
             }
         }
     }
+    private async void OnCutsceneFinished()
+    {
+        GD.Print("Cutscene terminou. Mudando de cena...");
+        await GetNode<Fade>("../Fade").StartFade();
 
+        GetTree().ChangeSceneToFile("res://scene2.tscn");
+    }
+
+    private void OnDeathFadeComplete()
+    {
+        GD.Print("Fade completo. Recarregando cena...");
+        
+    }
 }
