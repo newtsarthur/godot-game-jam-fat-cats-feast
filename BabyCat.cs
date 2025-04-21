@@ -1,24 +1,31 @@
 using Godot;
 using System;
 
-public partial class Mouse : CharacterBody2D
+public partial class BabyCat : CharacterBody2D
 {
     [Export] public TileMapLayer Grid;
-    [Export] public float MoveSpeed = 30f;
-    [Export] public float Gravity = 980f;
+    [Export] public float MoveSpeed = 25f;
+    [Export] public float Gravity = 0f;
     [Export] public float RayLength = 30f;
-    
+
     private int _direction = 1;
     private RayCast2D _floorDetector;
     private RayCast2D _wallDetector;
-    private AnimatedSprite2D _sprite;
-    private Area2D _hurtbox;
+    private Sprite2D _sprite;
+    private CollisionShape2D _collisionShape;
+
     public override void _Ready()
     {
+        // Configuração dos RayCast2D
         _floorDetector = GetNodeOrNull<RayCast2D>("FloorDetector");
         _wallDetector = GetNodeOrNull<RayCast2D>("WallDetector");
-        _sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        
+        _sprite = GetNode<Sprite2D>("Sprite2D");
+        _collisionShape = GetNode<CollisionShape2D>("CollisionShape2D");
+
+        // Configura as camadas de colisão para ignorar PlayerGroup e BabyCatGroup
+        SetupCollisionLayers();
+
+        // Garantir que os RayCasts sejam inicializados
         if (_floorDetector == null)
         {
             _floorDetector = new RayCast2D();
@@ -27,7 +34,7 @@ public partial class Mouse : CharacterBody2D
             _floorDetector.TargetPosition = new Vector2(RayLength * _direction, 20);
             _floorDetector.Enabled = true;
         }
-        
+
         if (_wallDetector == null)
         {
             _wallDetector = new RayCast2D();
@@ -36,14 +43,46 @@ public partial class Mouse : CharacterBody2D
             _wallDetector.TargetPosition = new Vector2(RayLength * _direction, 0);
             _wallDetector.Enabled = true;
         }
-        _hurtbox = GetNode<Area2D>("Hurtbox");
-        _hurtbox.AreaEntered += OnAreaEntered;
-        
+
+        // Ignora objetos dos grupos especificados nos RayCasts
+        foreach (Node node in GetTree().GetNodesInGroup("PlayerGroup"))
+        {
+            if (node is CollisionObject2D collisionObj)
+            {
+                _floorDetector.AddException(collisionObj);
+                _wallDetector.AddException(collisionObj);
+            }
+        }
+
+        foreach (Node node in GetTree().GetNodesInGroup("BabyCatGroup"))
+        {
+            if (node is CollisionObject2D collisionObj)
+            {
+                _floorDetector.AddException(collisionObj);
+                _wallDetector.AddException(collisionObj);
+            }
+        }
     }
+
+    private void SetupCollisionLayers()
+    {
+        // Obtém o parent CollisionObject2D (pode ser o próprio CharacterBody2D ou um filho)
+        CollisionObject2D collisionObject = this; // Ou GetNode<CollisionObject2D>("...");
+
+        // Configura as layers e masks para ignorar PlayerGroup e BabyCatGroup
+        // Você precisará ajustar os números das camadas de acordo com seu projeto
+        uint playerLayer = 1 << 0; // Supondo que PlayerGroup está na layer 1
+        uint babyCatLayer = 1 << 1; // Supondo que BabyCatGroup está na layer 2
+
+        // Desativa a detecção com essas camadas
+        collisionObject.CollisionMask &= ~playerLayer;
+        collisionObject.CollisionMask &= ~babyCatLayer;
+    }
+
     public override void _PhysicsProcess(double delta)
     {
         Vector2 velocity = Velocity;
-        
+
         // Aplica gravidade
         if (!IsOnFloor())
         {
@@ -56,18 +95,18 @@ public partial class Mouse : CharacterBody2D
 
         // Movimento horizontal
         velocity.X = MoveSpeed * _direction;
-        
+
         // Verifica colisões
         UpdateRaycasts();
         CheckForTurn();
-        
-        // Atualiza sprite
+
+        // Atualiza o sprite
         if (_sprite != null)
         {
-            _sprite.FlipH = _direction > 0; // Invertido para direção correta
-            _sprite.Play("walk");
+            _sprite.FlipH = _direction > 0;
         }
 
+        // Aplica a velocidade e movimento
         Velocity = velocity;
         MoveAndSlide();
     }
@@ -78,70 +117,33 @@ public partial class Mouse : CharacterBody2D
         {
             _floorDetector.TargetPosition = new Vector2(RayLength * _direction, 20);
             _floorDetector.ForceRaycastUpdate();
-            
-            if (_floorDetector.IsColliding())
-            {
-                var collider = _floorDetector.GetCollider();
-                if (collider is CollisionObject2D collisionObj && collisionObj.IsInGroup("PlayerGroup"))
-                {
-                    // Adiciona exceção corretamente
-                    _floorDetector.AddException(collisionObj);
-                }
-            }
         }
-        
+
         if (_wallDetector != null)
         {
             _wallDetector.TargetPosition = new Vector2(RayLength * _direction, 0);
             _wallDetector.ForceRaycastUpdate();
-            
-            if (_wallDetector.IsColliding())
-            {
-                var collider = _wallDetector.GetCollider();
-                if (collider is CollisionObject2D collisionObj && collisionObj.IsInGroup("PlayerGroup"))
-                {
-                    // Adiciona exceção corretamente
-                    _wallDetector.AddException(collisionObj);
-                }
-            }
         }
     }
 
     private void CheckForTurn()
     {
         bool shouldTurn = false;
-        
+
         if (_floorDetector != null && !_floorDetector.IsColliding())
         {
             shouldTurn = true;
         }
-        
+
         if (_wallDetector != null && _wallDetector.IsColliding())
         {
             shouldTurn = true;
         }
-        
+
         if (shouldTurn)
         {
             _direction *= -1;
             UpdateRaycasts();
-        }
-    }
-    private void OnAreaEntered(Area2D area)
-    {
-        if (area.IsInGroup("ThornGroup") && area is Thorn thorn && !thorn.HasTouchedGround)
-        {
-            var buttonTwo = GetNode<Button2>("../Button2");
-            buttonTwo.MouseDeath += 1;
-            GD.Print($"Rato mortes: {buttonTwo.MouseDeath}");
-            GD.Print("Rato morreu (Area2D)");
-            Grid.Enabled = false;
-            var playerNode = GetNode<CharacterBody2D>("../Player") as Player;
-            if (playerNode != null)
-            {
-                playerNode.MoveSpeed = 0;
-            }
-            QueueFree();
         }
     }
 }

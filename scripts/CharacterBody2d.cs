@@ -7,7 +7,7 @@ public partial class Player : CharacterBody2D
     [Export] public PackedScene Clone;
     [Export] public int MaxClones = 1;
 
-    [Export] public float MoveSpeed = 150f;
+    [Export] public float MoveSpeed { get; set; } = 150f;
     [Export] public float JumpForce = 350f;
     [Export] public float Gravity = 1000f;
     [Export] public float MaxFallSpeed = 1000f;
