@@ -20,6 +20,8 @@ public partial class Player : CharacterBody2D
 
     private List<Clone> _activeClones = new();
 
+    private bool _isDead = false;
+
     public override void _PhysicsProcess(double delta)
     {
         float dt = (float)delta;
@@ -76,10 +78,16 @@ public partial class Player : CharacterBody2D
 
         for (int i = 0; i < GetSlideCollisionCount(); i++)
         {
+            if (_isDead) break; // já morreu, evita múltiplos triggers
+
             var collision = GetSlideCollision(i);
             if (collision.GetCollider() is Node body && body.IsInGroup("EnemyGroup"))
             {
+                _isDead = true;
+                PlayerData.Instance.DeathCount++;
+                GD.Print("Você morreu " + PlayerData.Instance.DeathCount + " vezes!");
                 GD.Print("Player morreu");
+
                 GetNode<Fade>("../Fade").StartDeathFade(OnDeathFadeComplete);
             }
         }
