@@ -109,6 +109,8 @@ public partial class Player : CharacterBody2D
 
         if (Input.IsActionJustPressed("reload"))
         {
+            PlayerData.Instance.ItemsCollectedInLevel = 0;
+
             GetNode<Fade>("../Fade").StartDeathFade(OnDeathFadeComplete);
         }
 

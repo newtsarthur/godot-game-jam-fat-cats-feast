@@ -71,6 +71,9 @@ public partial class Thorn : Area2D
 
                         cutscene.Connect(Cutscene.SignalName.CutsceneFinished, new Callable(this, nameof(OnCutsceneFinished)));
                     }
+                    PlayerData.Instance.ItemsCollectedTotal += PlayerData.Instance.ItemsCollectedInLevel;
+                    PlayerData.Instance.ItemsCollectedInLevel = 0;
+
                     GD.Print("Acabou o jogo");
                 }
                 else

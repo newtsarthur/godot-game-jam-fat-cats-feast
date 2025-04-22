@@ -54,6 +54,6 @@ public partial class Balance : Area2D
     }
     public void AddPointPlayer() 
     {
-        PlayerData.Instance.ItemsCollected++;
+        PlayerData.Instance.ItemsCollectedInLevel++;
     }
 }
