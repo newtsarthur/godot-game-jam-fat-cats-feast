@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://cltu5kgw6i0yg"]
+[gd_scene load_steps=67 format=4 uid="uid://cltu5kgw6i0yg"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_1lry2"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_un2r7"]
@@ -20,7 +20,16 @@
 [ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="16_fgt4w"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="17_c78tf"]
 [ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://player.tscn" id="18_fgt4w"]
+[ext_resource type="Script" uid="uid://dc2o2f2d7ehnr" path="res://scripts/Button3.cs" id="19_nrsnt"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="20_wu4ic"]
+[ext_resource type="Script" uid="uid://cyeqfeqb251ii" path="res://scripts/Button4.cs" id="22_4jxcx"]
+[ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="22_f7cnd"]
+[ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="23_nrsnt"]
+[ext_resource type="Script" uid="uid://djlrhaoybjllx" path="res://scripts/Mouse2.cs" id="25_4jxcx"]
+[ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="25_8tubn"]
+[ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="26_qr2pt"]
+[ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="28_4jxcx"]
+[ext_resource type="Script" uid="uid://cbvelupw7586h" path="res://scripts/Thorn2.cs" id="28_yob8s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8tubn"]
 texture = ExtResource("1_1lry2")
@@ -1420,6 +1429,52 @@ shader_parameter/blink_intensity = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py7ct"]
 size = Vector2(14, 14)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxs5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_f7cnd")
+}],
+"loop": true,
+"name": &"ButtonClicked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_nrsnt")
+}],
+"loop": true,
+"name": &"ButtonDefault",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5kdi"]
+size = Vector2(16, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yjf6y"]
+shader = ExtResource("2_un2r7")
+shader_parameter/WindStrength = 2.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ua55d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_8tubn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qr2pt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f53w2"]
+size = Vector2(11, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yob8s"]
+size = Vector2(15, 4)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Level Design" type="Node2D" parent="."]
@@ -1532,8 +1587,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAI
 tile_set = SubResource("TileSet_xqlue")
 
 [node name="Food" type="TileMapLayer" parent="Level Design"]
-visible = false
-tile_map_data = PackedByteArray("AAARAAIAAAAKAAMAAAAQAAIAAAAKAAMAAAASAAIAAAAKAAMAAAA=")
+tile_map_data = PackedByteArray("AAAKAAIAAAAKAAMAAAALAAIAAAAKAAMAAAAMAAIAAAAKAAMAAAA=")
 tile_set = SubResource("TileSet_qal23")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Level Design"]
@@ -1548,22 +1602,31 @@ process_material = SubResource("ParticleProcessMaterial_jxbl2")
 [node name="Ground" type="TileMapLayer" parent="Level Design" groups=["Ground"]]
 visibility_layer = 2
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAAABUAAQAGAAkAABABABUAAQAFAAQAAAACABUAAQAFAAQAAAADABUAAQAFAAQAAAAEABUAAQAFAAQAAAAFABUAAQAFAAQAAAAGABUAAQAFAAQAAAAHABUAAQAFAAQAAAAIABUAAQAFAAQAAAAJABUAAQAFAAQAAAAKABUAAQAFAAQAAAALABUAAQAFAAQAAAAMABUAAQAFAAQAAAANABUAAQAFAAQAAAAOABUAAQAFAAQAAAAPABUAAQAFAAQAAAAQABUAAQAFAAQAAAARABUAAQAFAAQAAAASABUAAQAFAAQAAAATABUAAQAFAAQAAAAUABUAAQAFAAQAAAAVABUAAQAGAAkAAAAVABQAAQAFAAQAAGAVABMAAQAFAAQAAGAVABIAAQAFAAQAAGAVABEAAQAFAAQAAGAVABAAAQAFAAQAAGAVAA8AAQAFAAQAAGAVAA4AAQAFAAQAAGAVAA0AAQAFAAQAAGAVAAwAAQAFAAQAAGAVAAsAAQAFAAQAAGAVAAoAAQAFAAQAAGAVAAkAAQAFAAQAAGAVAAgAAQAFAAQAAGAVAAcAAQAFAAQAAGAVAAYAAQAFAAQAAGAVAAUAAQAFAAQAAGAVAAQAAQAFAAQAAGAVAAMAAQAFAAQAAGAVAAIAAQAFAAQAAGAVAAEAAQAFAAQAAGAVAAAAAQAGAAkAACAUAAAAAQAFAAYAAAATAAAAAQAFAAYAAAASAAAAAQAFAAYAAAARAAAAAQAFAAYAAAAQAAAAAQAFAAYAAAAPAAAAAQAFAAYAAAAOAAAAAQAFAAYAAAANAAAAAQAFAAYAAAAMAAAAAQAFAAYAAAALAAAAAQAFAAYAAAAKAAAAAQAFAAYAAAAJAAAAAQAFAAYAAAAIAAAAAQAFAAYAAAAHAAAAAQAFAAYAAAAGAAAAAQAFAAYAAAAFAAAAAQAFAAYAAAAEAAAAAQAFAAYAAAADAAAAAQAFAAYAAAACAAAAAQAFAAYAAAABAAAAAQAFAAYAAAAAAAAAAQAGAAkAADAAAAEAAQAFAAQAAFAAAAIAAQAFAAQAAFAAAAMAAQAFAAQAAFAAAAQAAQAFAAQAAFAAAAUAAQAFAAQAAFAAAAYAAQAFAAQAAFAAAAcAAQAFAAQAAFAAAAgAAQAFAAQAAFAAAAkAAQAFAAQAAFAAAAoAAQAFAAQAAFAAAAsAAQAFAAQAAFAAAAwAAQAFAAQAAFAAAA0AAQAFAAQAAFAAAA4AAQAFAAQAAFAAAA8AAQAFAAQAAFAAABAAAQAFAAQAAFAAABEAAQAFAAQAAFAAABIAAQAFAAQAAFAAABMAAQAFAAQAAFAAABQAAQAFAAQAAFACABMAAQAIAAQAAAADABMAAQAKAAQAAAANABEAAQAJAAQAAAAMABEAAQAIAAQAAAAOABEAAQAKAAQAAAAPAAwAAQAKAAQAAAAOAAwAAQAJAAQAAAANAAwAAQAJAAQAAAAMAAwAAQAJAAQAAAALAAwAAQAJAAQAAAAKAAwAAQAJAAQAAAAJAAwAAQAJAAQAAAAIAAwAAQAIAAQAAAACAAkAAQAKAAQAAAABAAkAAQAJAAQAAAAUAAsAAQAIAAQAAAA=")
+tile_map_data = PackedByteArray("AAAAABUAAQAGAAkAABABABUAAQAFAAQAAAACABUAAQAFAAQAAAADABUAAQAFAAQAAAAEABUAAQAFAAQAAAAFABUAAQAFAAQAAAAGABUAAQAFAAQAAAAHABUAAQAFAAQAAAAIABUAAQAFAAQAAAAJABUAAQAFAAQAAAAKABUAAQAFAAQAAAALABUAAQAFAAQAAAAMABUAAQAFAAQAAAANABUAAQAFAAQAAAAOABUAAQAFAAQAAAAPABUAAQAFAAQAAAAQABUAAQAFAAQAAAARABUAAQAFAAQAAAASABUAAQAFAAQAAAATABUAAQAFAAQAAAAUABUAAQAFAAQAAAAVABUAAQAGAAkAAAAVABQAAQAFAAQAAGAVABMAAQAFAAQAAGAVABIAAQAFAAQAAGAVABEAAQAFAAQAAGAVABAAAQAFAAQAAGAVAA8AAQAFAAQAAGAVAA4AAQAFAAQAAGAVAA0AAQAFAAQAAGAVAAwAAQAFAAQAAGAVAAsAAQAFAAQAAGAVAAoAAQAFAAQAAGAVAAkAAQAFAAQAAGAVAAgAAQAFAAQAAGAVAAcAAQAFAAQAAGAVAAYAAQAFAAQAAGAVAAUAAQAFAAQAAGAVAAQAAQAFAAQAAGAVAAMAAQAFAAQAAGAVAAIAAQAFAAQAAGAVAAEAAQAFAAQAAGAVAAAAAQAGAAkAACAUAAAAAQAFAAYAAAATAAAAAQAFAAYAAAASAAAAAQAFAAYAAAARAAAAAQAFAAYAAAAQAAAAAQAFAAYAAAAPAAAAAQAFAAYAAAAOAAAAAQAFAAYAAAANAAAAAQAFAAYAAAAMAAAAAQAFAAYAAAALAAAAAQAFAAYAAAAKAAAAAQAFAAYAAAAJAAAAAQAFAAYAAAAIAAAAAQAFAAYAAAAHAAAAAQAFAAYAAAAGAAAAAQAFAAYAAAAFAAAAAQAFAAYAAAAEAAAAAQAFAAYAAAADAAAAAQAFAAYAAAACAAAAAQAFAAYAAAABAAAAAQAFAAYAAAAAAAAAAQAGAAkAADAAAAEAAQAFAAQAAFAAAAIAAQAFAAQAAFAAAAMAAQAFAAQAAFAAAAQAAQAFAAQAAFAAAAUAAQAFAAQAAFAAAAYAAQAFAAQAAFAAAAcAAQAFAAQAAFAAAAgAAQAFAAQAAFAAAAkAAQAFAAQAAFAAAAoAAQAFAAQAAFAAAAsAAQAFAAQAAFAAAAwAAQAFAAQAAFAAAA0AAQAFAAQAAFAAAA4AAQAFAAQAAFAAAA8AAQAFAAQAAFAAABAAAQAFAAQAAFAAABEAAQAFAAQAAFAAABIAAQAFAAQAAFAAABMAAQAFAAQAAFAAABQAAQAFAAQAAFACABMAAQAIAAQAAAADABMAAQAKAAQAAAANABEAAQAJAAQAAAAMABEAAQAIAAQAAAAOABEAAQAKAAQAAAAPAAwAAQAKAAQAAAAOAAwAAQAJAAQAAAANAAwAAQAJAAQAAAAMAAwAAQAJAAQAAAALAAwAAQAJAAQAAAAKAAwAAQAJAAQAAAAJAAwAAQAJAAQAAAAIAAwAAQAIAAQAAAACAAkAAQAKAAQAAAABAAkAAQAJAAQAAAAUAAsAAQAIAAQAAAAIAAMAAQAIAAQAAAAJAAMAAQAJAAQAAAAKAAMAAQAJAAQAAAALAAMAAQAJAAQAAAAMAAMAAQAJAAQAAAANAAMAAQAJAAQAAAAOAAMAAQAKAAQAAAABAAcAAQAJAAQAAAACAAcAAQAKAAQAAAAMAAYAAQAKAAQAAAAKAAYAAQAIAAQAAAALAAYAAQAJAAQAAAA=")
 tile_set = SubResource("TileSet_h6hrc")
 
 [node name="Grid" type="TileMapLayer" parent="Level Design"]
+tile_map_data = PackedByteArray("AAAJAAEAAAAMAAUAAAAJAAIAAAAMAAYAAAANAAEAAAANAAUAAAANAAIAAAANAAYAAAA=")
 tile_set = SubResource("TileSet_svmkl")
 
 [node name="InvisibleGround" type="TileMapLayer" parent="Level Design"]
 tile_map_data = PackedByteArray("AAAHABIAAAAIAAQAAAAIABIAAAAKAAQAAAA=")
+enabled = false
 tile_set = SubResource("TileSet_dy7en")
 
 [node name="InvisibleGround2" type="TileMapLayer" parent="Level Design"]
 tile_map_data = PackedByteArray("AAASABAAAAAIAAQAAAATABAAAAAKAAQAAAA=")
+enabled = false
 tile_set = SubResource("TileSet_dy7en")
 
 [node name="InvisibleGround3" type="TileMapLayer" parent="Level Design"]
 tile_map_data = PackedByteArray("AAAEAAsAAAAIAAQAAAAFAAsAAAAKAAQAAAA=")
+enabled = false
+tile_set = SubResource("TileSet_dy7en")
+
+[node name="InvisibleGround4" type="TileMapLayer" parent="Level Design"]
+tile_map_data = PackedByteArray("AAASAAMAAAAIAAQAAAATAAMAAAAJAAQAAAAUAAMAAAAJAAQAAAA=")
+enabled = false
 tile_set = SubResource("TileSet_dy7en")
 
 [node name="Ballon" type="TileMapLayer" parent="Level Design"]
@@ -1590,9 +1653,8 @@ scale = Vector2(0.179836, 0.179836)
 texture = ExtResource("14_xjhb4")
 
 [node name="Balance" type="Area2D" parent="." groups=["BalanceGroup"]]
-visible = false
 texture_filter = 1
-position = Vector2(73, 24)
+position = Vector2(314, 40)
 script = ExtResource("15_rn5j6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Balance"]
@@ -1603,12 +1665,105 @@ texture = ExtResource("17_c78tf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Balance"]
 shape = SubResource("RectangleShape2D_py7ct")
 
+[node name="Button" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(48, 296)
+script = ExtResource("19_nrsnt")
+Chao = NodePath("../Level Design/InvisibleGround")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+sprite_frames = SubResource("SpriteFrames_lxs5u")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_i5kdi")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(216, 264)
+script = ExtResource("19_nrsnt")
+Chao = NodePath("../Level Design/InvisibleGround2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button2"]
+sprite_frames = SubResource("SpriteFrames_lxs5u")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_i5kdi")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button3" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(329, 168)
+script = ExtResource("19_nrsnt")
+Chao = NodePath("../Level Design/InvisibleGround3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button3"]
+sprite_frames = SubResource("SpriteFrames_lxs5u")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button3"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_i5kdi")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button4" type="Area2D" parent="." node_paths=PackedStringArray("Thorn")]
+position = Vector2(24, 105)
+script = ExtResource("22_4jxcx")
+Thorn = NodePath("../Thorn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button4"]
+sprite_frames = SubResource("SpriteFrames_lxs5u")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button4"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_i5kdi")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("18_fgt4w")]
-position = Vector2(189, 328)
+position = Vector2(43, 101)
 LayoutScene = ExtResource("20_wu4ic")
 MaxClones = 3
 MoveSpeed = 100.0
 JumpForce = 300.0
+
+[node name="Mouse" type="CharacterBody2D" parent="." node_paths=PackedStringArray("Grid") groups=["EnemyGroup"]]
+position = Vector2(195, 184)
+script = ExtResource("25_4jxcx")
+Grid = NodePath("../Level Design/Grid")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mouse"]
+material = SubResource("ShaderMaterial_yjf6y")
+sprite_frames = SubResource("SpriteFrames_ua55d")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse"]
+position = Vector2(-1.5, 5)
+shape = SubResource("RectangleShape2D_f53w2")
+
+[node name="Hurtbox" type="Area2D" parent="Mouse"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse/Hurtbox"]
+position = Vector2(-1.5, 5)
+shape = SubResource("RectangleShape2D_f53w2")
+debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
+
+[node name="Thorn" type="Area2D" parent="." groups=["ThornGroup"]]
+position = Vector2(184, 119)
+script = ExtResource("28_yob8s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Thorn"]
+rotation = 3.14159
+texture = ExtResource("28_4jxcx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Thorn"]
+position = Vector2(0.5, -6)
+shape = SubResource("RectangleShape2D_yob8s")
 
 [node name="Fade" type="CanvasLayer" parent="."]
 script = ExtResource("15_un2r7")
