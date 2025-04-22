@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://v02yeebxddth"]
+[gd_scene load_steps=80 format=4 uid="uid://v02yeebxddth"]
 
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="2_0h7mo"]
@@ -33,6 +33,7 @@
 [ext_resource type="Script" uid="uid://bdcpigxghkq8b" path="res://scripts/Thorn.cs" id="16_flf07"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="24_2nhjh"]
 [ext_resource type="Script" uid="uid://btwxos3vabpbt" path="res://scripts/Fade.cs" id="27_1fr6y"]
+[ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="33_ornx7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq1c5"]
 texture = ExtResource("4_0hol4")
@@ -1744,6 +1745,8 @@ material = SubResource("ShaderMaterial_2hxjc")
 position = Vector2(28, 329)
 script = ExtResource("3_0hol4")
 Clone = ExtResource("8_ta5nu")
+LayoutScene = ExtResource("33_ornx7")
+MaxClones = 1
 
 [node name="Anim" type="AnimatedSprite2D" parent="Player" groups=["PlayerGroup"]]
 texture_filter = 1

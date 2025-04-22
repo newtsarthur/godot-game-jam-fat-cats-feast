@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbwcxc76hiumj"]
+
+[ext_resource type="Texture2D" uid="uid://bag38ekunxdly" path="res://sprites/CatClone.png" id="1_v6hxy"]
+[ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="2_y03eh"]
+[ext_resource type="Script" uid="uid://yra8eh1pj05q" path="res://scripts/Control2.cs" id="3_jd3k5"]
+[ext_resource type="Script" uid="uid://bvjgl1io3d3d" path="res://scripts/HUD.cs" id="3_osagt"]
+[ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="3_tupbf"]
+
+[node name="Layout" type="Node2D"]
+
+[node name="Layout" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Layout"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(26, 23)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_v6hxy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Layout"]
+position = Vector2(25, 22)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_v6hxy")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Layout"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(26, 40)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("2_y03eh")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Layout"]
+position = Vector2(25, 39)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("2_y03eh")
+
+[node name="Control" type="Node2D" parent="Layout" node_paths=PackedStringArray("meuLabel")]
+position = Vector2(36, 14)
+script = ExtResource("3_osagt")
+meuLabel = NodePath("Label")
+
+[node name="Label2" type="Label" parent="Layout/Control"]
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 56.24
+offset_bottom = 19.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tupbf")
+text = ":"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Layout/Control"]
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 65.24
+offset_bottom = 19.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tupbf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Control2" type="Node2D" parent="Layout"]
+position = Vector2(36, 30)
+script = ExtResource("3_jd3k5")
+
+[node name="Label" type="Label" parent="Layout/Control2"]
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 56.24
+offset_bottom = 19.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tupbf")
+text = ": 0"
+metadata/_edit_use_anchors_ = true
