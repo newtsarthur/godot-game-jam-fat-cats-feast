@@ -5,7 +5,10 @@ using System.Collections.Generic;
 public partial class Player : CharacterBody2D
 {
     [Export] public PackedScene Clone;
-    [Export] public int MaxClones = 1;
+    [Export] public PackedScene LayoutScene;
+    private HUD layoutInstance;
+
+    [Export] public int MaxClones;
 
     [Export] public float MoveSpeed { get; set; } = 150f;
     [Export] public float JumpForce = 350f;
@@ -14,13 +17,49 @@ public partial class Player : CharacterBody2D
     [Export] public float JumpCutMultiplier = 0.5f;
 
     private Vector2 _velocity;
-    private int _currentClones = 0;
+    public int _currentClones { get; private set; } = 0;
     public int ClonesCurrent { get; private set; } = 0;
     public int ClonesMax { get; private set; } = 0;
 
     private List<Clone> _activeClones = new();
 
     private bool _isDead = false;
+    [Signal]
+    public delegate void PontuacaoAtualizadaEventHandler(int novaPontuacao);
+    private int _pontuacao;
+    [Signal]
+    public delegate void ClonesAtualizadosEventHandler(int clonesDisponiveis);
+
+    public override void _Ready()
+    {
+        if (LayoutScene != null)
+        {
+            var layoutNode = LayoutScene.Instantiate(); // Instancia "Layout"
+            AddChild(layoutNode);
+
+            // Busca o Control que contém o script HUD.cs
+            layoutInstance = layoutNode.FindChild("Control", true, false) as HUD;
+
+            if (layoutInstance != null)
+            {
+                GD.Print(MaxClones);
+                GD.Print(ClonesCurrent);
+
+                GD.Print("Funciona?");
+                layoutInstance.SetPlayer(this); // injeta o Player aqui
+            }
+            else
+            {
+                GD.PrintErr("HUD (Control com script) não encontrado na cena Layout!");
+            }
+        }
+    }
+
+    public void AdicionarPontos(int pontos)
+    {
+        _pontuacao += (MaxClones -= ClonesCurrent);
+        EmitSignal(SignalName.PontuacaoAtualizada, _pontuacao);
+    }
 
     public override void _PhysicsProcess(double delta)
     {
@@ -168,5 +207,6 @@ public partial class Player : CharacterBody2D
             GD.PrintErr($"Tipo de clone não suportado: {newClone.GetType()}");
             return;
         }
+        EmitSignal(SignalName.ClonesAtualizados, ClonesMax);
     }
 }
