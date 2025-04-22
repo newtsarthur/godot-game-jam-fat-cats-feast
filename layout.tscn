@@ -63,6 +63,15 @@ position = Vector2(36, 30)
 script = ExtResource("3_jd3k5")
 meuLabel = NodePath("Label")
 
+[node name="Label" type="Label" parent="Layout/Control2"]
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 65.24
+offset_bottom = 19.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_tupbf")
+metadata/_edit_use_anchors_ = true
+
 [node name="Label2" type="Label" parent="Layout/Control2"]
 offset_left = -2.0
 offset_top = 3.0
@@ -71,13 +80,4 @@ offset_bottom = 19.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_tupbf")
 text = ":"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Layout/Control2"]
-offset_left = -2.0
-offset_top = 3.0
-offset_right = 56.24
-offset_bottom = 19.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_tupbf")
 metadata/_edit_use_anchors_ = true

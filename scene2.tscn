@@ -1611,6 +1611,7 @@ MoveSpeed = 100.0
 JumpForce = 300.0
 
 [node name="Fade" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("15_un2r7")
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
