@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=4 uid="uid://v02yeebxddth"]
+[gd_scene load_steps=85 format=4 uid="uid://v02yeebxddth"]
 
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="2_0h7mo"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="6_kq1c5"]
 [ext_resource type="Texture2D" uid="uid://db5ap6lk8gjm8" path="res://sprites/Crow2.png" id="7_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="7_d21ai"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://BabyCat.cs" id="7_mryly"]
+[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_mryly"]
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="7_ornx7"]
 [ext_resource type="Script" uid="uid://iwgs1ib2tqti" path="res://scripts/Button2.cs" id="7_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="8_rj586"]
@@ -212,6 +212,104 @@ tracks/5/keys = {
 _data = {
 &"EndTutorial": SubResource("Animation_mryly"),
 &"RESET": SubResource("Animation_kq1c5")
+}
+
+[sub_resource type="Animation" id="Animation_6bttm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 189)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Balance/Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Balance:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0mta1"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Balance:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4rcgd"]
+resource_name = "plataform"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(280, 189), Vector2(280, 214), Vector2(280, 48), Vector2(280, 189)]
+}
+
+[sub_resource type="Animation" id="Animation_h5aeu"]
+resource_name = "scale objects"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Balance/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h5aeu"]
+_data = {
+&"RESET": SubResource("Animation_6bttm"),
+&"new_animation": SubResource("Animation_0mta1"),
+&"plataform": SubResource("Animation_4rcgd"),
+&"scale objects": SubResource("Animation_h5aeu")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kq1c5"]
@@ -1561,6 +1659,12 @@ animationName = "EndTutorial"
 libraries = {
 &"": SubResource("AnimationLibrary_ornx7")
 }
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Level Design/Cutscene"]
+libraries = {
+&"": SubResource("AnimationLibrary_h5aeu")
+}
+autoplay = "scale objects"
 
 [node name="Cutscene Caracters" type="Node2D" parent="Level Design/Cutscene"]
 position = Vector2(334, 328)

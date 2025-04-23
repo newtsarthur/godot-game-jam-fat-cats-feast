@@ -1,9 +1,8 @@
 using Godot;
-using System;
 
 public partial class Button4 : Area2D
 {
-    [Export] public Thorn2 Thorn;
+    [Export] public Thorn3 Thorn;
     private AnimatedSprite2D _sprite;
     private int _playersInArea = 0;
     public int MouseDeath {get; set;} = 0;
