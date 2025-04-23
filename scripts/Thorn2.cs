@@ -53,7 +53,7 @@ public partial class Thorn2 : Area2D
             _shouldFall = false;
             GD.Print("Thorn atingiu o chão/tilemap");
             HasTouchedGround = true;
-            var buttonTwo = GetNode<Button4>("../Button4");
+            var buttonTwo = GetNode<Button6>("../Button6");
 
             if (buttonTwo.MouseDeath != 0)
             {

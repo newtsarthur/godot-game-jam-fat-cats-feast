@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://player.tscn" id="18_fgt4w"]
 [ext_resource type="Script" uid="uid://dc2o2f2d7ehnr" path="res://scripts/Button3.cs" id="19_nrsnt"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="20_wu4ic"]
-[ext_resource type="Script" uid="uid://cyeqfeqb251ii" path="res://scripts/Button4.cs" id="22_4jxcx"]
+[ext_resource type="Script" uid="uid://bqlfwx5ciulb5" path="res://scripts/Button6.cs" id="22_4rcgd"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="22_f7cnd"]
 [ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="23_4rcgd"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="23_nrsnt"]
@@ -1714,17 +1714,17 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_i5kdi")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button4" type="Area2D" parent="." node_paths=PackedStringArray("Thorn")]
+[node name="Button6" type="Area2D" parent="." node_paths=PackedStringArray("Thorn")]
 position = Vector2(24, 105)
-script = ExtResource("22_4jxcx")
+script = ExtResource("22_4rcgd")
 Thorn = NodePath("../Thorn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button4"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button6"]
 sprite_frames = SubResource("SpriteFrames_lxs5u")
 animation = &"ButtonDefault"
 autoplay = "ButtonDefault"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button6"]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_i5kdi")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)

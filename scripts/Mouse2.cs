@@ -131,7 +131,7 @@ public partial class Mouse2 : CharacterBody2D
     {
         if (area.IsInGroup("ThornGroup") && area is Thorn2 thorn && !thorn.HasTouchedGround)
         {
-            var buttonTwo = GetNode<Button4>("../Button4");
+            var buttonTwo = GetNode<Button6>("../Button6");
             buttonTwo.MouseDeath += 1;
             GD.Print($"Rato mortes: {buttonTwo.MouseDeath}");
             GD.Print("Rato morreu (Area2D)");
