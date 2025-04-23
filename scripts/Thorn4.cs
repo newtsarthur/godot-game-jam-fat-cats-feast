@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Thorn2 : Area2D
+public partial class Thorn4 : Area2D
 {
     [Export] public float FallSpeed = 300f;
 
@@ -34,6 +34,7 @@ public partial class Thorn2 : Area2D
 
     public void StartFalling()
     {
+        GD.Print("StartFalling chamado");
         _shouldFall = true;
         GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred("disabled", false);
         HasTouchedGround = false;
@@ -51,9 +52,9 @@ public partial class Thorn2 : Area2D
         if (body is TileMap || body.IsInGroup("Ground") || body.IsInGroup("Platform"))
         {
             _shouldFall = false;
-            GD.Print("Thorn atingiu o chão/tilemap");
+            GD.Print("Thorn atingiu o chão/tilemap33");
             HasTouchedGround = true;
-            var buttonTwo = GetNode<Button6>("../Button6");
+            var buttonTwo = GetNode<Button8>("../Button8");
 
             if (buttonTwo.MouseDeath != 0)
             {
@@ -94,7 +95,7 @@ public partial class Thorn2 : Area2D
         GD.Print("Cutscene terminou. Mudando de cena...");
         await GetNode<Fade>("../Fade").StartFade();
 
-        GetTree().ChangeSceneToFile("res://scene3.tscn");
+        GetTree().ChangeSceneToFile("res://scene5.tscn");
     }
 
     private void OnDeathFadeComplete()

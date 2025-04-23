@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Mouse2 : CharacterBody2D
+public partial class Mouse4 : CharacterBody2D
 {
     [Export] public TileMapLayer Grid;
     [Export] public float MoveSpeed = 30f;
@@ -129,9 +129,9 @@ public partial class Mouse2 : CharacterBody2D
     }
     private void OnAreaEntered(Area2D area)
     {
-        if (area.IsInGroup("ThornGroup") && area is Thorn2 thorn && !thorn.HasTouchedGround)
+        if (area.IsInGroup("ThornGroup") && area is Thorn4 thorn && !thorn.HasTouchedGround)
         {
-            var buttonTwo = GetNode<Button6>("../Button6");
+            var buttonTwo = GetNode<Button8>("../Button8");
             buttonTwo.MouseDeath += 1;
             GD.Print($"Rato mortes: {buttonTwo.MouseDeath}");
             GD.Print("Rato morreu (Area2D)");
