@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://cltu5kgw6i0yg"]
+[gd_scene load_steps=74 format=4 uid="uid://cltu5kgw6i0yg"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_1lry2"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_un2r7"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="6_fgt4w"]
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="7_c78tf"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="8_wu4ic"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://BabyCat.cs" id="9_py7ct"]
+[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="9_py7ct"]
 [ext_resource type="Texture2D" uid="uid://cii4hibh23w1x" path="res://sprites/Leaf.png" id="10_f7cnd"]
 [ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="11_nrsnt"]
 [ext_resource type="Texture2D" uid="uid://d0u5g3jbk1g84" path="res://sprites/Ballon.png" id="12_lxs5u"]
@@ -24,14 +24,16 @@
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="20_wu4ic"]
 [ext_resource type="Script" uid="uid://cyeqfeqb251ii" path="res://scripts/Button4.cs" id="22_4jxcx"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="22_f7cnd"]
+[ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="23_4rcgd"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="23_nrsnt"]
+[ext_resource type="Texture2D" uid="uid://b3co5x53qgxxq" path="res://sprites/stem3.png" id="24_6bttm"]
 [ext_resource type="Script" uid="uid://djlrhaoybjllx" path="res://scripts/Mouse2.cs" id="25_4jxcx"]
 [ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="25_8tubn"]
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="26_qr2pt"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="28_4jxcx"]
 [ext_resource type="Script" uid="uid://cbvelupw7586h" path="res://scripts/Thorn2.cs" id="28_yob8s"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8tubn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4rcgd"]
 texture = ExtResource("1_1lry2")
 5:2/0 = 0
 8:2/0 = 0
@@ -46,7 +48,7 @@ texture = ExtResource("1_1lry2")
 6:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qr2pt"]
-sources/0 = SubResource("TileSetAtlasSource_8tubn")
+sources/0 = SubResource("TileSetAtlasSource_4rcgd")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4jxcx"]
 shader = ExtResource("2_un2r7")
@@ -54,76 +56,28 @@ shader_parameter/WindStrength = 2.0
 
 [sub_resource type="Animation" id="Animation_mryly"]
 resource_name = "EndTutorial"
-length = 16.0
+length = 6.0
 step = 60.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cutscene Caracters/Sprite2D2:position")
+tracks/0/path = NodePath("Cutscene Caracters/Sprite2D5:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.993333, 2.06407, 2.99333, 3.53333, 4.4, 5.17, 6.03333, 7.52667, 8.43333, 9.56667, 10.3767, 11.09, 11.91, 12.8467, 13.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-98, 0), Vector2(-48, 0), Vector2(-48, 0), Vector2(-45, -36), Vector2(-60, -53), Vector2(-102, -48), Vector2(-115, -122), Vector2(-145, -112), Vector2(-87, -154), Vector2(-57, -144), Vector2(-75, -192), Vector2(-95, -209), Vector2(-137, -192), Vector2(-132, -256), Vector2(-124, -296), Vector2(-91, -288)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Cutscene Caracters/Sprite2D2:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.35, 1.97333, 6, 6.28, 8.43333, 8.56667, 10.9333, 11.0349),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Cutscene Caracters/Sprite2D4:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.4577, 2.21927, 3.13333, 4.23371, 5.3267, 5.92207, 6.63333, 7, 8.13333, 9.9602, 11.5771, 12.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-253, 0), Vector2(-194, 0), Vector2(-179, -64), Vector2(-144, -65), Vector2(-109, -48), Vector2(-97, -90), Vector2(-95, -134), Vector2(-86, -165), Vector2(-56, -156), Vector2(-58, -144), Vector2(-85.6793, -232.574), Vector2(-139, -192), Vector2(-124, -298), Vector2(-103, -288)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Cutscene Caracters/Sprite2D4:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(6.93333, 7.0077, 9.88131, 9.96667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene Caracters/Sprite2D5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.266667, 0.566667, 0.933333, 1.36667, 1.83333, 2.23333, 2.66667, 3.2, 5.30024, 5.5669, 5.8669, 6.23357, 6.6669, 7.13357, 7.53357, 7.9669, 8.50024, 11.4454, 11.712, 12.012, 12.3787, 12.812, 13.2787, 13.6787, 14.112, 14.6454),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0), Vector2(-158, -24), Vector2(-158, 0)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene Caracters/Sprite2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(1.93333, 2.1999, 2.5, 2.86667, 3.3025, 3.76696, 4.16667, 4.6, 5.13333, 6.26667, 6.53323, 6.83333, 7.2, 7.63583, 8.1003, 8.5, 8.93333, 9.46667, 12.0355, 12.3021, 12.6022, 12.9689, 13.4047, 13.8692, 14.2689, 14.7022, 15.2355),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene Caracters/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26657, 0.56667, 0.93334, 1.36917, 1.83363, 2.23334, 2.66667, 3.2, 4.33334, 4.5999, 4.9, 5.26667, 5.7025, 6.16697, 6.56667, 7, 7.53334, 10.1022, 10.3688, 10.6689, 11.0356, 11.4714, 11.9359, 12.3356, 12.7689, 13.3022),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0), Vector2(-57, -11), Vector2(-57, 0)]
@@ -134,70 +88,22 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Cutscene Caracters/Sprite2D2:position")
+tracks/0/path = NodePath("Cutscene Caracters/Sprite2D5:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-98, 0)]
+"values": [Vector2(-158, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Cutscene Caracters/Sprite2D2:scale")
+tracks/1/path = NodePath("Cutscene Caracters/Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Cutscene Caracters/Sprite2D4:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-253, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Cutscene Caracters/Sprite2D4:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Cutscene Caracters/Sprite2D5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-158, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Cutscene Caracters/Sprite2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -210,9 +116,103 @@ _data = {
 &"RESET": SubResource("Animation_kq1c5")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yob8s"]
-shader = ExtResource("2_un2r7")
-shader_parameter/WindStrength = 2.0
+[sub_resource type="Animation" id="Animation_6bttm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 189)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Balance/Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Balance:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0mta1"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Balance:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4rcgd"]
+resource_name = "plataform"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(280, 189), Vector2(280, 214), Vector2(280, 48), Vector2(280, 189)]
+}
+
+[sub_resource type="Animation" id="Animation_h5aeu"]
+resource_name = "scale objects"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Balance/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h5aeu"]
+_data = {
+&"RESET": SubResource("Animation_6bttm"),
+&"new_animation": SubResource("Animation_0mta1"),
+&"plataform": SubResource("Animation_4rcgd"),
+&"scale objects": SubResource("Animation_h5aeu")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4rcgd"]
 shader = ExtResource("2_un2r7")
@@ -233,7 +233,7 @@ size = Vector2(8, 5)
 shader = ExtResource("2_un2r7")
 shader_parameter/WindStrength = 2.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f53w2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6bttm"]
 texture = ExtResource("3_sa2wl")
 0:0/0 = 0
 1:0/0 = 0
@@ -699,9 +699,9 @@ texture = ExtResource("3_sa2wl")
 21:21/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_xqlue"]
-sources/0 = SubResource("TileSetAtlasSource_f53w2")
+sources/0 = SubResource("TileSetAtlasSource_6bttm")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atwxa"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5aeu"]
 texture = ExtResource("1_1lry2")
 2:2/0 = 0
 3:2/0 = 0
@@ -860,7 +860,7 @@ texture = ExtResource("1_1lry2")
 26:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qal23"]
-sources/0 = SubResource("TileSetAtlasSource_atwxa")
+sources/0 = SubResource("TileSetAtlasSource_h5aeu")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bkb11"]
 particles_animation = true
@@ -880,7 +880,7 @@ scale_min = 0.25
 scale_max = 0.5
 anim_offset_max = 1.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kenpg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yjf6y"]
 texture = ExtResource("11_nrsnt")
 0:0/0 = 0
 1:0/0 = 0
@@ -1052,7 +1052,7 @@ texture = ExtResource("11_nrsnt")
 11:12/0 = 0
 12:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sf1aj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ua55d"]
 texture = ExtResource("1_1lry2")
 5:2/0 = 0
 4:4/0 = 0
@@ -1246,10 +1246,10 @@ texture = ExtResource("1_1lry2")
 
 [sub_resource type="TileSet" id="TileSet_h6hrc"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_kenpg")
-sources/1 = SubResource("TileSetAtlasSource_sf1aj")
+sources/0 = SubResource("TileSetAtlasSource_yjf6y")
+sources/1 = SubResource("TileSetAtlasSource_ua55d")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tag0u"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f53w2"]
 texture = ExtResource("1_1lry2")
 13:1/0 = 0
 14:1/0 = 0
@@ -1326,9 +1326,9 @@ texture = ExtResource("1_1lry2")
 
 [sub_resource type="TileSet" id="TileSet_svmkl"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_tag0u")
+sources/0 = SubResource("TileSetAtlasSource_f53w2")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhtr7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xqlue"]
 texture = ExtResource("1_1lry2")
 13:1/0 = 0
 14:1/0 = 0
@@ -1404,9 +1404,9 @@ texture = ExtResource("1_1lry2")
 
 [sub_resource type="TileSet" id="TileSet_dy7en"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jhtr7")
+sources/0 = SubResource("TileSetAtlasSource_xqlue")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bp6pi"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atwxa"]
 texture = ExtResource("12_lxs5u")
 use_texture_padding = false
 1:3/0 = 0
@@ -1414,12 +1414,12 @@ use_texture_padding = false
 3:3/0 = 0
 2:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3q8yx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qal23"]
 texture = ExtResource("13_i5kdi")
 
 [sub_resource type="TileSet" id="TileSet_nd4eu"]
-sources/0 = SubResource("TileSetAtlasSource_bp6pi")
-sources/1 = SubResource("TileSetAtlasSource_3q8yx")
+sources/0 = SubResource("TileSetAtlasSource_atwxa")
+sources/1 = SubResource("TileSetAtlasSource_qal23")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wu4ic"]
 shader = ExtResource("16_fgt4w")
@@ -1450,6 +1450,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5kdi"]
 size = Vector2(16, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5aeu"]
+size = Vector2(16, 5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yjf6y"]
 shader = ExtResource("2_un2r7")
@@ -1502,19 +1505,20 @@ libraries = {
 &"": SubResource("AnimationLibrary_ornx7")
 }
 
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Level Design/Cutscene"]
+libraries = {
+&"": SubResource("AnimationLibrary_h5aeu")
+}
+autoplay = "plataform"
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Level Design/Cutscene"]
+libraries = {
+&"": SubResource("AnimationLibrary_h5aeu")
+}
+autoplay = "scale objects"
+
 [node name="Cutscene Caracters" type="Node2D" parent="Level Design/Cutscene"]
 position = Vector2(334, 328)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
-material = SubResource("ShaderMaterial_yob8s")
-position = Vector2(-98, 0)
-texture = ExtResource("5_rn5j6")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
-material = SubResource("ShaderMaterial_4rcgd")
-position = Vector2(-253, 0)
-scale = Vector2(-1, 1)
-texture = ExtResource("6_fgt4w")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
 material = SubResource("ShaderMaterial_4rcgd")
@@ -1654,7 +1658,7 @@ texture = ExtResource("14_xjhb4")
 
 [node name="Balance" type="Area2D" parent="." groups=["BalanceGroup"]]
 texture_filter = 1
-position = Vector2(314, 40)
+position = Vector2(184, 88)
 script = ExtResource("15_rn5j6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Balance"]
@@ -1725,8 +1729,21 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_i5kdi")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
+[node name="MovingPlataform" type="CharacterBody2D" parent="." groups=["Ground"]]
+position = Vector2(280, 189)
+motion_mode = 1
+script = ExtResource("23_4rcgd")
+
+[node name="Sprite2D" type="Sprite2D" parent="MovingPlataform"]
+position = Vector2(4, 0)
+texture = ExtResource("24_6bttm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlataform"]
+position = Vector2(-12, 5.5)
+shape = SubResource("RectangleShape2D_h5aeu")
+
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("18_fgt4w")]
-position = Vector2(43, 101)
+position = Vector2(200, 328)
 LayoutScene = ExtResource("20_wu4ic")
 MaxClones = 3
 MoveSpeed = 100.0
