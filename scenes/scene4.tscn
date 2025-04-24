@@ -1,48 +1,41 @@
-[gd_scene load_steps=101 format=4 uid="uid://dqardypu0bmae"]
+[gd_scene load_steps=76 format=4 uid="uid://bwos4bd5xn0ix"]
 
-[ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_jbe0f"]
-[ext_resource type="Script" uid="uid://4lgosbna75jx" path="res://gd_scripts/Scene.gd" id="1_mjc06"]
-[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_4h62v"]
-[ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="3_3xme2"]
-[ext_resource type="Script" uid="uid://bcvusxpjy5dac" path="res://gd_scripts/Cutscene.gd" id="5_18cm1"]
-[ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="5_dd1nq"]
-[ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="6_n44gx"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_qm6k1"]
-[ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="8_kqw04"]
-[ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="9_aioai"]
-[ext_resource type="Script" uid="uid://dc2o2f2d7ehnr" path="res://scripts/Button3.cs" id="10_kumqt"]
-[ext_resource type="Texture2D" uid="uid://bmpmh2t21meyy" path="res://sprites/LightBoss.png" id="10_n44gx"]
-[ext_resource type="Texture2D" uid="uid://cii4hibh23w1x" path="res://sprites/Leaf.png" id="10_qtgef"]
-[ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="11_anl7x"]
-[ext_resource type="Texture2D" uid="uid://cvrwin7vu542o" path="res://sprites/stem.png" id="12_aioai"]
-[ext_resource type="Texture2D" uid="uid://d0u5g3jbk1g84" path="res://sprites/Ballon.png" id="12_xty6v"]
-[ext_resource type="Texture2D" uid="uid://cce26jplrt58v" path="res://sprites/Shift.png" id="13_tgpcg"]
-[ext_resource type="Texture2D" uid="uid://dhg4yy3qasuf6" path="res://sprites/Reload.png" id="14_eol8u"]
-[ext_resource type="Script" uid="uid://cqqcmcu3yd6oj" path="res://gd_scripts/Button2.gd" id="14_vkbqs"]
-[ext_resource type="Texture2D" uid="uid://c215ftoq0is4o" path="res://sprites/Enemy.png" id="15_dd1nq"]
-[ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://player.tscn" id="15_i280t"]
-[ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="16_dd1nq"]
-[ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="17_kqw04"]
-[ext_resource type="Texture2D" uid="uid://b3co5x53qgxxq" path="res://sprites/stem3.png" id="18_aioai"]
-[ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="18_mjc06"]
-[ext_resource type="Script" uid="uid://b7vgsxc4d013j" path="res://gd_scripts/Thorn2.gd" id="23_vkbqs"]
-[ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="24_bxhpy"]
-[ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="24_tgpcg"]
-[ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="25_eol8u"]
-[ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="25_qjr5j"]
-[ext_resource type="Script" uid="uid://cjbwuxp416a8l" path="res://gd_scripts/Boss.gd" id="25_xws1k"]
-[ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="29_kumqt"]
-[ext_resource type="Script" uid="uid://bebnios2xc2io" path="res://scripts/Mouse4.cs" id="29_u1jg5"]
-[ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="30_ptb7q"]
-[ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="31_fjmpp"]
-[ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="33_f1xyl"]
-[ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="37_mjc06"]
-[ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="37_xws1k"]
-[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://clone.tscn" id="38_f1xyl"]
-[ext_resource type="Script" uid="uid://dcnjww4kjla4x" path="res://gd_scripts/Fade.gd" id="39_5osp5"]
+[ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_rj35a"]
+[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_68fmk"]
+[ext_resource type="Texture2D" uid="uid://b37y3tyo2peip" path="res://sprites/Grouded-expor2t.png" id="3_k6tve"]
+[ext_resource type="Script" uid="uid://bcvusxpjy5dac" path="res://gd_scripts/Cutscene.gd" id="4_ligmg"]
+[ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="5_ks01w"]
+[ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="6_2fd8t"]
+[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_c3itq"]
+[ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="8_brm7h"]
+[ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="9_wd1dq"]
+[ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="10_fcyp3"]
+[ext_resource type="Texture2D" uid="uid://cii4hibh23w1x" path="res://sprites/Leaf.png" id="11_h2fv6"]
+[ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="12_010m7"]
+[ext_resource type="Texture2D" uid="uid://d0u5g3jbk1g84" path="res://sprites/Ballon.png" id="13_dn3eg"]
+[ext_resource type="Texture2D" uid="uid://cce26jplrt58v" path="res://sprites/Shift.png" id="14_brqit"]
+[ext_resource type="Texture2D" uid="uid://dhg4yy3qasuf6" path="res://sprites/Reload.png" id="15_p3st1"]
+[ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="16_e27yk"]
+[ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="17_jqk76"]
+[ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="18_3tgdw"]
+[ext_resource type="Script" uid="uid://dc2o2f2d7ehnr" path="res://scripts/Button3.cs" id="19_g1wqg"]
+[ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="20_q0f4g"]
+[ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="21_kt42d"]
+[ext_resource type="Script" uid="uid://cqqcmcu3yd6oj" path="res://gd_scripts/Button2.gd" id="22_u553q"]
+[ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://scenes/player.tscn" id="23_qf2e0"]
+[ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="24_3lrh2"]
+[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="25_cs572"]
+[ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://scenes/layout.tscn" id="26_xyg83"]
+[ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="27_v72xw"]
+[ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="28_jaitq"]
+[ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="29_ubny0"]
+[ext_resource type="Script" uid="uid://dhnedrpxsisqp" path="res://gd_scripts/Thorn.gd" id="30_dy161"]
+[ext_resource type="PackedScene" uid="uid://dqardypu0bmae" path="res://scenes/scene5.tscn" id="31_cacqa"]
+[ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="32_stnf8"]
+[ext_resource type="Script" uid="uid://dcnjww4kjla4x" path="res://gd_scripts/Fade.gd" id="33_15jo5"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xws1k"]
-texture = ExtResource("1_jbe0f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnxmt"]
+texture = ExtResource("1_rj35a")
 5:2/0 = 0
 8:2/0 = 0
 4:4/0 = 0
@@ -55,11 +48,11 @@ texture = ExtResource("1_jbe0f")
 5:6/0 = 0
 6:6/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_bxhpy"]
-sources/0 = SubResource("TileSetAtlasSource_xws1k")
+[sub_resource type="TileSet" id="TileSet_uimed"]
+sources/0 = SubResource("TileSetAtlasSource_xnxmt")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qjr5j"]
-shader = ExtResource("2_4h62v")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ip5lv"]
+shader = ExtResource("2_68fmk")
 shader_parameter/WindStrength = 2.0
 
 [sub_resource type="Animation" id="Animation_mryly"]
@@ -222,165 +215,27 @@ _data = {
 &"scale objects": SubResource("Animation_h5aeu")
 }
 
-[sub_resource type="Animation" id="Animation_qm6k1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Light:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.34, 0.34)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Light:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-16, 173)]
-}
-
-[sub_resource type="Animation" id="Animation_n44gx"]
-resource_name = "light"
-length = 12.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Light:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.02, 2, 2.5, 4, 4.5, 4.93, 5, 5.03333, 5.06667, 5.07119, 5.96667, 7.33333, 8.4, 9.55616, 9.67444, 9.82853, 10.0962, 10.2095, 10.9333, 11.4, 11.7099, 11.8667, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0.34, 0.34), Vector2(0.34, 0.34), Vector2(0.34, 0.34), Vector2(0.34, 0.34), Vector2(3.775, 0.34), Vector2(3.775, 0.34), Vector2(3.775, 0.34), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0.34, 0.34), Vector2(0.34, 0.34), Vector2(0.34, 0.34), Vector2(3.995, 0.34), Vector2(3.995, 0.34), Vector2(0.34, 0.34), Vector2(0, 0), Vector2(0, 0), Vector2(2.575, 1e-05), Vector2(2.575, 0.005), Vector2(2.575, 0.005), Vector2(2.575, 0.18), Vector2(2.575, 0.18), Vector2(2.575, 0.18)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Light:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.02, 2, 2.5, 4.01, 4.51, 4.93, 5, 5.03333, 5.06667, 5.06678, 5.07119, 5.96667, 7.33333, 8.4, 9.55616, 9.67444, 9.82853, 10.0619, 10.9619, 11.4285, 11.7099, 11.8667, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-16, 173), Vector2(5, -147), Vector2(24, -148), Vector2(24, 181), Vector2(24, 181), Vector2(24, 181), Vector2(24, 541), Vector2(2.66665, 912), Vector2(396, 912), Vector2(396, 912), Vector2(393.818, -514), Vector2(329, -151), Vector2(329, 175), Vector2(329, 175), Vector2(329, 175), Vector2(329, 521), Vector2(370, 521), Vector2(368, 228), Vector2(176, 193), Vector2(176, 193), Vector2(176, 193), Vector2(176, 263), Vector2(176, 444), Vector2(176, 444)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kqw04"]
-_data = {
-&"RESET": SubResource("Animation_qm6k1"),
-&"light": SubResource("Animation_n44gx")
-}
-
-[sub_resource type="Animation" id="Animation_aioai"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../MovingPlataform2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(131, 88)]
-}
-
-[sub_resource type="Animation" id="Animation_kqw04"]
-resource_name = "plataform3"
-length = 5.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../MovingPlataform2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.49876, 5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(123, 88), Vector2(244, 88), Vector2(123, 88)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtgef"]
-_data = {
-&"RESET": SubResource("Animation_aioai"),
-&"plataform3": SubResource("Animation_kqw04")
-}
-
-[sub_resource type="Animation" id="Animation_anl7x"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../MovingPlataform3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(40, 188)]
-}
-
-[sub_resource type="Animation" id="Animation_qtgef"]
-resource_name = "plataform54"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../MovingPlataform3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333334, 2, 4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(40, 188), Vector2(40, 34), Vector2(40, 188)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xty6v"]
-_data = {
-&"RESET": SubResource("Animation_anl7x"),
-&"plataform54": SubResource("Animation_qtgef")
-}
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kumqt"]
-shader = ExtResource("2_4h62v")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bik31"]
+shader = ExtResource("2_68fmk")
 shader_parameter/WindStrength = 2.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4id1h"]
-shader = ExtResource("2_4h62v")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3v16l"]
+shader = ExtResource("2_68fmk")
 shader_parameter/WindStrength = 5.67
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ffiul"]
-shader = ExtResource("2_4h62v")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k8leh"]
+shader = ExtResource("2_68fmk")
 shader_parameter/WindStrength = 2.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1jg5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g41qa"]
 size = Vector2(8, 5)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ptb7q"]
-shader = ExtResource("2_4h62v")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bob47"]
+shader = ExtResource("2_68fmk")
 shader_parameter/WindStrength = 2.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_50h4b"]
-texture = ExtResource("3_3xme2")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxclo"]
+texture = ExtResource("10_fcyp3")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -844,11 +699,11 @@ texture = ExtResource("3_3xme2")
 20:21/0 = 0
 21:21/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_xws1k"]
-sources/0 = SubResource("TileSetAtlasSource_50h4b")
+[sub_resource type="TileSet" id="TileSet_vgagl"]
+sources/0 = SubResource("TileSetAtlasSource_hxclo")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_18cm1"]
-texture = ExtResource("1_jbe0f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kd3kf"]
+texture = ExtResource("1_rj35a")
 2:2/0 = 0
 3:2/0 = 0
 5:2/0 = 0
@@ -1005,160 +860,29 @@ texture = ExtResource("1_jbe0f")
 25:5/0 = 0
 26:5/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_18cm1"]
-sources/0 = SubResource("TileSetAtlasSource_18cm1")
+[sub_resource type="TileSet" id="TileSet_ygari"]
+sources/0 = SubResource("TileSetAtlasSource_kd3kf")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkbqs"]
-texture = ExtResource("1_jbe0f")
-13:1/0 = 0
-14:1/0 = 0
-19:1/0 = 0
-20:1/0 = 0
-21:1/0 = 0
-22:1/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-5:2/0 = 0
-8:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-19:2/0 = 0
-20:2/0 = 0
-21:2/0 = 0
-22:2/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-10:3/0 = 0
-19:3/0 = 0
-20:3/0 = 0
-21:3/0 = 0
-22:3/0 = 0
-23:3/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-8:4/0 = 0
-8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:4/0 = 0
-9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-10:4/0 = 0
-10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-17:4/0 = 0
-18:4/0 = 0
-19:4/0 = 0
-20:4/0 = 0
-21:4/0 = 0
-22:4/0 = 0
-23:4/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-16:5/0 = 0
-17:5/0 = 0
-18:5/0 = 0
-19:5/0 = 0
-20:5/0 = 0
-21:5/0 = 0
-22:5/0 = 0
-23:5/0 = 0
-24:5/0 = 0
-25:5/0 = 0
-26:5/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-6:9/0 = 0
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dhjrm"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
-[sub_resource type="TileSet" id="TileSet_a57w3"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vkbqs")
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kia7e"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(300, 300, 1)
+spread = 20.0
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 10, 0)
+scale_min = 0.25
+scale_max = 0.5
+anim_offset_max = 1.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4id1h"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("24_tgpcg")
-}],
-"loop": true,
-"name": &"ButtonClicked",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("25_eol8u")
-}],
-"loop": true,
-"name": &"ButtonDefault",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffiul"]
-size = Vector2(16, 8)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_r8vtu"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("24_tgpcg")
-}],
-"loop": true,
-"name": &"ButtonClicked",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("25_eol8u")
-}],
-"loop": true,
-"name": &"ButtonDefault",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxhpy"]
-size = Vector2(16, 8)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtgef"]
-size = Vector2(18, 5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aioai"]
-size = Vector2(48, 5)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xws1k"]
-shader = ExtResource("2_4h62v")
-shader_parameter/WindStrength = 2.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_50h4b"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("30_ptb7q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_fjmpp")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_18cm1"]
-size = Vector2(11, 6)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mjc06"]
-texture = ExtResource("11_anl7x")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkjcl"]
+texture = ExtResource("12_010m7")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1329,8 +1053,8 @@ texture = ExtResource("11_anl7x")
 11:12/0 = 0
 12:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1xyl"]
-texture = ExtResource("1_jbe0f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aafsy"]
+texture = ExtResource("1_rj35a")
 5:2/0 = 0
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1521,48 +1245,13 @@ texture = ExtResource("1_jbe0f")
 21:7/0 = 0
 22:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_5osp5"]
+[sub_resource type="TileSet" id="TileSet_fv5a8"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_mjc06")
-sources/1 = SubResource("TileSetAtlasSource_f1xyl")
+sources/0 = SubResource("TileSetAtlasSource_xkjcl")
+sources/1 = SubResource("TileSetAtlasSource_aafsy")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4id1h"]
-size = Vector2(15, 4)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_n44gx"]
-shader = ExtResource("2_4h62v")
-shader_parameter/WindStrength = 2.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qm6k1"]
-size = Vector2(47.0588, 941.177)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dd1nq"]
-shader = ExtResource("2_4h62v")
-shader_parameter/WindStrength = 5.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n44gx"]
-size = Vector2(124, 10.5)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vkbqs"]
-particles_animation = true
-particles_anim_h_frames = 5
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mjc06"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(300, 300, 1)
-spread = 20.0
-initial_velocity_min = 20.0
-initial_velocity_max = 50.0
-gravity = Vector3(0, 10, 0)
-scale_min = 0.25
-scale_max = 0.5
-anim_offset_max = 1.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qixq3"]
-texture = ExtResource("1_jbe0f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bfhc"]
+texture = ExtResource("1_rj35a")
 13:1/0 = 0
 14:1/0 = 0
 19:1/0 = 0
@@ -1636,170 +1325,180 @@ texture = ExtResource("1_jbe0f")
 13:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:9/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_xwqjw"]
+[sub_resource type="TileSet" id="TileSet_ow5vw"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_qixq3")
+sources/0 = SubResource("TileSetAtlasSource_3bfhc")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5osp5"]
-texture = ExtResource("12_xty6v")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ragx8"]
+texture = ExtResource("1_rj35a")
+13:1/0 = 0
+14:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+8:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+10:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+6:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_586gu"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ragx8")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uimed"]
+texture = ExtResource("13_dn3eg")
 use_texture_padding = false
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
 2:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tn8ni"]
-texture = ExtResource("13_tgpcg")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ip5lv"]
+texture = ExtResource("14_brqit")
 
-[sub_resource type="TileSet" id="TileSet_v2217"]
-sources/0 = SubResource("TileSetAtlasSource_5osp5")
-sources/1 = SubResource("TileSetAtlasSource_tn8ni")
+[sub_resource type="TileSet" id="TileSet_85f40"]
+sources/0 = SubResource("TileSetAtlasSource_uimed")
+sources/1 = SubResource("TileSetAtlasSource_ip5lv")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u1jg5"]
-shader = ExtResource("24_bxhpy")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j3ml4"]
+shader = ExtResource("17_jqk76")
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_intensity = 0.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptb7q"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4oe5"]
 size = Vector2(14, 14)
 
-[sub_resource type="Animation" id="Animation_xws1k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("UI/Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UI/Panel/VBoxContainer/Label:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:visible_ratio")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:text")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["You're interfering with my black-market kibble stash! Those stray cats don’t deserve the chow I stole! I'm gonna finish you off, Gatito!"]
-}
+[sub_resource type="SpriteFrames" id="SpriteFrames_hxclo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_q0f4g")
+}],
+"loop": true,
+"name": &"ButtonClicked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_kt42d")
+}],
+"loop": true,
+"name": &"ButtonDefault",
+"speed": 5.0
+}]
 
-[sub_resource type="Animation" id="Animation_fjmpp"]
-resource_name = "initial1"
-length = 12.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("UI/Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UI/Panel/VBoxContainer/Label:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.49),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Oswald \"Cookiehead\" Mobster"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:text")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.494093),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["You're interfering with my black-market kibble stash! Those stray cats don’t deserve the chow I stole! I'm gonna finish you off, Gatito! You're the villain here, not me!"]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("UI/Panel/VBoxContainer/Label:visible_ratio")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.541908, 2.03333, 10, 12),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 1.0, 1.0, 1.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:visible_ratio")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1.86667, 9.96667, 15),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 1.0, 1.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("UI/Panel/VBoxContainer/Label:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.396078, 0.858824, 0.45098, 1)]
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kd3kf"]
+size = Vector2(16, 8)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_50h4b"]
-_data = {
-&"RESET": SubResource("Animation_xws1k"),
-&"initial1": SubResource("Animation_fjmpp")
-}
+[sub_resource type="SpriteFrames" id="SpriteFrames_3bfhc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_q0f4g")
+}],
+"loop": true,
+"name": &"ButtonClicked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_kt42d")
+}],
+"loop": true,
+"name": &"ButtonDefault",
+"speed": 5.0
+}]
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("animated", "animatedtw")]
-script = ExtResource("1_mjc06")
-animated = NodePath("Level Design/Cutscene/AnimationPlayer4")
-animatedtw = NodePath("Cutscene Initial/AnimationPlayer")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ragx8"]
+size = Vector2(16, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2k10o"]
+shader = ExtResource("2_68fmk")
+shader_parameter/WindStrength = 2.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6ljc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_jaitq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ubny0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12vaj"]
+size = Vector2(11, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uimed"]
+size = Vector2(15, 4)
+
+[node name="Node2D" type="Node2D"]
 
 [node name="Level Design" type="Node2D" parent="."]
 
@@ -1807,18 +1506,18 @@ animatedtw = NodePath("Cutscene Initial/AnimationPlayer")
 visibility_layer = 4
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAAAAAAAAAIAAIAAAAAAAEAAAAIAAIAAAAAAAIAAAAIAAIAAAAAAAMAAAAIAAIAAAAAAAQAAAAIAAIAAAAAAAUAAAAIAAIAAAAAAAYAAAAIAAIAAAAAAAcAAAAIAAIAAAAAAAgAAAAIAAIAAAAAAAkAAAAIAAIAAAAAAAoAAAAIAAIAAAAAAAsAAAAIAAIAAAAAAAwAAAAIAAIAAAAAAA0AAAAIAAIAAAAAAA4AAAAIAAIAAAAAAA8AAAAIAAIAAAAAABAAAAAIAAIAAAAAABEAAAAIAAIAAAAAABIAAAAIAAIAAAABAAAAAAAIAAIAAAABAAEAAAAIAAIAAAABAAIAAAAIAAIAAAABAAMAAAAIAAIAAAABAAQAAAAIAAIAAAABAAUAAAAIAAIAAAABAAYAAAAIAAIAAAABAAcAAAAIAAIAAAABAAgAAAAIAAIAAAABAAkAAAAIAAIAAAABAAoAAAAIAAIAAAABAAsAAAAIAAIAAAABAAwAAAAIAAIAAAABAA0AAAAIAAIAAAABAA4AAAAIAAIAAAABAA8AAAAIAAIAAAABABAAAAAIAAIAAAABABEAAAAIAAIAAAABABIAAAAIAAIAAAACAAAAAAAIAAIAAAACAAEAAAAIAAIAAAACAAIAAAAIAAIAAAACAAMAAAAIAAIAAAACAAQAAAAIAAIAAAACAAUAAAAIAAIAAAACAAYAAAAIAAIAAAACAAcAAAAIAAIAAAACAAgAAAAIAAIAAAACAAkAAAAIAAIAAAACAAoAAAAIAAIAAAACAAsAAAAIAAIAAAACAAwAAAAIAAIAAAACAA0AAAAIAAIAAAACAA4AAAAIAAIAAAACAA8AAAAIAAIAAAACABAAAAAIAAIAAAACABEAAAAIAAIAAAACABIAAAAIAAIAAAADAAAAAAAIAAIAAAADAAEAAAAIAAIAAAADAAIAAAAIAAIAAAADAAMAAAAIAAIAAAADAAQAAAAIAAIAAAADAAUAAAAIAAIAAAADAAYAAAAIAAIAAAADAAcAAAAIAAIAAAADAAgAAAAIAAIAAAADAAkAAAAIAAIAAAADAAoAAAAIAAIAAAADAAsAAAAIAAIAAAADAAwAAAAIAAIAAAADAA0AAAAIAAIAAAADAA4AAAAIAAIAAAADAA8AAAAIAAIAAAADABAAAAAIAAIAAAADABEAAAAIAAIAAAADABIAAAAIAAIAAAAEAAAAAAAIAAIAAAAEAAEAAAAIAAIAAAAEAAIAAAAIAAIAAAAEAAMAAAAIAAIAAAAEAAQAAAAIAAIAAAAEAAUAAAAIAAIAAAAEAAYAAAAIAAIAAAAEAAcAAAAIAAIAAAAEAAgAAAAIAAIAAAAEAAkAAAAIAAIAAAAEAAoAAAAIAAIAAAAEAAsAAAAIAAIAAAAEAAwAAAAIAAIAAAAEAA0AAAAIAAIAAAAEAA4AAAAIAAIAAAAEAA8AAAAIAAIAAAAEABAAAAAIAAIAAAAEABEAAAAIAAIAAAAEABIAAAAIAAIAAAAFAAAAAAAIAAIAAAAFAAEAAAAIAAIAAAAFAAIAAAAIAAIAAAAFAAMAAAAIAAIAAAAFAAQAAAAIAAIAAAAFAAUAAAAIAAIAAAAFAAYAAAAIAAIAAAAFAAcAAAAIAAIAAAAFAAgAAAAIAAIAAAAFAAkAAAAIAAIAAAAFAAoAAAAIAAIAAAAFAAsAAAAIAAIAAAAFAAwAAAAIAAIAAAAFAA0AAAAIAAIAAAAFAA4AAAAIAAIAAAAFAA8AAAAIAAIAAAAFABAAAAAIAAIAAAAFABEAAAAIAAIAAAAFABIAAAAIAAIAAAAGAAAAAAAIAAIAAAAGAAEAAAAIAAIAAAAGAAIAAAAIAAIAAAAGAAMAAAAIAAIAAAAGAAQAAAAIAAIAAAAGAAUAAAAIAAIAAAAGAAYAAAAIAAIAAAAGAAcAAAAIAAIAAAAGAAgAAAAIAAIAAAAGAAkAAAAIAAIAAAAGAAoAAAAIAAIAAAAGAAsAAAAIAAIAAAAGAAwAAAAIAAIAAAAGAA0AAAAIAAIAAAAGAA4AAAAIAAIAAAAGAA8AAAAIAAIAAAAGABAAAAAIAAIAAAAGABEAAAAIAAIAAAAGABIAAAAIAAIAAAAHAAAAAAAIAAIAAAAHAAEAAAAIAAIAAAAHAAIAAAAIAAIAAAAHAAMAAAAIAAIAAAAHAAQAAAAIAAIAAAAHAAUAAAAIAAIAAAAHAAYAAAAIAAIAAAAHAAcAAAAIAAIAAAAHAAgAAAAIAAIAAAAHAAkAAAAIAAIAAAAHAAoAAAAIAAIAAAAHAAsAAAAIAAIAAAAHAAwAAAAIAAIAAAAHAA0AAAAIAAIAAAAHAA4AAAAIAAIAAAAHAA8AAAAIAAIAAAAHABAAAAAIAAIAAAAHABEAAAAIAAIAAAAHABIAAAAIAAIAAAAIAAAAAAAIAAIAAAAIAAEAAAAIAAIAAAAIAAIAAAAIAAIAAAAIAAMAAAAIAAIAAAAIAAQAAAAIAAIAAAAIAAUAAAAIAAIAAAAIAAYAAAAIAAIAAAAIAAcAAAAIAAIAAAAIAAgAAAAIAAIAAAAIAAkAAAAIAAIAAAAIAAoAAAAIAAIAAAAIAAsAAAAIAAIAAAAIAAwAAAAIAAIAAAAIAA0AAAAIAAIAAAAIAA4AAAAIAAIAAAAIAA8AAAAIAAIAAAAIABAAAAAIAAIAAAAIABEAAAAIAAIAAAAIABIAAAAIAAIAAAAJAAAAAAAIAAIAAAAJAAEAAAAIAAIAAAAJAAIAAAAIAAIAAAAJAAMAAAAIAAIAAAAJAAQAAAAIAAIAAAAJAAUAAAAIAAIAAAAJAAYAAAAIAAIAAAAJAAcAAAAIAAIAAAAJAAgAAAAIAAIAAAAJAAkAAAAIAAIAAAAJAAoAAAAIAAIAAAAJAAsAAAAIAAIAAAAJAAwAAAAIAAIAAAAJAA0AAAAIAAIAAAAJAA4AAAAIAAIAAAAJAA8AAAAIAAIAAAAJABAAAAAIAAIAAAAJABEAAAAIAAIAAAAJABIAAAAIAAIAAAAKAAAAAAAIAAIAAAAKAAEAAAAIAAIAAAAKAAIAAAAIAAIAAAAKAAMAAAAIAAIAAAAKAAQAAAAIAAIAAAAKAAUAAAAIAAIAAAAKAAYAAAAIAAIAAAAKAAcAAAAIAAIAAAAKAAgAAAAIAAIAAAAKAAkAAAAIAAIAAAAKAAoAAAAIAAIAAAAKAAsAAAAIAAIAAAAKAAwAAAAIAAIAAAAKAA0AAAAIAAIAAAAKAA4AAAAIAAIAAAAKAA8AAAAIAAIAAAAKABAAAAAIAAIAAAAKABEAAAAIAAIAAAAKABIAAAAIAAIAAAALAAAAAAAIAAIAAAALAAEAAAAIAAIAAAALAAIAAAAIAAIAAAALAAMAAAAIAAIAAAALAAQAAAAIAAIAAAALAAUAAAAIAAIAAAALAAYAAAAIAAIAAAALAAcAAAAIAAIAAAALAAgAAAAIAAIAAAALAAkAAAAIAAIAAAALAAoAAAAIAAIAAAALAAsAAAAIAAIAAAALAAwAAAAIAAIAAAALAA0AAAAIAAIAAAALAA4AAAAIAAIAAAALAA8AAAAIAAIAAAALABAAAAAIAAIAAAALABEAAAAIAAIAAAALABIAAAAIAAIAAAAMAAAAAAAIAAIAAAAMAAEAAAAIAAIAAAAMAAIAAAAIAAIAAAAMAAMAAAAIAAIAAAAMAAUAAAAIAAIAAAAMAAYAAAAIAAIAAAAMAAcAAAAIAAIAAAAMAAgAAAAIAAIAAAAMAAkAAAAIAAIAAAAMAAoAAAAIAAIAAAAMAAsAAAAIAAIAAAAMAAwAAAAIAAIAAAAMAA0AAAAIAAIAAAAMAA4AAAAIAAIAAAAMAA8AAAAIAAIAAAAMABAAAAAIAAIAAAAMABEAAAAIAAIAAAAMABIAAAAIAAIAAAANAAAAAAAIAAIAAAANAAEAAAAIAAIAAAANAAUAAAAIAAIAAAANAAYAAAAIAAIAAAANAAcAAAAIAAIAAAANAAgAAAAIAAIAAAANAAkAAAAIAAIAAAANAAoAAAAIAAIAAAANAAsAAAAIAAIAAAANAAwAAAAIAAIAAAANAA0AAAAIAAIAAAANAA4AAAAIAAIAAAANAA8AAAAIAAIAAAANABAAAAAIAAIAAAANABEAAAAIAAIAAAANABIAAAAIAAIAAAAOAAAAAAAIAAIAAAAOAAEAAAAIAAIAAAAOAAUAAAAIAAIAAAAOAAYAAAAIAAIAAAAOAAcAAAAIAAIAAAAOAAgAAAAIAAIAAAAOAAkAAAAIAAIAAAAOAAoAAAAIAAIAAAAOAAsAAAAIAAIAAAAOAAwAAAAIAAIAAAAOAA0AAAAIAAIAAAAOAA4AAAAIAAIAAAAOAA8AAAAIAAIAAAAOABAAAAAIAAIAAAAOABEAAAAIAAIAAAAOABIAAAAIAAIAAAAPAAAAAAAIAAIAAAAPAAEAAAAIAAIAAAAPAAUAAAAIAAIAAAAPAAYAAAAIAAIAAAAPAAcAAAAIAAIAAAAPAAgAAAAIAAIAAAAPAAkAAAAIAAIAAAAPAAoAAAAIAAIAAAAPAAsAAAAIAAIAAAAPAAwAAAAIAAIAAAAPAA0AAAAIAAIAAAAPAA4AAAAIAAIAAAAPAA8AAAAIAAIAAAAPABAAAAAIAAIAAAAPABEAAAAIAAIAAAAPABIAAAAIAAIAAAAQAAAAAAAIAAIAAAAQAAEAAAAIAAIAAAAQAAUAAAAIAAIAAAAQAAYAAAAIAAIAAAAQAAcAAAAIAAIAAAAQAAgAAAAIAAIAAAAQAAkAAAAIAAIAAAAQAAoAAAAIAAIAAAAQAAsAAAAIAAIAAAAQAAwAAAAIAAIAAAAQAA0AAAAIAAIAAAAQAA4AAAAIAAIAAAAQAA8AAAAIAAIAAAAQABAAAAAIAAIAAAAQABEAAAAIAAIAAAAQABIAAAAIAAIAAAARAAAAAAAIAAIAAAARAAEAAAAIAAIAAAARAAUAAAAIAAIAAAARAAYAAAAIAAIAAAARAAcAAAAIAAIAAAARAAgAAAAIAAIAAAARAAkAAAAIAAIAAAARAAoAAAAIAAIAAAARAAsAAAAIAAIAAAARAAwAAAAIAAIAAAARAA0AAAAIAAIAAAARAA4AAAAIAAIAAAARAA8AAAAIAAIAAAARABAAAAAIAAIAAAARABEAAAAIAAIAAAARABIAAAAIAAIAAAASAAAAAAAIAAIAAAASAAEAAAAIAAIAAAASAAIAAAAIAAIAAAASAAMAAAAIAAIAAAASAAUAAAAIAAIAAAASAAYAAAAIAAIAAAASAAcAAAAIAAIAAAASAAgAAAAIAAIAAAASAAkAAAAIAAIAAAASAAoAAAAIAAIAAAASAAsAAAAIAAIAAAASAAwAAAAIAAIAAAASAA0AAAAIAAIAAAASAA4AAAAIAAIAAAASAA8AAAAIAAIAAAASABAAAAAIAAIAAAASABEAAAAIAAIAAAASABIAAAAIAAIAAAATAAAAAAAIAAIAAAATAAEAAAAIAAIAAAATAAIAAAAIAAIAAAATAAMAAAAIAAIAAAATAAQAAAAIAAIAAAATAAUAAAAIAAIAAAATAAYAAAAIAAIAAAATAAcAAAAIAAIAAAATAAgAAAAIAAIAAAATAAkAAAAIAAIAAAATAAoAAAAIAAIAAAATAAsAAAAIAAIAAAATAAwAAAAIAAIAAAATAA0AAAAIAAIAAAATAA4AAAAIAAIAAAATAA8AAAAIAAIAAAATABAAAAAIAAIAAAATABEAAAAIAAIAAAATABIAAAAIAAIAAAAAABMAAAAIAAIAAAABABMAAAAIAAIAAAACABMAAAAIAAIAAAADABMAAAAIAAIAAAAEABQAAAAIAAIAAAAFABQAAAAIAAIAAAAGABQAAAAIAAIAAAAHABQAAAAIAAIAAAAIABQAAAAIAAIAAAAJABQAAAAIAAIAAAAKABQAAAAIAAIAAAALABQAAAAIAAIAAAAMABQAAAAIAAIAAAANABQAAAAIAAIAAAAOABQAAAAIAAIAAAAPABQAAAAIAAIAAAAQABQAAAAIAAIAAAARABQAAAAIAAIAAAASABQAAAAIAAIAAAATABQAAAAIAAIAAAAUABQAAAAIAAIAAAAAABQAAAAIAAIAAAAAABUAAAAIAAIAAAABABQAAAAIAAIAAAABABUAAAAIAAIAAAACABQAAAAIAAIAAAACABUAAAAIAAIAAAADABQAAAAIAAIAAAADABUAAAAIAAIAAAAEABMAAAAIAAIAAAAEABUAAAAIAAIAAAAFABMAAAAIAAIAAAAFABUAAAAIAAIAAAAGABMAAAAIAAIAAAAGABUAAAAIAAIAAAAHABMAAAAIAAIAAAAHABUAAAAIAAIAAAAIABMAAAAIAAIAAAAIABUAAAAIAAIAAAAJABMAAAAIAAIAAAAJABUAAAAIAAIAAAAKABMAAAAIAAIAAAAKABUAAAAIAAIAAAALABMAAAAIAAIAAAALABUAAAAIAAIAAAAMABMAAAAIAAIAAAAMABUAAAAIAAIAAAANABMAAAAIAAIAAAANABUAAAAIAAIAAAAOABMAAAAIAAIAAAAOABUAAAAIAAIAAAAPABMAAAAIAAIAAAAPABUAAAAIAAIAAAAQABMAAAAIAAIAAAAQABUAAAAIAAIAAAARABMAAAAIAAIAAAARABUAAAAIAAIAAAASABMAAAAIAAIAAAASABUAAAAIAAIAAAATABMAAAAIAAIAAAATABUAAAAIAAIAAAAUABMAAAAIAAIAAAAUABUAAAAIAAIAAAAVABMAAAAIAAIAAAAVABQAAAAIAAIAAAAVABUAAAAIAAIAAAAUAAAAAAAIAAIAAAAUAAEAAAAIAAIAAAAUAAIAAAAIAAIAAAAUAAMAAAAIAAIAAAAUAAQAAAAIAAIAAAAUAAUAAAAIAAIAAAAUAAYAAAAIAAIAAAAUAAcAAAAIAAIAAAAUAAgAAAAIAAIAAAAUAAkAAAAIAAIAAAAUAAoAAAAIAAIAAAAUAAsAAAAIAAIAAAAUAAwAAAAIAAIAAAAUAA0AAAAIAAIAAAAUAA4AAAAIAAIAAAAUAA8AAAAIAAIAAAAUABAAAAAIAAIAAAAUABEAAAAIAAIAAAAUABIAAAAIAAIAAAAVAAAAAAAIAAIAAAAVAAEAAAAIAAIAAAAVAAIAAAAIAAIAAAAVAAMAAAAIAAIAAAAVAAQAAAAIAAIAAAAVAAUAAAAIAAIAAAAVAAYAAAAIAAIAAAAVAAcAAAAIAAIAAAAVAAgAAAAIAAIAAAAVAAkAAAAIAAIAAAAVAAoAAAAIAAIAAAAVAAsAAAAIAAIAAAAVAAwAAAAIAAIAAAAVAA0AAAAIAAIAAAAVAA4AAAAIAAIAAAAVAA8AAAAIAAIAAAAVABAAAAAIAAIAAAAVABEAAAAIAAIAAAAVABIAAAAIAAIAAAAPAAIAAAAIAAIAAAAQAAIAAAAIAAIAAAARAAIAAAAIAAIAAAAMAAQAAAAIAAIAAAANAAIAAAAIAAIAAAANAAMAAAAIAAIAAAANAAQAAAAIAAIAAAAOAAIAAAAIAAIAAAAOAAMAAAAIAAIAAAAOAAQAAAAIAAIAAAAPAAMAAAAIAAIAAAAPAAQAAAAIAAIAAAAQAAMAAAAIAAIAAAAQAAQAAAAIAAIAAAARAAMAAAAIAAIAAAARAAQAAAAIAAIAAAASAAQAAAAIAAIAAAA=")
-tile_set = SubResource("TileSet_bxhpy")
+tile_set = SubResource("TileSet_uimed")
 collision_enabled = false
 collision_visibility_mode = 1
 
 [node name="Tree" type="Sprite2D" parent="Level Design"]
-material = SubResource("ShaderMaterial_qjr5j")
+material = SubResource("ShaderMaterial_ip5lv")
 position = Vector2(175.5, 178.5)
 scale = Vector2(0.923295, 0.974432)
-texture = ExtResource("3_3xme2")
+texture = ExtResource("3_k6tve")
 
 [node name="Cutscene" type="Node2D" parent="Level Design"]
-script = ExtResource("5_18cm1")
+script = ExtResource("4_ligmg")
 animation_name = "EndTutorial"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level Design/Cutscene"]
@@ -1838,385 +1537,259 @@ libraries = {
 }
 autoplay = "scale objects"
 
-[node name="AnimationPlayer4" type="AnimationPlayer" parent="Level Design/Cutscene"]
-libraries = {
-&"": SubResource("AnimationLibrary_kqw04")
-}
-
-[node name="AnimationPlayer5" type="AnimationPlayer" parent="Level Design/Cutscene"]
-libraries = {
-&"": SubResource("AnimationLibrary_qtgef")
-}
-autoplay = "plataform3"
-
-[node name="AnimationPlayer6" type="AnimationPlayer" parent="Level Design/Cutscene"]
-libraries = {
-&"": SubResource("AnimationLibrary_xty6v")
-}
-autoplay = "plataform54"
-
 [node name="Cutscene Caracters" type="Node2D" parent="Level Design/Cutscene"]
 position = Vector2(334, 328)
 
 [node name="Sprite2D5" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
-material = SubResource("ShaderMaterial_kumqt")
+material = SubResource("ShaderMaterial_bik31")
 position = Vector2(-158, 0)
-texture = ExtResource("5_dd1nq")
+texture = ExtResource("5_ks01w")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters"]
-material = SubResource("ShaderMaterial_4id1h")
+material = SubResource("ShaderMaterial_3v16l")
 position = Vector2(-57, 0)
-texture = ExtResource("6_n44gx")
+texture = ExtResource("6_2fd8t")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
-script = ExtResource("7_qm6k1")
+script = ExtResource("7_c3itq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_ffiul")
-texture = ExtResource("5_dd1nq")
+material = SubResource("ShaderMaterial_k8leh")
+texture = ExtResource("5_ks01w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D"]
 position = Vector2(-3, 5.5)
-shape = SubResource("RectangleShape2D_u1jg5")
+shape = SubResource("RectangleShape2D_g41qa")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-280, 0)
-script = ExtResource("7_qm6k1")
+script = ExtResource("7_c3itq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D2"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_ffiul")
-texture = ExtResource("8_kqw04")
+material = SubResource("ShaderMaterial_k8leh")
+texture = ExtResource("8_brm7h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D2"]
 position = Vector2(-3, 5.5)
-shape = SubResource("RectangleShape2D_u1jg5")
+shape = SubResource("RectangleShape2D_g41qa")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-206, 0)
-script = ExtResource("7_qm6k1")
+script = ExtResource("7_c3itq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D3"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_ffiul")
-texture = ExtResource("9_aioai")
+material = SubResource("ShaderMaterial_k8leh")
+texture = ExtResource("9_wd1dq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D3"]
 position = Vector2(-3, 5.5)
-shape = SubResource("RectangleShape2D_u1jg5")
+shape = SubResource("RectangleShape2D_g41qa")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-108, 0)
-script = ExtResource("7_qm6k1")
+script = ExtResource("7_c3itq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D4"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_ffiul")
+material = SubResource("ShaderMaterial_k8leh")
 position = Vector2(1, 0)
-texture = ExtResource("6_n44gx")
+texture = ExtResource("6_2fd8t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D4"]
 position = Vector2(-3, 5.5)
-shape = SubResource("RectangleShape2D_u1jg5")
+shape = SubResource("RectangleShape2D_g41qa")
 
 [node name="Background" type="TileMapLayer" parent="Level Design"]
 visible = false
-material = SubResource("ShaderMaterial_ptb7q")
+material = SubResource("ShaderMaterial_bob47")
 position = Vector2(14, 12)
 scale = Vector2(0.925, 0.945)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAMAAAAAAAMAAAAAAAQAAAAAAAQAAAAAAAUAAAAAAAUAAAAAAAYAAAAAAAYAAAAAAAcAAAAAAAcAAAAAAAgAAAAAAAgAAAAAAAkAAAAAAAkAAAAAAAoAAAAAAAoAAAAAAAsAAAAAAAsAAAAAAAwAAAAAAAwAAAAAAA0AAAAAAA0AAAAAAA4AAAAAAA4AAAAAAA8AAAAAAA8AAAAAABAAAAAAABAAAAAAABEAAAAAABEAAAAAABIAAAAAABIAAAAAABMAAAAAABMAAAAAABQAAAAAABQAAAAAABUAAAAAABUAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAABAAMAAAABAAMAAAABAAQAAAABAAQAAAABAAUAAAABAAUAAAABAAYAAAABAAYAAAABAAcAAAABAAcAAAABAAgAAAABAAgAAAABAAkAAAABAAkAAAABAAoAAAABAAoAAAABAAsAAAABAAsAAAABAAwAAAABAAwAAAABAA0AAAABAA0AAAABAA4AAAABAA4AAAABAA8AAAABAA8AAAABABAAAAABABAAAAABABEAAAABABEAAAABABIAAAABABIAAAABABMAAAABABMAAAABABQAAAABABQAAAABABUAAAABABUAAAACAAAAAAACAAAAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAACAAMAAAACAAMAAAACAAQAAAACAAQAAAACAAUAAAACAAUAAAACAAYAAAACAAYAAAACAAcAAAACAAcAAAACAAgAAAACAAgAAAACAAkAAAACAAkAAAACAAoAAAACAAoAAAACAAsAAAACAAsAAAACAAwAAAACAAwAAAACAA0AAAACAA0AAAACAA4AAAACAA4AAAACAA8AAAACAA8AAAACABAAAAACABAAAAACABEAAAACABEAAAACABIAAAACABIAAAACABMAAAACABMAAAACABQAAAACABQAAAACABUAAAACABUAAAADAAAAAAADAAAAAAADAAEAAAADAAEAAAADAAIAAAADAAIAAAADAAMAAAADAAMAAAADAAQAAAADAAQAAAADAAUAAAADAAUAAAADAAYAAAADAAYAAAADAAcAAAADAAcAAAADAAgAAAADAAgAAAADAAkAAAADAAkAAAADAAoAAAADAAoAAAADAAsAAAADAAsAAAADAAwAAAADAAwAAAADAA0AAAADAA0AAAADAA4AAAADAA4AAAADAA8AAAADAA8AAAADABAAAAADABAAAAADABEAAAADABEAAAADABIAAAADABIAAAADABMAAAADABMAAAADABQAAAADABQAAAADABUAAAADABUAAAAEAAAAAAAEAAAAAAAEAAEAAAAEAAEAAAAEAAIAAAAEAAIAAAAEAAMAAAAEAAMAAAAEAAQAAAAEAAQAAAAEAAUAAAAEAAUAAAAEAAYAAAAEAAYAAAAEAAcAAAAEAAcAAAAEAAgAAAAEAAgAAAAEAAkAAAAEAAkAAAAEAAoAAAAEAAoAAAAEAAsAAAAEAAsAAAAEAAwAAAAEAAwAAAAEAA0AAAAEAA0AAAAEAA4AAAAEAA4AAAAEAA8AAAAEAA8AAAAEABAAAAAEABAAAAAEABEAAAAEABEAAAAEABIAAAAEABIAAAAEABMAAAAEABMAAAAEABQAAAAEABQAAAAEABUAAAAEABUAAAAFAAAAAAAFAAAAAAAFAAEAAAAFAAEAAAAFAAIAAAAFAAIAAAAFAAMAAAAFAAMAAAAFAAQAAAAFAAQAAAAFAAUAAAAFAAUAAAAFAAYAAAAFAAYAAAAFAAcAAAAFAAcAAAAFAAgAAAAFAAgAAAAFAAkAAAAFAAkAAAAFAAoAAAAFAAoAAAAFAAsAAAAFAAsAAAAFAAwAAAAFAAwAAAAFAA0AAAAFAA0AAAAFAA4AAAAFAA4AAAAFAA8AAAAFAA8AAAAFABAAAAAFABAAAAAFABEAAAAFABEAAAAFABIAAAAFABIAAAAFABMAAAAFABMAAAAFABQAAAAFABQAAAAFABUAAAAFABUAAAAGAAAAAAAGAAAAAAAGAAEAAAAGAAEAAAAGAAIAAAAGAAIAAAAGAAMAAAAGAAMAAAAGAAQAAAAGAAQAAAAGAAUAAAAGAAUAAAAGAAYAAAAGAAYAAAAGAAcAAAAGAAcAAAAGAAgAAAAGAAgAAAAGAAkAAAAGAAkAAAAGAAoAAAAGAAoAAAAGAAsAAAAGAAsAAAAGAAwAAAAGAAwAAAAGAA0AAAAGAA0AAAAGAA4AAAAGAA4AAAAGAA8AAAAGAA8AAAAGABAAAAAGABAAAAAGABEAAAAGABEAAAAGABIAAAAGABIAAAAGABMAAAAGABMAAAAGABQAAAAGABQAAAAGABUAAAAGABUAAAAHAAAAAAAHAAAAAAAHAAEAAAAHAAEAAAAHAAIAAAAHAAIAAAAHAAMAAAAHAAMAAAAHAAQAAAAHAAQAAAAHAAUAAAAHAAUAAAAHAAYAAAAHAAYAAAAHAAcAAAAHAAcAAAAHAAgAAAAHAAgAAAAHAAkAAAAHAAkAAAAHAAoAAAAHAAoAAAAHAAsAAAAHAAsAAAAHAAwAAAAHAAwAAAAHAA0AAAAHAA0AAAAHAA4AAAAHAA4AAAAHAA8AAAAHAA8AAAAHABAAAAAHABAAAAAHABEAAAAHABEAAAAHABIAAAAHABIAAAAHABMAAAAHABMAAAAHABQAAAAHABQAAAAHABUAAAAHABUAAAAIAAAAAAAIAAAAAAAIAAEAAAAIAAEAAAAIAAIAAAAIAAIAAAAIAAMAAAAIAAMAAAAIAAQAAAAIAAQAAAAIAAUAAAAIAAUAAAAIAAYAAAAIAAYAAAAIAAcAAAAIAAcAAAAIAAgAAAAIAAgAAAAIAAkAAAAIAAkAAAAIAAoAAAAIAAoAAAAIAAsAAAAIAAsAAAAIAAwAAAAIAAwAAAAIAA0AAAAIAA0AAAAIAA4AAAAIAA4AAAAIAA8AAAAIAA8AAAAIABAAAAAIABAAAAAIABEAAAAIABEAAAAIABIAAAAIABIAAAAIABMAAAAIABMAAAAIABQAAAAIABQAAAAIABUAAAAIABUAAAAJAAAAAAAJAAAAAAAJAAEAAAAJAAEAAAAJAAIAAAAJAAIAAAAJAAMAAAAJAAMAAAAJAAQAAAAJAAQAAAAJAAUAAAAJAAUAAAAJAAYAAAAJAAYAAAAJAAcAAAAJAAcAAAAJAAgAAAAJAAgAAAAJAAkAAAAJAAkAAAAJAAoAAAAJAAoAAAAJAAsAAAAJAAsAAAAJAAwAAAAJAAwAAAAJAA0AAAAJAA0AAAAJAA4AAAAJAA4AAAAJAA8AAAAJAA8AAAAJABAAAAAJABAAAAAJABEAAAAJABEAAAAJABIAAAAJABIAAAAJABMAAAAJABMAAAAJABQAAAAJABQAAAAJABUAAAAJABUAAAAKAAAAAAAKAAAAAAAKAAEAAAAKAAEAAAAKAAIAAAAKAAIAAAAKAAMAAAAKAAMAAAAKAAQAAAAKAAQAAAAKAAUAAAAKAAUAAAAKAAYAAAAKAAYAAAAKAAcAAAAKAAcAAAAKAAgAAAAKAAgAAAAKAAkAAAAKAAkAAAAKAAoAAAAKAAoAAAAKAAsAAAAKAAsAAAAKAAwAAAAKAAwAAAAKAA0AAAAKAA0AAAAKAA4AAAAKAA4AAAAKAA8AAAAKAA8AAAAKABAAAAAKABAAAAAKABEAAAAKABEAAAAKABIAAAAKABIAAAAKABMAAAAKABMAAAAKABQAAAAKABQAAAAKABUAAAAKABUAAAALAAAAAAALAAAAAAALAAEAAAALAAEAAAALAAIAAAALAAIAAAALAAMAAAALAAMAAAALAAQAAAALAAQAAAALAAUAAAALAAUAAAALAAYAAAALAAYAAAALAAcAAAALAAcAAAALAAgAAAALAAgAAAALAAkAAAALAAkAAAALAAoAAAALAAoAAAALAAsAAAALAAsAAAALAAwAAAALAAwAAAALAA0AAAALAA0AAAALAA4AAAALAA4AAAALAA8AAAALAA8AAAALABAAAAALABAAAAALABEAAAALABEAAAALABIAAAALABIAAAALABMAAAALABMAAAALABQAAAALABQAAAALABUAAAALABUAAAAMAAAAAAAMAAAAAAAMAAEAAAAMAAEAAAAMAAIAAAAMAAIAAAAMAAMAAAAMAAMAAAAMAAQAAAAMAAQAAAAMAAUAAAAMAAUAAAAMAAYAAAAMAAYAAAAMAAcAAAAMAAcAAAAMAAgAAAAMAAgAAAAMAAkAAAAMAAkAAAAMAAoAAAAMAAoAAAAMAAsAAAAMAAsAAAAMAAwAAAAMAAwAAAAMAA0AAAAMAA0AAAAMAA4AAAAMAA4AAAAMAA8AAAAMAA8AAAAMABAAAAAMABAAAAAMABEAAAAMABEAAAAMABIAAAAMABIAAAAMABMAAAAMABMAAAAMABQAAAAMABQAAAAMABUAAAAMABUAAAANAAAAAAANAAAAAAANAAEAAAANAAEAAAANAAIAAAANAAIAAAANAAMAAAANAAMAAAANAAQAAAANAAQAAAANAAUAAAANAAUAAAANAAYAAAANAAYAAAANAAcAAAANAAcAAAANAAgAAAANAAgAAAANAAkAAAANAAkAAAANAAoAAAANAAoAAAANAAsAAAANAAsAAAANAAwAAAANAAwAAAANAA0AAAANAA0AAAANAA4AAAANAA4AAAANAA8AAAANAA8AAAANABAAAAANABAAAAANABEAAAANABEAAAANABIAAAANABIAAAANABMAAAANABMAAAANABQAAAANABQAAAANABUAAAANABUAAAAOAAAAAAAOAAAAAAAOAAEAAAAOAAEAAAAOAAIAAAAOAAIAAAAOAAMAAAAOAAMAAAAOAAQAAAAOAAQAAAAOAAUAAAAOAAUAAAAOAAYAAAAOAAYAAAAOAAcAAAAOAAcAAAAOAAgAAAAOAAgAAAAOAAkAAAAOAAkAAAAOAA4AAAAOAA4AAAAOAA8AAAAOAA8AAAAOABAAAAAOABAAAAAOABEAAAAOABEAAAAOABIAAAAOABIAAAAOABMAAAAOABMAAAAOABQAAAAOABQAAAAOABUAAAAOABUAAAAPAAAAAAAPAAAAAAAPAAEAAAAPAAEAAAAPAAIAAAAPAAIAAAAPAAMAAAAPAAMAAAAPAAQAAAAPAAQAAAAPAAUAAAAPAAUAAAAPAAYAAAAPAAYAAAAPAAcAAAAPAAcAAAAPAAgAAAAPAAgAAAAPAA4AAAAPAA4AAAAPAA8AAAAPAA8AAAAPABAAAAAPABAAAAAPABEAAAAPABEAAAAPABIAAAAPABIAAAAPABMAAAAPABMAAAAPABQAAAAPABQAAAAPABUAAAAPABUAAAAQAAAAAAAQAAAAAAAQAAEAAAAQAAEAAAAQAAIAAAAQAAIAAAAQAAMAAAAQAAMAAAAQAAQAAAAQAAQAAAAQAAUAAAAQAAUAAAAQAAYAAAAQAAYAAAAQAAcAAAAQAAcAAAAQAAgAAAAQAAgAAAAQAA4AAAAQAA4AAAAQAA8AAAAQAA8AAAAQABAAAAAQABAAAAAQABEAAAAQABEAAAAQABIAAAAQABIAAAAQABMAAAAQABMAAAAQABQAAAAQABQAAAAQABUAAAAQABUAAAARAAAAAAARAAAAAAARAAEAAAARAAEAAAARAAIAAAARAAIAAAARAAMAAAARAAMAAAARAAQAAAARAAQAAAARAAUAAAARAAUAAAARAAYAAAARAAYAAAARAAcAAAARAAcAAAARAAgAAAARAAgAAAARAAkAAAARAAkAAAARAA4AAAARAA4AAAARAA8AAAARAA8AAAARABAAAAARABAAAAARABEAAAARABEAAAARABIAAAARABIAAAARABMAAAARABMAAAARABQAAAARABQAAAARABUAAAARABUAAAASAAAAAAASAAAAAAASAAEAAAASAAEAAAASAAIAAAASAAIAAAASAAMAAAASAAMAAAASAAQAAAASAAQAAAASAAUAAAASAAUAAAASAAYAAAASAAYAAAASAAcAAAASAAcAAAASAAgAAAASAAgAAAASAAkAAAASAAkAAAASAA4AAAASAA4AAAASAA8AAAASAA8AAAASABAAAAASABAAAAASABEAAAASABEAAAASABIAAAASABIAAAASABMAAAASABMAAAASABQAAAASABQAAAASABUAAAASABUAAAATAAAAAAATAAAAAAATAAEAAAATAAEAAAATAAIAAAATAAIAAAATAAMAAAATAAMAAAATAAQAAAATAAQAAAATAAUAAAATAAUAAAATAAYAAAATAAYAAAATAAcAAAATAAcAAAATAAgAAAATAAgAAAATAAkAAAATAAkAAAATAAoAAAATAAoAAAATAAsAAAATAAsAAAATAAwAAAATAAwAAAATAA0AAAATAA0AAAATAA4AAAATAA4AAAATAA8AAAATAA8AAAATABAAAAATABAAAAATABEAAAATABEAAAATABIAAAATABIAAAATABMAAAATABMAAAATABQAAAATABQAAAATABUAAAATABUAAAAUAAAAAAAUAAAAAAAUAAEAAAAUAAEAAAAUAAIAAAAUAAIAAAAUAAMAAAAUAAMAAAAUAAQAAAAUAAQAAAAUAAUAAAAUAAUAAAAUAAYAAAAUAAYAAAAUAAcAAAAUAAcAAAAUAAgAAAAUAAgAAAAUAAkAAAAUAAkAAAAUAAoAAAAUAAoAAAAUAAsAAAAUAAsAAAAUAAwAAAAUAAwAAAAUAA0AAAAUAA0AAAAUAA4AAAAUAA4AAAAUAA8AAAAUAA8AAAAUABAAAAAUABAAAAAUABEAAAAUABEAAAAUABIAAAAUABIAAAAUABMAAAAUABMAAAAUABQAAAAUABQAAAAUABUAAAAUABUAAAAVAAAAAAAVAAAAAAAVAAEAAAAVAAEAAAAVAAIAAAAVAAIAAAAVAAMAAAAVAAMAAAAVAAQAAAAVAAQAAAAVAAUAAAAVAAUAAAAVAAYAAAAVAAYAAAAVAAcAAAAVAAcAAAAVAAgAAAAVAAgAAAAVAAkAAAAVAAkAAAAVAAoAAAAVAAoAAAAVAAsAAAAVAAsAAAAVAAwAAAAVAAwAAAAVAA0AAAAVAA0AAAAVAA4AAAAVAA4AAAAVAA8AAAAVAA8AAAAVABAAAAAVABAAAAAVABEAAAAVABEAAAAVABIAAAAVABIAAAAVABMAAAAVABMAAAAVABQAAAAVABQAAAAVABUAAAAVABUAAAA=")
-tile_set = SubResource("TileSet_xws1k")
+tile_set = SubResource("TileSet_vgagl")
 
 [node name="Food" type="TileMapLayer" parent="Level Design"]
-tile_map_data = PackedByteArray("AADu/wkAAAAMAAUAAADu/woAAAAMAAYAAADy/wkAAAANAAUAAADy/woAAAANAAYAAAAJAAIAAAAKAAMAAAAMAAIAAAAKAAMAABALAAIAAAAKAAMAAAAKAAIAAAAKAAMAABA=")
-tile_set = SubResource("TileSet_18cm1")
-
-[node name="InvisibleGround" type="TileMapLayer" parent="Level Design"]
-tile_map_data = PackedByteArray("AAAHABEAAAAIAAQAAAAIABEAAAAKAAQAAAA=")
-tile_set = SubResource("TileSet_a57w3")
-
-[node name="InvisibleGround2" type="TileMapLayer" parent="Level Design"]
-tile_map_data = PackedByteArray("AAAGAA4AAAAKAAQAAAAFAA4AAAAJAAQAAAAEAA4AAAAJAAQAAAADAA4AAAAIAAQAAAA=")
-tile_set = SubResource("TileSet_a57w3")
-
-[node name="InvisibleGround3" type="TileMapLayer" parent="Level Design"]
-tile_set = SubResource("TileSet_a57w3")
-
-[node name="InvisibleGround4" type="TileMapLayer" parent="Level Design"]
-tile_set = SubResource("TileSet_a57w3")
-
-[node name="InvisibleGround5" type="TileMapLayer" parent="Level Design"]
-tile_set = SubResource("TileSet_a57w3")
-
-[node name="Button" type="Area2D" parent="Level Design" node_paths=PackedStringArray("Chao")]
-position = Vector2(176, 296)
-script = ExtResource("10_kumqt")
-Chao = NodePath("../InvisibleGround")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Button"]
-sprite_frames = SubResource("SpriteFrames_4id1h")
-animation = &"ButtonDefault"
-autoplay = "ButtonDefault"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Button"]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_ffiul")
-debug_color = Color(0.63639, 0.526663, 0, 0.42)
-
-[node name="Button2" type="Area2D" parent="Level Design" node_paths=PackedStringArray("Chao")]
-position = Vector2(176, 232)
-script = ExtResource("10_kumqt")
-Chao = NodePath("../InvisibleGround2")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Button2"]
-sprite_frames = SubResource("SpriteFrames_4id1h")
-animation = &"ButtonDefault"
-autoplay = "ButtonDefault"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Button2"]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_ffiul")
-debug_color = Color(0.63639, 0.526663, 0, 0.42)
-
-[node name="Button88" type="Area2D" parent="Level Design"]
-position = Vector2(329, 40)
-script = ExtResource("14_vkbqs")
-thorn = NodePath("../Thorn")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Button88"]
-sprite_frames = SubResource("SpriteFrames_r8vtu")
-animation = &"ButtonDefault"
-autoplay = "ButtonDefault"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Button88"]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_bxhpy")
-debug_color = Color(0.63639, 0.526663, 0, 0.42)
-
-[node name="MovingPlataform" type="CharacterBody2D" parent="Level Design" groups=["Ground"]]
-position = Vector2(280, 189)
-motion_mode = 1
-script = ExtResource("17_kqw04")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level Design/MovingPlataform"]
-position = Vector2(4, 0)
-texture = ExtResource("18_aioai")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/MovingPlataform"]
-position = Vector2(-12, 5.5)
-shape = SubResource("RectangleShape2D_qtgef")
-
-[node name="MovingPlataform2" type="CharacterBody2D" parent="Level Design" groups=["Ground"]]
-position = Vector2(131, 88)
-motion_mode = 1
-script = ExtResource("17_kqw04")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level Design/MovingPlataform2"]
-position = Vector2(4, 0)
-texture = ExtResource("18_aioai")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/MovingPlataform2"]
-position = Vector2(-12, 5.5)
-shape = SubResource("RectangleShape2D_qtgef")
-
-[node name="MovingPlataform3" type="CharacterBody2D" parent="Level Design" groups=["Ground"]]
-position = Vector2(40, 188)
-motion_mode = 1
-script = ExtResource("17_kqw04")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level Design/MovingPlataform3"]
-position = Vector2(4, 0)
-texture = ExtResource("12_aioai")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/MovingPlataform3"]
-position = Vector2(4, 5.5)
-shape = SubResource("RectangleShape2D_aioai")
-
-[node name="Mouse3" type="CharacterBody2D" parent="Level Design" groups=["EnemyGroup"]]
-position = Vector2(323, 264)
-script = ExtResource("18_mjc06")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Mouse3"]
-material = SubResource("ShaderMaterial_xws1k")
-sprite_frames = SubResource("SpriteFrames_50h4b")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Mouse3"]
-position = Vector2(-1.5, 5)
-shape = SubResource("RectangleShape2D_18cm1")
-
-[node name="Hurtbox" type="Area2D" parent="Level Design/Mouse3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Mouse3/Hurtbox"]
-position = Vector2(-1.5, 5)
-shape = SubResource("RectangleShape2D_18cm1")
-debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
-
-[node name="Mouse4" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("Grid") groups=["EnemyGroup"]]
-position = Vector2(298, 77)
-script = ExtResource("29_u1jg5")
-Grid = NodePath("../Grid")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Mouse4"]
-material = SubResource("ShaderMaterial_xws1k")
-sprite_frames = SubResource("SpriteFrames_50h4b")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Mouse4"]
-position = Vector2(-1.5, 5)
-shape = SubResource("RectangleShape2D_18cm1")
-
-[node name="Hurtbox" type="Area2D" parent="Level Design/Mouse4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Mouse4/Hurtbox"]
-position = Vector2(-1.5, 5)
-shape = SubResource("RectangleShape2D_18cm1")
-debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
-
-[node name="Mouse5" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("Grid") groups=["EnemyGroup"]]
-position = Vector2(87, 195)
-script = ExtResource("29_u1jg5")
-Grid = NodePath("../Grid")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Mouse5"]
-material = SubResource("ShaderMaterial_xws1k")
-sprite_frames = SubResource("SpriteFrames_50h4b")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Mouse5"]
-position = Vector2(-1.5, 5)
-shape = SubResource("RectangleShape2D_18cm1")
-
-[node name="Hurtbox" type="Area2D" parent="Level Design/Mouse5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Mouse5/Hurtbox"]
-position = Vector2(-1.5, 5)
-shape = SubResource("RectangleShape2D_18cm1")
-debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
-
-[node name="Ground2" type="TileMapLayer" parent="Level Design" groups=["Ground"]]
-visibility_layer = 2
-texture_filter = 1
-tile_map_data = PackedByteArray("AAAHAAsAAQAIAAQAAAAIAAsAAQAJAAQAAAAJAAsAAQAJAAQAAAAKAAsAAQAJAAQAAAALAAsAAQAJAAQAAAAMAAsAAQAJAAQAAAANAAsAAQAJAAQAAAAOAAsAAQAKAAQAAAAHAAMAAQAIAAQAAAAIAAMAAQAJAAQAAAAJAAMAAQAJAAQAAAAKAAMAAQAJAAQAAAALAAMAAQAJAAQAAAAMAAMAAQAJAAQAAAANAAMAAQAJAAQAAAAOAAMAAQAKAAQAAAAKABMAAQAIAAQAAAALABMAAQAKAAQAAAATAAMAAQAIAAQAAAAUAAMAAQAJAAQAAAAPABEAAQAIAAQAAAAQABEAAQAKAAQAAAASABEAAQAIAAQAAAATABEAAQAJAAQAAAAUABEAAQAJAAQAAAAKAA8AAQAIAAQAAAALAA8AAQAKAAQAAAABABMAAQAIAAQAAAACABMAAQAKAAQAAAA=")
-tile_set = SubResource("TileSet_5osp5")
-
-[node name="Thorn" type="Area2D" parent="Level Design" node_paths=PackedStringArray("animated") groups=["ThornGroup"]]
-position = Vector2(177, 72)
-script = ExtResource("23_vkbqs")
-animated = NodePath("../Cutscene/AnimationPlayer4")
-fade_node = NodePath("../../Fade")
-cutscene_node = NodePath("../Cutscene")
-button_node = NodePath("../Button88")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level Design/Thorn"]
-rotation = 3.14159
-texture = ExtResource("29_kumqt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Thorn"]
-position = Vector2(0.5, -6)
-shape = SubResource("RectangleShape2D_4id1h")
-
-[node name="Light" type="CharacterBody2D" parent="Level Design" groups=["EnemyGroup"]]
-position = Vector2(-16, 173)
-scale = Vector2(0.34, 0.34)
-
-[node name="Sprite2D" type="Sprite2D" parent="Level Design/Light"]
-texture_filter = 1
-material = SubResource("ShaderMaterial_n44gx")
-texture = ExtResource("10_n44gx")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Light"]
-position = Vector2(0, 8.82361)
-shape = SubResource("RectangleShape2D_qm6k1")
-
-[node name="Boss" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("grid", "mouse_enemy") groups=["EnemyGroup"]]
-position = Vector2(67, 131)
-script = ExtResource("25_xws1k")
-grid = NodePath("../Grid")
-mouse_enemy = [NodePath("../Mouse3"), NodePath("../Mouse4"), NodePath("../Mouse5")]
-button88 = NodePath("../Button88")
-player = NodePath("../../Player")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level Design/Boss"]
-texture_filter = 1
-material = SubResource("ShaderMaterial_dd1nq")
-position = Vector2(107, -2.00001)
-scale = Vector2(0.811429, 1.03226)
-texture = ExtResource("15_dd1nq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Design/Boss"]
-position = Vector2(109, 40.25)
-shape = SubResource("RectangleShape2D_n44gx")
-
-[node name="Hurtbox" type="Area2D" parent="Level Design/Boss"]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level Design/Boss/Hurtbox"]
-position = Vector2(109, 40.25)
-shape = SubResource("RectangleShape2D_n44gx")
-debug_color = Color(0.949586, 2.88785e-06, 0.572767, 0.42)
+tile_map_data = PackedByteArray("AAABAAUAAAAKAAMAAAACAAUAAAAKAAMAAAATAAUAAAAKAAMAAAAUAAUAAAAKAAMAAADu/wkAAAAMAAUAAADu/woAAAAMAAYAAADy/wkAAAANAAUAAADy/woAAAANAAYAAAA=")
+tile_set = SubResource("TileSet_ygari")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Level Design"]
 texture_filter = 1
-material = SubResource("CanvasItemMaterial_vkbqs")
+material = SubResource("CanvasItemMaterial_dhjrm")
 position = Vector2(181, 175)
 amount = 100
-texture = ExtResource("10_qtgef")
+texture = ExtResource("11_h2fv6")
 visibility_rect = Rect2(-500, -200, 1000, 300)
-process_material = SubResource("ParticleProcessMaterial_mjc06")
+process_material = SubResource("ParticleProcessMaterial_kia7e")
 
 [node name="Ground" type="TileMapLayer" parent="Level Design" groups=["Ground"]]
 visibility_layer = 2
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAAABUAAQAGAAkAABABABUAAQAFAAQAAAACABUAAQAFAAQAAAADABUAAQAFAAQAAAAEABUAAQAFAAQAAAAFABUAAQAFAAQAAAAGABUAAQAFAAQAAAAHABUAAQAFAAQAAAAIABUAAQAFAAQAAAAJABUAAQAFAAQAAAAKABUAAQAFAAQAAAALABUAAQAFAAQAAAAMABUAAQAFAAQAAAANABUAAQAFAAQAAAAOABUAAQAFAAQAAAAPABUAAQAFAAQAAAAQABUAAQAFAAQAAAARABUAAQAFAAQAAAASABUAAQAFAAQAAAATABUAAQAFAAQAAAAUABUAAQAFAAQAAAAVABUAAQAGAAkAAAAVABQAAQAFAAQAAGAVABMAAQAFAAQAAGAVABIAAQAFAAQAAGAVABEAAQAFAAQAAGAVABAAAQAFAAQAAGAVAA8AAQAFAAQAAGAVAA4AAQAFAAQAAGAVAA0AAQAFAAQAAGAVAAwAAQAFAAQAAGAVAAsAAQAFAAQAAGAVAAoAAQAFAAQAAGAVAAkAAQAFAAQAAGAVAAgAAQAFAAQAAGAVAAcAAQAFAAQAAGAVAAYAAQAFAAQAAGAVAAUAAQAFAAQAAGAVAAQAAQAFAAQAAGAVAAMAAQAFAAQAAGAVAAIAAQAFAAQAAGAVAAEAAQAFAAQAAGAVAAAAAQAGAAkAACAUAAAAAQAFAAYAAAATAAAAAQAFAAYAAAASAAAAAQAFAAYAAAARAAAAAQAFAAYAAAAQAAAAAQAFAAYAAAAPAAAAAQAFAAYAAAAOAAAAAQAFAAYAAAANAAAAAQAFAAYAAAAMAAAAAQAFAAYAAAALAAAAAQAFAAYAAAAKAAAAAQAFAAYAAAAJAAAAAQAFAAYAAAAIAAAAAQAFAAYAAAAHAAAAAQAFAAYAAAAGAAAAAQAFAAYAAAAFAAAAAQAFAAYAAAAEAAAAAQAFAAYAAAADAAAAAQAFAAYAAAACAAAAAQAFAAYAAAABAAAAAQAFAAYAAAAAAAAAAQAGAAkAADAAAAEAAQAFAAQAAFAAAAIAAQAFAAQAAFAAAAMAAQAFAAQAAFAAAAQAAQAFAAQAAFAAAAUAAQAFAAQAAFAAAAYAAQAFAAQAAFAAAAcAAQAFAAQAAFAAAAgAAQAFAAQAAFAAAAkAAQAFAAQAAFAAAAoAAQAFAAQAAFAAAAsAAQAFAAQAAFAAAAwAAQAFAAQAAFAAAA0AAQAFAAQAAFAAAA4AAQAFAAQAAFAAAA8AAQAFAAQAAFAAABAAAQAFAAQAAFAAABEAAQAFAAQAAFAAABIAAQAFAAQAAFAAABMAAQAFAAQAAFAAABQAAQAFAAQAAFAHAAsAAQAIAAQAAAAIAAsAAQAJAAQAAAAJAAsAAQAJAAQAAAAKAAsAAQAJAAQAAAALAAsAAQAJAAQAAAAMAAsAAQAJAAQAAAANAAsAAQAJAAQAAAAOAAsAAQAKAAQAAAAHAAMAAQAIAAQAAAAIAAMAAQAJAAQAAAAJAAMAAQAJAAQAAAAKAAMAAQAJAAQAAAALAAMAAQAJAAQAAAAMAAMAAQAJAAQAAAANAAMAAQAJAAQAAAAOAAMAAQAKAAQAAAA=")
-tile_set = SubResource("TileSet_5osp5")
+tile_map_data = PackedByteArray("AAAAABUAAQAGAAkAABABABUAAQAFAAQAAAACABUAAQAFAAQAAAADABUAAQAFAAQAAAAEABUAAQAFAAQAAAAFABUAAQAFAAQAAAAGABUAAQAFAAQAAAAHABUAAQAFAAQAAAAIABUAAQAFAAQAAAAJABUAAQAFAAQAAAAKABUAAQAFAAQAAAALABUAAQAFAAQAAAAMABUAAQAFAAQAAAANABUAAQAFAAQAAAAOABUAAQAFAAQAAAAPABUAAQAFAAQAAAAQABUAAQAFAAQAAAARABUAAQAFAAQAAAASABUAAQAFAAQAAAATABUAAQAFAAQAAAAUABUAAQAFAAQAAAAVABUAAQAGAAkAAAAVABQAAQAFAAQAAGAVABMAAQAFAAQAAGAVABIAAQAFAAQAAGAVABEAAQAFAAQAAGAVABAAAQAFAAQAAGAVAA8AAQAFAAQAAGAVAA4AAQAFAAQAAGAVAA0AAQAFAAQAAGAVAAwAAQAFAAQAAGAVAAsAAQAFAAQAAGAVAAoAAQAFAAQAAGAVAAkAAQAFAAQAAGAVAAgAAQAFAAQAAGAVAAcAAQAFAAQAAGAVAAYAAQAFAAQAAGAVAAUAAQAFAAQAAGAVAAQAAQAFAAQAAGAVAAMAAQAFAAQAAGAVAAIAAQAFAAQAAGAVAAEAAQAFAAQAAGAVAAAAAQAGAAkAACAUAAAAAQAFAAYAAAATAAAAAQAFAAYAAAASAAAAAQAFAAYAAAARAAAAAQAFAAYAAAAQAAAAAQAFAAYAAAAPAAAAAQAFAAYAAAAOAAAAAQAFAAYAAAANAAAAAQAFAAYAAAAMAAAAAQAFAAYAAAALAAAAAQAFAAYAAAAKAAAAAQAFAAYAAAAJAAAAAQAFAAYAAAAIAAAAAQAFAAYAAAAHAAAAAQAFAAYAAAAGAAAAAQAFAAYAAAAFAAAAAQAFAAYAAAAEAAAAAQAFAAYAAAADAAAAAQAFAAYAAAACAAAAAQAFAAYAAAABAAAAAQAFAAYAAAAAAAAAAQAGAAkAADAAAAEAAQAFAAQAAFAAAAIAAQAFAAQAAFAAAAMAAQAFAAQAAFAAAAQAAQAFAAQAAFAAAAUAAQAFAAQAAFAAAAYAAQAFAAQAAFAAAAcAAQAFAAQAAFAAAAgAAQAFAAQAAFAAAAkAAQAFAAQAAFAAAAoAAQAFAAQAAFAAAAsAAQAFAAQAAFAAAAwAAQAFAAQAAFAAAA0AAQAFAAQAAFAAAA4AAQAFAAQAAFAAAA8AAQAFAAQAAFAAABAAAQAFAAQAAFAAABEAAQAFAAQAAFAAABIAAQAFAAQAAFAAABMAAQAFAAQAAFAAABQAAQAFAAQAAFABAAMAAQAJAAQAAAACAAMAAQAJAAQAAAADAAMAAQAJAAQAAAAEAAMAAQAKAAQAAAARAAMAAQAIAAQAAAASAAMAAQAJAAQAAAATAAMAAQAJAAQAAAAUAAMAAQAJAAQAAAAEAAYAAQAKAAQAAAADAAYAAQAJAAQAAAACAAYAAQAJAAQAAAABAAYAAQAJAAQAAAARAAYAAQAIAAQAAAASAAYAAQAJAAQAAAATAAYAAQAJAAQAAAAUAAYAAQAJAAQAAAAKABIAAQAIAAQAAAAKAA4AAQAIAAQAAAAKAAYAAQAIAAQAAAAKAAoAAQAIAAQAAAALAAYAAQAJAAQAAAALAAoAAQAJAAQAAAALAA4AAQAJAAQAAAALABIAAQAJAAQAAAAMABIAAQAJAAQAAAAMAA4AAQAKAAQAAAAMAAoAAQAKAAQAAAAMAAYAAQAKAAQAAAAEABIAAQAIAAQAAAAFABIAAQAJAAQAAAAGABIAAQAKAAQAAAARABIAAQAJAAQAAAASABIAAQAJAAQAAAATABIAAQAJAAQAAAAUABIAAQAJAAQAAAAQABIAAQAJAAQAAAAPABIAAQAJAAQAAAAOABIAAQAJAAQAAAANABIAAQAJAAQAAAA=")
+tile_set = SubResource("TileSet_fv5a8")
 
 [node name="Grid" type="TileMapLayer" parent="Level Design"]
-tile_map_data = PackedByteArray("AAAIAAEAAAAMAAUAAAAIAAIAAAAMAAYAAAANAAEAAAANAAUAAAANAAIAAAANAAYAAAA=")
-tile_set = SubResource("TileSet_xwqjw")
+tile_map_data = PackedByteArray("AAASAAQAAAAMAAUAAAASAAUAAAAMAAYAAAADAAQAAAAMAAUAAAADAAUAAAAMAAYAAAA=")
+tile_set = SubResource("TileSet_ow5vw")
+
+[node name="InvisibleGround" type="TileMapLayer" parent="Level Design"]
+tile_map_data = PackedByteArray("AAAOABAAAAAIAAQAAAAPABAAAAAKAAQAAAA=")
+enabled = false
+tile_set = SubResource("TileSet_586gu")
+
+[node name="InvisibleGround2" type="TileMapLayer" parent="Level Design"]
+tile_map_data = PackedByteArray("AAAHAAwAAAAIAAQAAAAIAAwAAAAKAAQAAAA=")
+enabled = false
+tile_set = SubResource("TileSet_586gu")
+
+[node name="InvisibleGround3" type="TileMapLayer" parent="Level Design"]
+tile_map_data = PackedByteArray("AAAOAAgAAAAIAAQAAAAPAAgAAAAKAAQAAAA=")
+enabled = false
+tile_set = SubResource("TileSet_586gu")
+
+[node name="InvisibleGround4" type="TileMapLayer" parent="Level Design"]
+tile_map_data = PackedByteArray("AAAOAAQAAAAIAAQAAAAPAAQAAAAKAAQAAAA=")
+enabled = false
+tile_set = SubResource("TileSet_586gu")
+
+[node name="InvisibleGround5" type="TileMapLayer" parent="Level Design"]
+tile_map_data = PackedByteArray("AAAHAAQAAAAIAAQAAAAIAAQAAAAKAAQAAAA=")
+enabled = false
+tile_set = SubResource("TileSet_586gu")
 
 [node name="Ballon" type="TileMapLayer" parent="Level Design"]
 visible = false
-tile_set = SubResource("TileSet_v2217")
+tile_set = SubResource("TileSet_85f40")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Ballon"]
 visible = false
 texture_filter = 1
 position = Vector2(293, 168)
 scale = Vector2(0.141566, 0.141566)
-texture = ExtResource("13_tgpcg")
+texture = ExtResource("14_brqit")
 
 [node name="BallonReload" type="TileMapLayer" parent="Level Design"]
 visible = false
 position = Vector2(1, 0)
-tile_set = SubResource("TileSet_v2217")
+tile_set = SubResource("TileSet_85f40")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/BallonReload"]
 visible = false
 texture_filter = 1
 position = Vector2(293, 169)
 scale = Vector2(0.179836, 0.179836)
-texture = ExtResource("14_eol8u")
+texture = ExtResource("15_p3st1")
 
 [node name="Balance" type="Area2D" parent="." groups=["BalanceGroup"]]
 texture_filter = 1
-position = Vector2(121, 34)
-script = ExtResource("33_f1xyl")
+position = Vector2(63, 33)
+script = ExtResource("16_e27yk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Balance"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_u1jg5")
-texture = ExtResource("25_qjr5j")
+material = SubResource("ShaderMaterial_j3ml4")
+texture = ExtResource("18_3tgdw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Balance"]
-shape = SubResource("RectangleShape2D_ptb7q")
+shape = SubResource("RectangleShape2D_n4oe5")
 
-[node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("15_i280t")]
-position = Vector2(30, 296)
-script = ExtResource("37_mjc06")
-clone = ExtResource("38_f1xyl")
-layout_scene = ExtResource("16_dd1nq")
-max_clones = 3
+[node name="Button" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(329, 280)
+script = ExtResource("19_g1wqg")
+Chao = NodePath("../Level Design/InvisibleGround")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
+sprite_frames = SubResource("SpriteFrames_hxclo")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kd3kf")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(184, 216)
+script = ExtResource("19_g1wqg")
+Chao = NodePath("../Level Design/InvisibleGround2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button2"]
+sprite_frames = SubResource("SpriteFrames_hxclo")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kd3kf")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button3" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(184, 152)
+script = ExtResource("19_g1wqg")
+Chao = NodePath("../Level Design/InvisibleGround3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button3"]
+sprite_frames = SubResource("SpriteFrames_hxclo")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button3"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kd3kf")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button4" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(184, 88)
+script = ExtResource("19_g1wqg")
+Chao = NodePath("../Level Design/InvisibleGround4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button4"]
+sprite_frames = SubResource("SpriteFrames_hxclo")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button4"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kd3kf")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button5" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+position = Vector2(297, 40)
+script = ExtResource("19_g1wqg")
+Chao = NodePath("../Level Design/InvisibleGround5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button5"]
+sprite_frames = SubResource("SpriteFrames_hxclo")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button5"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kd3kf")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Button8" type="Area2D" parent="."]
+position = Vector2(88, 280)
+script = ExtResource("22_u553q")
+thorn = NodePath("../Thorn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button8"]
+sprite_frames = SubResource("SpriteFrames_3bfhc")
+animation = &"ButtonDefault"
+autoplay = "ButtonDefault"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button8"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_ragx8")
+debug_color = Color(0.63639, 0.526663, 0, 0.42)
+
+[node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("23_qf2e0")]
+position = Vector2(30, 328)
+script = ExtResource("24_3lrh2")
+clone = ExtResource("25_cs572")
+layout_scene = ExtResource("26_xyg83")
+max_clones = 5
 move_speed = 100.0
 jump_force = 300.0
 gravity = 1000.0
@@ -2225,61 +1798,48 @@ jump_cut_multiplier = 0.5
 clones_current = 0
 clones_max = 0
 
-[node name="Cutscene Initial" type="Node2D" parent="."]
+[node name="Mouse" type="CharacterBody2D" parent="." node_paths=PackedStringArray("grid") groups=["EnemyGroup"]]
+position = Vector2(315, 280)
+script = ExtResource("27_v72xw")
+grid = NodePath("../Level Design/Grid")
+button2 = NodePath("../Button8")
+player_node = NodePath("../Player")
 
-[node name="UI" type="CanvasLayer" parent="Cutscene Initial"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mouse"]
+material = SubResource("ShaderMaterial_2k10o")
+sprite_frames = SubResource("SpriteFrames_d6ljc")
+autoplay = "default"
 
-[node name="Panel" type="Panel" parent="Cutscene Initial/UI"]
-visible = false
-offset_top = 192.0
-offset_right = 352.0
-offset_bottom = 352.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse"]
+position = Vector2(-1.5, 5)
+shape = SubResource("RectangleShape2D_12vaj")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Cutscene Initial/UI/Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -125.0
-offset_top = -77.0
-offset_right = 125.0
-offset_bottom = 65.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Hurtbox" type="Area2D" parent="Mouse"]
 
-[node name="Label" type="Label" parent="Cutscene Initial/UI/Panel/VBoxContainer"]
-modulate = Color(0.396078, 0.858824, 0.45098, 1)
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_stretch_ratio = 0.0
-theme_override_fonts/font = ExtResource("37_xws1k")
-theme_override_font_sizes/font_size = 16
-text = "Oswald \"Cookiehead\" Mobster"
-visible_characters = 0
-visible_ratio = 0.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse/Hurtbox"]
+position = Vector2(-1.5, 5)
+shape = SubResource("RectangleShape2D_12vaj")
+debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Cutscene Initial/UI/Panel/VBoxContainer"]
-custom_minimum_size = Vector2(250, 55)
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_fonts/normal_font = ExtResource("37_xws1k")
-theme_override_font_sizes/normal_font_size = 16
-text = "You're interfering with my black-market kibble stash! Those stray cats don’t deserve the chow I stole! I'm gonna finish you off, Gatito!"
-fit_content = true
-scroll_active = false
-visible_characters = 0
-visible_ratio = 0.0
+[node name="Thorn" type="Area2D" parent="." groups=["ThornGroup"]]
+position = Vector2(295, 119)
+script = ExtResource("30_dy161")
+reload_tilemap = NodePath("../Level Design/BallonReload")
+button2 = NodePath("../Button8")
+cutscene_node = NodePath("../Level Design/Cutscene")
+fade_node = NodePath("../Fade")
+next_scene = ExtResource("31_cacqa")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene Initial"]
-libraries = {
-&"": SubResource("AnimationLibrary_50h4b")
-}
+[node name="Sprite2D" type="Sprite2D" parent="Thorn"]
+rotation = 3.14159
+texture = ExtResource("32_stnf8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Thorn"]
+position = Vector2(0.5, -6)
+shape = SubResource("RectangleShape2D_uimed")
 
 [node name="Fade" type="CanvasLayer" parent="."]
-script = ExtResource("39_5osp5")
+script = ExtResource("33_15jo5")
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
 texture_filter = 1

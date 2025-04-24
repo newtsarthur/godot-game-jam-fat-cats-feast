@@ -1,19 +1,19 @@
 [gd_scene load_steps=25 format=4 uid="uid://dd17oiegtl1hx"]
 
-[ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_j45b6"]
-[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_uutkv"]
-[ext_resource type="Texture2D" uid="uid://b37y3tyo2peip" path="res://sprites/Grouded-expor2t.png" id="3_mbj7f"]
-[ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="5_fp33m"]
-[ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="6_bx61u"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_ov1th"]
-[ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="8_xcls3"]
-[ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="9_fhg0f"]
-[ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="10_mbj7f"]
-[ext_resource type="Script" uid="uid://btwxos3vabpbt" path="res://scripts/Fade.cs" id="11_pyxu7"]
-[ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="16_kuadj"]
+[ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_gxw4u"]
+[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_5owfs"]
+[ext_resource type="Texture2D" uid="uid://b37y3tyo2peip" path="res://sprites/Grouded-expor2t.png" id="3_ob75j"]
+[ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="4_3tndm"]
+[ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="5_d8uw4"]
+[ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="6_k43l0"]
+[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_lojvg"]
+[ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="8_ripkt"]
+[ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="9_4brb5"]
+[ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="10_hscba"]
+[ext_resource type="Script" uid="uid://btwxos3vabpbt" path="res://scripts/Fade.cs" id="11_vqd7e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sca3c"]
-texture = ExtResource("1_j45b6")
+texture = ExtResource("1_gxw4u")
 5:2/0 = 0
 8:2/0 = 0
 4:4/0 = 0
@@ -30,11 +30,11 @@ texture = ExtResource("1_j45b6")
 sources/0 = SubResource("TileSetAtlasSource_sca3c")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2602l"]
-shader = ExtResource("2_uutkv")
+shader = ExtResource("2_5owfs")
 shader_parameter/WindStrength = 2.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h53vq"]
-texture = ExtResource("16_kuadj")
+texture = ExtResource("4_3tndm")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -206,7 +206,7 @@ texture = ExtResource("16_kuadj")
 12:12/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlnpj"]
-texture = ExtResource("1_j45b6")
+texture = ExtResource("1_gxw4u")
 5:2/0 = 0
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -403,15 +403,15 @@ sources/0 = SubResource("TileSetAtlasSource_h53vq")
 sources/1 = SubResource("TileSetAtlasSource_vlnpj")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kfqfa"]
-shader = ExtResource("2_uutkv")
+shader = ExtResource("2_5owfs")
 shader_parameter/WindStrength = 2.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kphik"]
-shader = ExtResource("2_uutkv")
+shader = ExtResource("2_5owfs")
 shader_parameter/WindStrength = 5.67
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mbj7f"]
-shader = ExtResource("2_uutkv")
+shader = ExtResource("2_5owfs")
 shader_parameter/WindStrength = 2.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pyxu7"]
@@ -517,7 +517,7 @@ collision_visibility_mode = 1
 material = SubResource("ShaderMaterial_2602l")
 position = Vector2(175.5, 178.5)
 scale = Vector2(0.923295, 0.974432)
-texture = ExtResource("3_mbj7f")
+texture = ExtResource("3_ob75j")
 
 [node name="Ground" type="TileMapLayer" parent="." groups=["Ground"]]
 visibility_layer = 2
@@ -531,20 +531,20 @@ position = Vector2(334, 328)
 [node name="Sprite2D5" type="Sprite2D" parent="Cutscene Caracters"]
 material = SubResource("ShaderMaterial_kfqfa")
 position = Vector2(-158, 0)
-texture = ExtResource("5_fp33m")
+texture = ExtResource("5_d8uw4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters"]
 material = SubResource("ShaderMaterial_kphik")
 position = Vector2(-57, 0)
-texture = ExtResource("6_bx61u")
+texture = ExtResource("6_k43l0")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
-script = ExtResource("7_ov1th")
+script = ExtResource("7_lojvg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_mbj7f")
-texture = ExtResource("5_fp33m")
+texture = ExtResource("5_d8uw4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene Caracters/CharacterBody2D"]
 position = Vector2(-3, 5.5)
@@ -552,12 +552,12 @@ shape = SubResource("RectangleShape2D_pyxu7")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-280, 0)
-script = ExtResource("7_ov1th")
+script = ExtResource("7_lojvg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D2"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_mbj7f")
-texture = ExtResource("8_xcls3")
+texture = ExtResource("8_ripkt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene Caracters/CharacterBody2D2"]
 position = Vector2(-3, 5.5)
@@ -565,12 +565,12 @@ shape = SubResource("RectangleShape2D_pyxu7")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-206, 0)
-script = ExtResource("7_ov1th")
+script = ExtResource("7_lojvg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D3"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_mbj7f")
-texture = ExtResource("9_fhg0f")
+texture = ExtResource("9_4brb5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene Caracters/CharacterBody2D3"]
 position = Vector2(-3, 5.5)
@@ -578,13 +578,13 @@ shape = SubResource("RectangleShape2D_pyxu7")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-108, 0)
-script = ExtResource("7_ov1th")
+script = ExtResource("7_lojvg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D4"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_mbj7f")
 position = Vector2(1, 0)
-texture = ExtResource("6_bx61u")
+texture = ExtResource("6_k43l0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscene Caracters/CharacterBody2D4"]
 position = Vector2(-3, 5.5)
@@ -616,7 +616,7 @@ offset_bottom = 322.0
 modulate = Color(0.396078, 0.858824, 0.45098, 1)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("10_mbj7f")
+theme_override_fonts/font = ExtResource("10_hscba")
 text = "
 Cats"
 visible_characters = 0
@@ -626,7 +626,7 @@ visible_ratio = 0.0
 custom_minimum_size = Vector2(250, 295)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/normal_font = ExtResource("10_mbj7f")
+theme_override_fonts/normal_font = ExtResource("10_hscba")
 text = "Thanks to you, the kittens are finally free from the tyranny of Oswald \"Cookiehead\" Mobster!
 Now they can eat in peace, without fear of having their kibble stolen.
 
@@ -648,7 +648,7 @@ libraries = {
 autoplay = "endcredts"
 
 [node name="Fade" type="CanvasLayer" parent="."]
-script = ExtResource("11_pyxu7")
+script = ExtResource("11_vqd7e")
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
 texture_filter = 1

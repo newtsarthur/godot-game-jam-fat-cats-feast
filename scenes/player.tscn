@@ -1,21 +1,21 @@
 [gd_scene load_steps=11 format=3 uid="uid://4nupo0ajs8qm"]
 
-[ext_resource type="Script" uid="uid://dopwibu8s42cp" path="res://scripts/Player.cs" id="1_hqtel"]
-[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="2_hqtel"]
-[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://clone.tscn" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://daw1kevh3irmt" path="res://player/Cat2.png" id="3_sweqy"]
+[ext_resource type="Script" uid="uid://dopwibu8s42cp" path="res://scripts/Player.cs" id="1_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="2_tuyoq"]
+[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="3_fjrip"]
+[ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="4_smehm"]
+[ext_resource type="Texture2D" uid="uid://daw1kevh3irmt" path="res://player/Cat2.png" id="5_ur7pv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2hs0m"]
-shader = ExtResource("1_i3pqv")
+shader = ExtResource("3_fjrip")
 shader_parameter/WindStrength = 2.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
-atlas = ExtResource("2_hqtel")
+atlas = ExtResource("4_smehm")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
-atlas = ExtResource("3_sweqy")
+atlas = ExtResource("5_ur7pv")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1jxqw"]
@@ -36,8 +36,8 @@ animations = [{
 size = Vector2(12, 10)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_hqtel")
-Clone = ExtResource("2_sweqy")
+script = ExtResource("1_qlg0r")
+Clone = ExtResource("2_tuyoq")
 
 [node name="Anim" type="AnimatedSprite2D" parent="." groups=["PlayerGroup"]]
 texture_filter = 1

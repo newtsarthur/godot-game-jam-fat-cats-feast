@@ -17,11 +17,11 @@ boot_splash/bg_color=Color(0.129412, 0.117647, 0.2, 1)
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 boot_splash/image="uid://ck4ql8d7miy86"
-config/icon="res://icon.svg"
+config/icon="res://sprites/icon.svg"
 
 [autoload]
 
-AudioPlayer="*res://audio_player.tscn"
+AudioPlayer="*res://scenes/audio_player.tscn"
 PlayerDataTw="*res://gd_scripts/PlayerData.gd"
 
 [display]

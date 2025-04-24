@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="2_0h7mo"]
-[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_e8dv2"]
+[ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_e8dv2"]
 [ext_resource type="Texture2D" uid="uid://cii4hibh23w1x" path="res://sprites/Leaf.png" id="3_ei405"]
 [ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="3_epypp"]
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="4_0hol4"]
@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_mryly"]
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="7_ornx7"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="8_rj586"]
-[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://clone.tscn" id="8_ta5nu"]
+[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="8_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="9_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="11_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="12_0h7mo"]
@@ -32,8 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="24_2nhjh"]
 [ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="29_cnnru"]
 [ext_resource type="Script" uid="uid://dhnedrpxsisqp" path="res://gd_scripts/Thorn.gd" id="32_cnnru"]
-[ext_resource type="PackedScene" uid="uid://cltu5kgw6i0yg" path="res://scene2.tscn" id="33_540hr"]
-[ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="33_ornx7"]
+[ext_resource type="PackedScene" uid="uid://cltu5kgw6i0yg" path="res://scenes/scene2.tscn" id="33_540hr"]
+[ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://scenes/layout.tscn" id="33_ornx7"]
 [ext_resource type="Script" uid="uid://dcnjww4kjla4x" path="res://gd_scripts/Fade.gd" id="34_cnnru"]
 [ext_resource type="Script" uid="uid://dwa702mva6g04" path="res://scripts/level.gd" id="35_cnnru"]
 
