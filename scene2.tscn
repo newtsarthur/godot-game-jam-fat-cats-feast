@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://cltu5kgw6i0yg"]
+[gd_scene load_steps=78 format=4 uid="uid://cltu5kgw6i0yg"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_1lry2"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_un2r7"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="26_qr2pt"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="28_4jxcx"]
 [ext_resource type="Script" uid="uid://cbvelupw7586h" path="res://scripts/Thorn2.cs" id="28_yob8s"]
+[ext_resource type="Script" uid="uid://dwa702mva6g04" path="res://scripts/level.gd" id="33_6bttm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4rcgd"]
 texture = ExtResource("1_1lry2")
@@ -1828,3 +1829,6 @@ texture_filter = 1
 offset_right = 352.0
 offset_bottom = 352.0
 color = Color(0.129412, 0.117647, 0.2, 1)
+
+[node name="level" type="Node" parent="."]
+script = ExtResource("33_6bttm")

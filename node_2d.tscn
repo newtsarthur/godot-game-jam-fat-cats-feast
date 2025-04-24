@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=4 uid="uid://v02yeebxddth"]
+[gd_scene load_steps=86 format=4 uid="uid://v02yeebxddth"]
 
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="2_0h7mo"]
@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="24_2nhjh"]
 [ext_resource type="Script" uid="uid://btwxos3vabpbt" path="res://scripts/Fade.cs" id="27_1fr6y"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="33_ornx7"]
+[ext_resource type="Script" uid="uid://dwa702mva6g04" path="res://scripts/level.gd" id="35_cnnru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq1c5"]
 texture = ExtResource("4_0hol4")
@@ -1920,3 +1921,6 @@ texture_filter = 1
 offset_right = 352.0
 offset_bottom = 352.0
 color = Color(0.129412, 0.117647, 0.2, 1)
+
+[node name="level" type="Node" parent="."]
+script = ExtResource("35_cnnru")
