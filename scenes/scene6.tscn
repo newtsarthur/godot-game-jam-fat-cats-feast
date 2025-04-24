@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="4_3tndm"]
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="5_d8uw4"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="6_k43l0"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_lojvg"]
+[ext_resource type="Script" uid="uid://dradn66v45iod" path="res://gd_scripts/BabyCat.gd" id="7_gxw4u"]
 [ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="8_ripkt"]
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="9_4brb5"]
 [ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="10_hscba"]
@@ -539,7 +539,7 @@ position = Vector2(-57, 0)
 texture = ExtResource("6_k43l0")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
-script = ExtResource("7_lojvg")
+script = ExtResource("7_gxw4u")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D"]
 texture_filter = 1
@@ -552,7 +552,7 @@ shape = SubResource("RectangleShape2D_pyxu7")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-280, 0)
-script = ExtResource("7_lojvg")
+script = ExtResource("7_gxw4u")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D2"]
 texture_filter = 1
@@ -565,7 +565,7 @@ shape = SubResource("RectangleShape2D_pyxu7")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-206, 0)
-script = ExtResource("7_lojvg")
+script = ExtResource("7_gxw4u")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D3"]
 texture_filter = 1
@@ -578,7 +578,7 @@ shape = SubResource("RectangleShape2D_pyxu7")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-108, 0)
-script = ExtResource("7_lojvg")
+script = ExtResource("7_gxw4u")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cutscene Caracters/CharacterBody2D4"]
 texture_filter = 1
