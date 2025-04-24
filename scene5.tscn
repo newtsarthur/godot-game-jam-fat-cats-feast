@@ -1,10 +1,10 @@
-[gd_scene load_steps=98 format=4 uid="uid://dqardypu0bmae"]
+[gd_scene load_steps=101 format=4 uid="uid://dqardypu0bmae"]
 
-[ext_resource type="Script" uid="uid://d21r6oqg31yoi" path="res://scripts/Scene5.cs" id="1_fjmpp"]
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_jbe0f"]
+[ext_resource type="Script" uid="uid://4lgosbna75jx" path="res://gd_scripts/Scene.gd" id="1_mjc06"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_4h62v"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="3_3xme2"]
-[ext_resource type="Script" uid="uid://ynbmty74ic0j" path="res://scripts/Cutscene.cs" id="4_i280t"]
+[ext_resource type="Script" uid="uid://bcvusxpjy5dac" path="res://gd_scripts/Cutscene.gd" id="5_18cm1"]
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="5_dd1nq"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="6_n44gx"]
 [ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_qm6k1"]
@@ -16,27 +16,30 @@
 [ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="11_anl7x"]
 [ext_resource type="Texture2D" uid="uid://cvrwin7vu542o" path="res://sprites/stem.png" id="12_aioai"]
 [ext_resource type="Texture2D" uid="uid://d0u5g3jbk1g84" path="res://sprites/Ballon.png" id="12_xty6v"]
-[ext_resource type="Script" uid="uid://qlxydx32d4pf" path="res://scripts/Button88.cs" id="13_ptb7q"]
 [ext_resource type="Texture2D" uid="uid://cce26jplrt58v" path="res://sprites/Shift.png" id="13_tgpcg"]
 [ext_resource type="Texture2D" uid="uid://dhg4yy3qasuf6" path="res://sprites/Reload.png" id="14_eol8u"]
+[ext_resource type="Script" uid="uid://cqqcmcu3yd6oj" path="res://gd_scripts/Button2.gd" id="14_vkbqs"]
 [ext_resource type="Texture2D" uid="uid://c215ftoq0is4o" path="res://sprites/Enemy.png" id="15_dd1nq"]
 [ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://player.tscn" id="15_i280t"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="16_dd1nq"]
 [ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="17_kqw04"]
-[ext_resource type="Script" uid="uid://btwxos3vabpbt" path="res://scripts/Fade.cs" id="17_n44gx"]
 [ext_resource type="Texture2D" uid="uid://b3co5x53qgxxq" path="res://sprites/stem3.png" id="18_aioai"]
-[ext_resource type="Script" uid="uid://xg1fmo3efahx" path="res://scripts/Thorn5.cs" id="21_ptb7q"]
-[ext_resource type="Script" uid="uid://dq2y6bpp0ce8y" path="res://scripts/Balance.cs" id="23_r8vtu"]
+[ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="18_mjc06"]
+[ext_resource type="Script" uid="uid://b7vgsxc4d013j" path="res://gd_scripts/Thorn2.gd" id="23_vkbqs"]
 [ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="24_bxhpy"]
-[ext_resource type="Script" uid="uid://ds4ph1m2tg4co" path="res://scripts/Boss.cs" id="24_ptb7q"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="24_tgpcg"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="25_eol8u"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="25_qjr5j"]
+[ext_resource type="Script" uid="uid://cjbwuxp416a8l" path="res://gd_scripts/Boss.gd" id="25_xws1k"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="29_kumqt"]
 [ext_resource type="Script" uid="uid://bebnios2xc2io" path="res://scripts/Mouse4.cs" id="29_u1jg5"]
 [ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="30_ptb7q"]
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="31_fjmpp"]
+[ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="33_f1xyl"]
+[ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="37_mjc06"]
 [ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="37_xws1k"]
+[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://clone.tscn" id="38_f1xyl"]
+[ext_resource type="Script" uid="uid://dcnjww4kjla4x" path="res://gd_scripts/Fade.gd" id="39_5osp5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xws1k"]
 texture = ExtResource("1_jbe0f")
@@ -1660,6 +1663,57 @@ shader_parameter/blink_intensity = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ptb7q"]
 size = Vector2(14, 14)
 
+[sub_resource type="Animation" id="Animation_xws1k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Panel/VBoxContainer/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["You're interfering with my black-market kibble stash! Those stray cats don’t deserve the chow I stole! I'm gonna finish you off, Gatito!"]
+}
+
 [sub_resource type="Animation" id="Animation_fjmpp"]
 resource_name = "initial1"
 length = 12.0
@@ -1736,57 +1790,6 @@ tracks/5/keys = {
 "values": [Color(0.396078, 0.858824, 0.45098, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_xws1k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("UI/Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UI/Panel/VBoxContainer/Label:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:visible_ratio")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("UI/Panel/VBoxContainer/RichTextLabel:text")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["You're interfering with my black-market kibble stash! Those stray cats don’t deserve the chow I stole! I'm gonna finish you off, Gatito!"]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_50h4b"]
 _data = {
 &"RESET": SubResource("Animation_xws1k"),
@@ -1794,7 +1797,7 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("animated", "animatedtw")]
-script = ExtResource("1_fjmpp")
+script = ExtResource("1_mjc06")
 animated = NodePath("Level Design/Cutscene/AnimationPlayer4")
 animatedtw = NodePath("Cutscene Initial/AnimationPlayer")
 
@@ -1815,8 +1818,8 @@ scale = Vector2(0.923295, 0.974432)
 texture = ExtResource("3_3xme2")
 
 [node name="Cutscene" type="Node2D" parent="Level Design"]
-script = ExtResource("4_i280t")
-animationName = "EndTutorial"
+script = ExtResource("5_18cm1")
+animation_name = "EndTutorial"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level Design/Cutscene"]
 libraries = {
@@ -1976,10 +1979,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_ffiul")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button88" type="Area2D" parent="Level Design" node_paths=PackedStringArray("Thorn")]
+[node name="Button88" type="Area2D" parent="Level Design"]
 position = Vector2(329, 40)
-script = ExtResource("13_ptb7q")
-Thorn = NodePath("../Thorn")
+script = ExtResource("14_vkbqs")
+thorn = NodePath("../Thorn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Button88"]
 sprite_frames = SubResource("SpriteFrames_r8vtu")
@@ -2030,10 +2033,9 @@ texture = ExtResource("12_aioai")
 position = Vector2(4, 5.5)
 shape = SubResource("RectangleShape2D_aioai")
 
-[node name="Mouse3" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("Grid") groups=["EnemyGroup"]]
+[node name="Mouse3" type="CharacterBody2D" parent="Level Design" groups=["EnemyGroup"]]
 position = Vector2(323, 264)
-script = ExtResource("29_u1jg5")
-Grid = NodePath("../Grid")
+script = ExtResource("18_mjc06")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Mouse3"]
 material = SubResource("ShaderMaterial_xws1k")
@@ -2101,8 +2103,11 @@ tile_set = SubResource("TileSet_5osp5")
 
 [node name="Thorn" type="Area2D" parent="Level Design" node_paths=PackedStringArray("animated") groups=["ThornGroup"]]
 position = Vector2(177, 72)
-script = ExtResource("21_ptb7q")
+script = ExtResource("23_vkbqs")
 animated = NodePath("../Cutscene/AnimationPlayer4")
+fade_node = NodePath("../../Fade")
+cutscene_node = NodePath("../Cutscene")
+button_node = NodePath("../Button88")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Thorn"]
 rotation = 3.14159
@@ -2125,11 +2130,13 @@ texture = ExtResource("10_n44gx")
 position = Vector2(0, 8.82361)
 shape = SubResource("RectangleShape2D_qm6k1")
 
-[node name="Boss" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("Grid", "MouseEnemy") groups=["EnemyGroup"]]
+[node name="Boss" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("grid", "mouse_enemy") groups=["EnemyGroup"]]
 position = Vector2(67, 131)
-script = ExtResource("24_ptb7q")
-Grid = NodePath("../Grid")
-MouseEnemy = [NodePath("../Mouse3"), NodePath("../Mouse4"), NodePath("../Mouse5")]
+script = ExtResource("25_xws1k")
+grid = NodePath("../Grid")
+mouse_enemy = [NodePath("../Mouse3"), NodePath("../Mouse4"), NodePath("../Mouse5")]
+button88 = NodePath("../Button88")
+player = NodePath("../../Player")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Boss"]
 texture_filter = 1
@@ -2194,7 +2201,7 @@ texture = ExtResource("14_eol8u")
 [node name="Balance" type="Area2D" parent="." groups=["BalanceGroup"]]
 texture_filter = 1
 position = Vector2(121, 34)
-script = ExtResource("23_r8vtu")
+script = ExtResource("33_f1xyl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Balance"]
 texture_filter = 1
@@ -2206,10 +2213,17 @@ shape = SubResource("RectangleShape2D_ptb7q")
 
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("15_i280t")]
 position = Vector2(30, 296)
-LayoutScene = ExtResource("16_dd1nq")
-MaxClones = 3
-MoveSpeed = 100.0
-JumpForce = 300.0
+script = ExtResource("37_mjc06")
+clone = ExtResource("38_f1xyl")
+layout_scene = ExtResource("16_dd1nq")
+max_clones = 3
+move_speed = 100.0
+jump_force = 300.0
+gravity = 1000.0
+max_fall_speed = 1000.0
+jump_cut_multiplier = 0.5
+clones_current = 0
+clones_max = 0
 
 [node name="Cutscene Initial" type="Node2D" parent="."]
 
@@ -2265,7 +2279,7 @@ libraries = {
 }
 
 [node name="Fade" type="CanvasLayer" parent="."]
-script = ExtResource("17_n44gx")
+script = ExtResource("39_5osp5")
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
 texture_filter = 1
