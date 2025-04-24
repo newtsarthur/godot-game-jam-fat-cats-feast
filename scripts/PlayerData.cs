@@ -8,6 +8,7 @@ public partial class PlayerData : Node
     public int ItemsCollectedTotal = 0;
     private int _itemsCollectedInLevel = 0;
     public int DeathCount = 0;
+    public int Inicio = 0;
 
     [Signal]
     public delegate void ItemsCollectedInLevelChangedEventHandler(int newValue);
@@ -30,6 +31,7 @@ public partial class PlayerData : Node
     public void ResetLevelProgress()
     {
         ItemsCollectedInLevel = 0;
+        Inicio = 1;
     }
 
     public void CommitLevelProgress()

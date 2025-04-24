@@ -31,7 +31,7 @@
 [ext_resource type="Script" uid="uid://c4ohdef5lruf0" path="res://scripts/Thorn4.cs" id="27_xkjcl"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="28_aafsy"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ragx8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnxmt"]
 texture = ExtResource("1_x3s10")
 5:2/0 = 0
 8:2/0 = 0
@@ -46,7 +46,7 @@ texture = ExtResource("1_x3s10")
 6:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_uimed"]
-sources/0 = SubResource("TileSetAtlasSource_ragx8")
+sources/0 = SubResource("TileSetAtlasSource_xnxmt")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ip5lv"]
 shader = ExtResource("2_7rlpe")
@@ -119,7 +119,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/path = NodePath("../MovingPlataform:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -177,7 +177,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/path = NodePath("../MovingPlataform:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -231,7 +231,7 @@ size = Vector2(8, 5)
 shader = ExtResource("2_7rlpe")
 shader_parameter/WindStrength = 2.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_prbas"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxclo"]
 texture = ExtResource("10_2k10o")
 0:0/0 = 0
 1:0/0 = 0
@@ -697,9 +697,9 @@ texture = ExtResource("10_2k10o")
 21:21/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_vgagl"]
-sources/0 = SubResource("TileSetAtlasSource_prbas")
+sources/0 = SubResource("TileSetAtlasSource_hxclo")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8q05"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kd3kf"]
 texture = ExtResource("1_x3s10")
 2:2/0 = 0
 3:2/0 = 0
@@ -858,7 +858,7 @@ texture = ExtResource("1_x3s10")
 26:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ygari"]
-sources/0 = SubResource("TileSetAtlasSource_x8q05")
+sources/0 = SubResource("TileSetAtlasSource_kd3kf")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dhjrm"]
 particles_animation = true
@@ -878,7 +878,7 @@ scale_min = 0.25
 scale_max = 0.5
 anim_offset_max = 1.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_akgr6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkjcl"]
 texture = ExtResource("12_12vaj")
 0:0/0 = 0
 1:0/0 = 0
@@ -1050,7 +1050,7 @@ texture = ExtResource("12_12vaj")
 11:12/0 = 0
 12:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rykai"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aafsy"]
 texture = ExtResource("1_x3s10")
 5:2/0 = 0
 4:4/0 = 0
@@ -1244,10 +1244,10 @@ texture = ExtResource("1_x3s10")
 
 [sub_resource type="TileSet" id="TileSet_fv5a8"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_akgr6")
-sources/1 = SubResource("TileSetAtlasSource_rykai")
+sources/0 = SubResource("TileSetAtlasSource_xkjcl")
+sources/1 = SubResource("TileSetAtlasSource_aafsy")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qof2c"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bfhc"]
 texture = ExtResource("1_x3s10")
 13:1/0 = 0
 14:1/0 = 0
@@ -1324,9 +1324,9 @@ texture = ExtResource("1_x3s10")
 
 [sub_resource type="TileSet" id="TileSet_ow5vw"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_qof2c")
+sources/0 = SubResource("TileSetAtlasSource_3bfhc")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tvg1f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ragx8"]
 texture = ExtResource("1_x3s10")
 13:1/0 = 0
 14:1/0 = 0
@@ -1402,9 +1402,9 @@ texture = ExtResource("1_x3s10")
 
 [sub_resource type="TileSet" id="TileSet_586gu"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_tvg1f")
+sources/0 = SubResource("TileSetAtlasSource_ragx8")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycj78"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uimed"]
 texture = ExtResource("13_xnxmt")
 use_texture_padding = false
 1:3/0 = 0
@@ -1412,12 +1412,12 @@ use_texture_padding = false
 3:3/0 = 0
 2:4/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6hi68"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ip5lv"]
 texture = ExtResource("14_hxclo")
 
 [sub_resource type="TileSet" id="TileSet_85f40"]
-sources/0 = SubResource("TileSetAtlasSource_ycj78")
-sources/1 = SubResource("TileSetAtlasSource_6hi68")
+sources/0 = SubResource("TileSetAtlasSource_uimed")
+sources/1 = SubResource("TileSetAtlasSource_ip5lv")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j3ml4"]
 shader = ExtResource("17_aafsy")
