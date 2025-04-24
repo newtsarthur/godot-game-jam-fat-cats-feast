@@ -8,6 +8,15 @@ All the game's source code is open source and available in this repository.
 
 In *Sprout Shadow*, you play as a small plant-cat in an enchanted forest, standing up to a tyrant who has been stealing food from the local kittens. Solve environmental puzzles, use clones, and carefully balance your jumps to progress through each level.
 
+## Screenshots
+
+Check out some gameplay from Sprout Shadow:
+
+![Sprout Shadow Screenshot 1](/sprites/print01.png)
+![Sprout Shadow Screenshot 2](/sprites/print02.png)
+![Sprout Shadow Screenshot 3](/sprites/print03.png)
+
+
 ## How to Play
 
 Play the HTML5 version directly in your browser.
