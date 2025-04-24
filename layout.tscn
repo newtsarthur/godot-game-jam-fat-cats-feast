@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bag38ekunxdly" path="res://sprites/CatClone.png" id="1_v6hxy"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="2_y03eh"]
-[ext_resource type="Script" uid="uid://yra8eh1pj05q" path="res://scripts/Control2.cs" id="3_jd3k5"]
-[ext_resource type="Script" uid="uid://bvjgl1io3d3d" path="res://scripts/HUD.cs" id="3_osagt"]
+[ext_resource type="Script" uid="uid://b7rqviel6bfl" path="res://gd_scripts/HUD.gd" id="3_osagt"]
 [ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="3_tupbf"]
+[ext_resource type="Script" uid="uid://bagxyee6xldqe" path="res://gd_scripts/Control2.gd" id="5_jd3k5"]
 
 [node name="Layout" type="Node2D"]
 
@@ -34,10 +34,9 @@ rotation = -3.14159
 scale = Vector2(1, -1)
 texture = ExtResource("2_y03eh")
 
-[node name="Control" type="Node2D" parent="Layout" node_paths=PackedStringArray("meuLabel")]
+[node name="Control" type="Node2D" parent="Layout"]
 position = Vector2(36, 14)
 script = ExtResource("3_osagt")
-meuLabel = NodePath("Label")
 
 [node name="Label2" type="Label" parent="Layout/Control"]
 offset_left = -2.0
@@ -58,10 +57,10 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_tupbf")
 metadata/_edit_use_anchors_ = true
 
-[node name="Control2" type="Node2D" parent="Layout" node_paths=PackedStringArray("meuLabel")]
+[node name="Control2" type="Node2D" parent="Layout" node_paths=PackedStringArray("meu_label")]
 position = Vector2(36, 30)
-script = ExtResource("3_jd3k5")
-meuLabel = NodePath("Label")
+script = ExtResource("5_jd3k5")
+meu_label = NodePath("Label")
 
 [node name="Label" type="Label" parent="Layout/Control2"]
 offset_left = 7.0

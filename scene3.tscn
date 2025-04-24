@@ -1,38 +1,41 @@
-[gd_scene load_steps=87 format=4 uid="uid://bary52efr52te"]
+[gd_scene load_steps=90 format=4 uid="uid://bary52efr52te"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_tioik"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_2i52w"]
-[ext_resource type="Script" uid="uid://ynbmty74ic0j" path="res://scripts/Cutscene.cs" id="4_tk270"]
+[ext_resource type="Script" uid="uid://bcvusxpjy5dac" path="res://gd_scripts/Cutscene.gd" id="4_lovjy"]
 [ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="5_k6viw"]
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="6_xmo86"]
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="7_7w8ke"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="8_7lifn"]
 [ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="9_kcof3"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="10_x5yd5"]
+[ext_resource type="Script" uid="uid://cqqcmcu3yd6oj" path="res://gd_scripts/Button2.gd" id="11_5sled"]
 [ext_resource type="Texture2D" uid="uid://cii4hibh23w1x" path="res://sprites/Leaf.png" id="11_aoqa0"]
-[ext_resource type="Script" uid="uid://cyeqfeqb251ii" path="res://scripts/Button4.cs" id="11_jmxem"]
 [ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="12_vmruc"]
 [ext_resource type="Texture2D" uid="uid://d0u5g3jbk1g84" path="res://sprites/Ballon.png" id="13_0mta1"]
 [ext_resource type="Texture2D" uid="uid://cce26jplrt58v" path="res://sprites/Shift.png" id="14_vdmhe"]
-[ext_resource type="Script" uid="uid://dq2y6bpp0ce8y" path="res://scripts/Balance.cs" id="15_aoqa0"]
 [ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://player.tscn" id="15_bwhmq"]
 [ext_resource type="Texture2D" uid="uid://dhg4yy3qasuf6" path="res://sprites/Reload.png" id="15_pu7y0"]
-[ext_resource type="Script" uid="uid://btwxos3vabpbt" path="res://scripts/Fade.cs" id="15_tioik"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="16_tk270"]
 [ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="16_vmruc"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="17_0mta1"]
 [ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="18_7w8ke"]
-[ext_resource type="Script" uid="uid://dc2o2f2d7ehnr" path="res://scripts/Button3.cs" id="18_vdmhe"]
+[ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="18_jmxem"]
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="19_7lifn"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="19_pu7y0"]
 [ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="20_7lifn"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="20_s5jea"]
 [ext_resource type="Texture2D" uid="uid://du4hbyuvqp22d" path="res://sprites/stem2.png" id="21_kcof3"]
-[ext_resource type="Script" uid="uid://bctfiow636thl" path="res://scripts/Button5.cs" id="22_rp66p"]
+[ext_resource type="Script" uid="uid://bw4ukcthkxid1" path="res://gd_scripts/Button3.gd" id="21_rp66p"]
+[ext_resource type="Script" uid="uid://bc63if51rqceh" path="res://gd_scripts/button4.gd" id="22_30hra"]
+[ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="23_lovjy"]
 [ext_resource type="Texture2D" uid="uid://b3co5x53qgxxq" path="res://sprites/stem3.png" id="23_pu7y0"]
-[ext_resource type="Script" uid="uid://dh4j5pblw7egh" path="res://scripts/Mouse3.cs" id="28_rp66p"]
+[ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="23_rp66p"]
+[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://clone.tscn" id="24_lovjy"]
+[ext_resource type="Script" uid="uid://dhnedrpxsisqp" path="res://gd_scripts/Thorn.gd" id="29_miu4f"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="30_jmxem"]
-[ext_resource type="Script" uid="uid://c46oiyks611px" path="res://scripts/Thorn3.cs" id="31_rp66p"]
+[ext_resource type="Script" uid="uid://dcnjww4kjla4x" path="res://gd_scripts/Fade.gd" id="31_5sled"]
+[ext_resource type="PackedScene" uid="uid://bwos4bd5xn0ix" path="res://scene4.tscn" id="34_ick5v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5jea"]
 texture = ExtResource("1_tioik")
@@ -1622,8 +1625,8 @@ scale = Vector2(0.923295, 0.974432)
 texture = ExtResource("10_x5yd5")
 
 [node name="Cutscene" type="Node2D" parent="Level Design"]
-script = ExtResource("4_tk270")
-animationName = "EndTutorial"
+script = ExtResource("4_lovjy")
+animation_name = "EndTutorial"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level Design/Cutscene"]
 libraries = {
@@ -1753,10 +1756,10 @@ texture = ExtResource("11_aoqa0")
 visibility_rect = Rect2(-500, -200, 1000, 300)
 process_material = SubResource("ParticleProcessMaterial_njc40")
 
-[node name="Button4" type="Area2D" parent="Level Design" node_paths=PackedStringArray("Thorn")]
+[node name="Button4" type="Area2D" parent="Level Design"]
 position = Vector2(331, 40)
-script = ExtResource("11_jmxem")
-Thorn = NodePath("../../Thorn")
+script = ExtResource("11_5sled")
+thorn = NodePath("../../Thorn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Button4"]
 sprite_frames = SubResource("SpriteFrames_5sled")
@@ -1823,7 +1826,7 @@ texture = ExtResource("15_pu7y0")
 [node name="Balance" type="Area2D" parent="." groups=["BalanceGroup"]]
 texture_filter = 1
 position = Vector2(325, 223)
-script = ExtResource("15_aoqa0")
+script = ExtResource("18_jmxem")
 
 [node name="Sprite2D" type="Sprite2D" parent="Balance"]
 texture_filter = 1
@@ -1833,10 +1836,10 @@ texture = ExtResource("17_0mta1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Balance"]
 shape = SubResource("RectangleShape2D_pu7y0")
 
-[node name="Button" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button" type="Area2D" parent="." node_paths=PackedStringArray("chao")]
 position = Vector2(153, 168)
-script = ExtResource("18_vdmhe")
-Chao = NodePath("../Level Design/InvisibleGround")
+script = ExtResource("21_rp66p")
+chao = NodePath("../Level Design/InvisibleGround")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
 sprite_frames = SubResource("SpriteFrames_5sled")
@@ -1848,10 +1851,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_jmxem")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("chao")]
 position = Vector2(325, 232)
-script = ExtResource("18_vdmhe")
-Chao = NodePath("../Level Design/InvisibleGround2")
+script = ExtResource("21_rp66p")
+chao = NodePath("../Level Design/InvisibleGround2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button2"]
 sprite_frames = SubResource("SpriteFrames_5sled")
@@ -1863,11 +1866,11 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_jmxem")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button3" type="Area2D" parent="." node_paths=PackedStringArray("Chao", "Thorn")]
-position = Vector2(181, 56)
-script = ExtResource("22_rp66p")
-Chao = NodePath("../Level Design/InvisibleGround4")
-Thorn = NodePath("../Thorn")
+[node name="Button3" type="Area2D" parent="." node_paths=PackedStringArray("chao", "thorn")]
+position = Vector2(184, 55)
+script = ExtResource("22_30hra")
+chao = NodePath("../Level Design/InvisibleGround4")
+thorn = NodePath("../Thorn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button3"]
 sprite_frames = SubResource("SpriteFrames_5sled")
@@ -1881,10 +1884,17 @@ debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("15_bwhmq")]
 position = Vector2(200, 328)
-LayoutScene = ExtResource("16_tk270")
-MaxClones = 3
-MoveSpeed = 100.0
-JumpForce = 300.0
+script = ExtResource("23_rp66p")
+clone = ExtResource("24_lovjy")
+layout_scene = ExtResource("16_tk270")
+max_clones = 3
+move_speed = 100.0
+jump_force = 300.0
+gravity = 1000.0
+max_fall_speed = 1000.0
+jump_cut_multiplier = 0.5
+clones_current = 0
+clones_max = 0
 
 [node name="MovingPlataform" type="CharacterBody2D" parent="." groups=["Ground"]]
 position = Vector2(105, 257)
@@ -1919,10 +1929,12 @@ texture = ExtResource("23_pu7y0")
 position = Vector2(-16, 5.5)
 shape = SubResource("RectangleShape2D_5sled")
 
-[node name="Mouse" type="CharacterBody2D" parent="." node_paths=PackedStringArray("Grid") groups=["EnemyGroup"]]
+[node name="Mouse" type="CharacterBody2D" parent="." node_paths=PackedStringArray("grid") groups=["EnemyGroup"]]
 position = Vector2(304, 232)
-script = ExtResource("28_rp66p")
-Grid = NodePath("../Level Design/Grid")
+script = ExtResource("23_lovjy")
+grid = NodePath("../Level Design/Grid")
+button2 = NodePath("../Level Design/Button4")
+player_node = NodePath("../Player")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mouse"]
 material = SubResource("ShaderMaterial_kcof3")
@@ -1942,7 +1954,12 @@ debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
 
 [node name="Thorn" type="Area2D" parent="." groups=["ThornGroup"]]
 position = Vector2(288, 151)
-script = ExtResource("31_rp66p")
+script = ExtResource("29_miu4f")
+reload_tilemap = NodePath("../Level Design/BallonReload")
+button2 = NodePath("../Level Design/Button4")
+cutscene_node = NodePath("../Level Design/Cutscene")
+fade_node = NodePath("../Fade")
+next_scene = ExtResource("34_ick5v")
 
 [node name="Sprite2D" type="Sprite2D" parent="Thorn"]
 rotation = 3.14159
@@ -1953,7 +1970,7 @@ position = Vector2(0.5, -6)
 shape = SubResource("RectangleShape2D_lovjy")
 
 [node name="Fade" type="CanvasLayer" parent="."]
-script = ExtResource("15_tioik")
+script = ExtResource("31_5sled")
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
 texture_filter = 1
