@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://cltu5kgw6i0yg"]
+[gd_scene load_steps=77 format=4 uid="uid://cltu5kgw6i0yg"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_1lry2"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://node_2d.tres" id="2_un2r7"]
@@ -116,12 +116,50 @@ _data = {
 &"RESET": SubResource("Animation_kq1c5")
 }
 
+[sub_resource type="Animation" id="Animation_4rcgd"]
+resource_name = "new_animationtt"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(280, 189), Vector2(280, 214), Vector2(280, 48), Vector2(280, 189)]
+}
+
 [sub_resource type="Animation" id="Animation_6bttm"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(280, 189)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h5aeu"]
+_data = {
+&"RESET": SubResource("Animation_6bttm"),
+&"new_animationtt": SubResource("Animation_4rcgd")
+}
+
+[sub_resource type="Animation" id="Animation_yjf6y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MovingPlataform:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -155,7 +193,7 @@ tracks/2/keys = {
 "values": [Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_0mta1"]
+[sub_resource type="Animation" id="Animation_ua55d"]
 resource_name = "new_animation"
 length = 2.0
 loop_mode = 1
@@ -172,14 +210,14 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_4rcgd"]
+[sub_resource type="Animation" id="Animation_f53w2"]
 resource_name = "plataform"
 length = 3.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../MovingPlataform:position")
+tracks/0/path = NodePath("../MovingPlataform:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -189,7 +227,7 @@ tracks/0/keys = {
 "values": [Vector2(280, 189), Vector2(280, 214), Vector2(280, 48), Vector2(280, 189)]
 }
 
-[sub_resource type="Animation" id="Animation_h5aeu"]
+[sub_resource type="Animation" id="Animation_xqlue"]
 resource_name = "scale objects"
 length = 2.0
 loop_mode = 1
@@ -206,12 +244,12 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_h5aeu"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atwxa"]
 _data = {
-&"RESET": SubResource("Animation_6bttm"),
-&"new_animation": SubResource("Animation_0mta1"),
-&"plataform": SubResource("Animation_4rcgd"),
-&"scale objects": SubResource("Animation_h5aeu")
+&"RESET": SubResource("Animation_yjf6y"),
+&"new_animation": SubResource("Animation_ua55d"),
+&"plataform": SubResource("Animation_f53w2"),
+&"scale objects": SubResource("Animation_xqlue")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4rcgd"]
@@ -1451,8 +1489,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5kdi"]
 size = Vector2(16, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5aeu"]
-size = Vector2(16, 5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4rcgd"]
+size = Vector2(18, 5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yjf6y"]
 shader = ExtResource("2_un2r7")
@@ -1505,15 +1543,15 @@ libraries = {
 &"": SubResource("AnimationLibrary_ornx7")
 }
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Level Design/Cutscene"]
+[node name="AnimationPlayer23" type="AnimationPlayer" parent="Level Design/Cutscene"]
 libraries = {
 &"": SubResource("AnimationLibrary_h5aeu")
 }
-autoplay = "plataform"
+autoplay = "new_animationtt"
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Level Design/Cutscene"]
 libraries = {
-&"": SubResource("AnimationLibrary_h5aeu")
+&"": SubResource("AnimationLibrary_atwxa")
 }
 autoplay = "scale objects"
 
@@ -1740,7 +1778,7 @@ texture = ExtResource("24_6bttm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlataform"]
 position = Vector2(-12, 5.5)
-shape = SubResource("RectangleShape2D_h5aeu")
+shape = SubResource("RectangleShape2D_4rcgd")
 
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("18_fgt4w")]
 position = Vector2(200, 328)
