@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://bkfc7fbclb0l3" path="res://scene2.tscn" id="33_540hr"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="33_ornx7"]
 [ext_resource type="Script" uid="uid://dcnjww4kjla4x" path="res://gd_scripts/Fade.gd" id="34_cnnru"]
-[ext_resource type="Script" uid="uid://dwa702mva6g04" path="res://scripts/level.gd" id="35_cnnru"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="35_cnnru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq1c5"]
 texture = ExtResource("4_0hol4")
