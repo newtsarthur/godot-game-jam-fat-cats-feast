@@ -5,6 +5,7 @@ extends Area2D
 @export var fade_node: NodePath
 @export var cutscene_node: NodePath
 @export var button_node: NodePath
+@export var next_scene: PackedScene
 
 var _should_fall := false
 var _original_position: Vector2
@@ -68,4 +69,4 @@ func _on_cutscene_finished():
 	var fade = get_node_or_null(fade_node)
 	if fade:
 		await fade.start_fade()
-	get_tree().change_scene_to_file("res://scene6.tscn")
+	get_tree().change_scene_to_packed(next_scene)
