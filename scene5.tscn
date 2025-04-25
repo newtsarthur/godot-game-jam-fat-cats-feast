@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=4 uid="uid://dqardypu0bmae"]
+[gd_scene load_steps=98 format=4 uid="uid://brxu7fwi0xlu2"]
 
 [ext_resource type="Script" uid="uid://4lgosbna75jx" path="res://gd_scripts/Scene.gd" id="1_pkcpp"]
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="2_hbwvr"]
@@ -32,7 +32,7 @@
 [ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="32_afwxf"]
 [ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="33_b03cy"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="34_fk7hq"]
-[ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://player.tscn" id="35_qsi0f"]
+[ext_resource type="PackedScene" uid="uid://crvre5ihegud6" path="res://player.tscn" id="35_qsi0f"]
 [ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://clone.tscn" id="37_ew1sg"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="38_0xxnx"]
 [ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="39_7ukym"]

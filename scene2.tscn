@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://cltu5kgw6i0yg"]
+[gd_scene load_steps=79 format=4 uid="uid://bkfc7fbclb0l3"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_1lry2"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_un2r7"]
@@ -18,7 +18,7 @@
 [ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="16_fgt4w"]
 [ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="16_ua55d"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="17_c78tf"]
-[ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://player.tscn" id="18_fgt4w"]
+[ext_resource type="PackedScene" uid="uid://crvre5ihegud6" path="res://player.tscn" id="18_fgt4w"]
 [ext_resource type="Script" uid="uid://bw4ukcthkxid1" path="res://gd_scripts/Button3.gd" id="19_h5aeu"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://layout.tscn" id="20_wu4ic"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="22_f7cnd"]
