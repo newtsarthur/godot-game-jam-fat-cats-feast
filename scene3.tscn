@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=4 uid="uid://bary52efr52te"]
+[gd_scene load_steps=89 format=4 uid="uid://bary52efr52te"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_k8jou"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_t0bel"]
@@ -26,7 +26,6 @@
 [ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="24_v1ro7"]
 [ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="25_dl8b1"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://scenes/layout.tscn" id="26_cp5qq"]
-[ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="27_wg7l2"]
 [ext_resource type="Texture2D" uid="uid://du4hbyuvqp22d" path="res://sprites/stem2.png" id="28_trh2p"]
 [ext_resource type="Texture2D" uid="uid://b3co5x53qgxxq" path="res://sprites/stem3.png" id="29_7oewo"]
 [ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="30_8jdsk"]
@@ -1899,7 +1898,6 @@ clones_max = 0
 [node name="MovingPlataform" type="CharacterBody2D" parent="." groups=["Ground"]]
 position = Vector2(105, 257)
 motion_mode = 1
-script = ExtResource("27_wg7l2")
 
 [node name="Sprite2D" type="Sprite2D" parent="MovingPlataform"]
 position = Vector2(4, 0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://3mia6fyhktbi"]
+[gd_scene load_steps=25 format=4 uid="uid://dd17oiegtl1hx"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_gxw4u"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_5owfs"]
