@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cq2767vvd6d6r"]
 
-[ext_resource type="Script" uid="uid://bgx2gpafbcaac" path="res://scripts/Spashscreen.cs" id="1_7s01s"]
+[ext_resource type="Script" uid="uid://c42ihavgvqbe1" path="res://gd_scripts/Spashscreen.gd" id="1_7s01s"]
 [ext_resource type="Texture2D" uid="uid://cgx8y8p7fy3u8" path="res://sprites/logo/teste.svg" id="2_hscu2"]
 
 [node name="Control" type="Control"]

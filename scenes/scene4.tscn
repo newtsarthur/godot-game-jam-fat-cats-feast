@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=4 uid="uid://bwos4bd5xn0ix"]
+[gd_scene load_steps=75 format=4 uid="uid://bwos4bd5xn0ix"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_rj35a"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_68fmk"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bcvusxpjy5dac" path="res://gd_scripts/Cutscene.gd" id="4_ligmg"]
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="5_ks01w"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="6_2fd8t"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="7_c3itq"]
+[ext_resource type="Script" uid="uid://dradn66v45iod" path="res://gd_scripts/BabyCat.gd" id="7_rj35a"]
 [ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="8_brm7h"]
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="9_wd1dq"]
 [ext_resource type="Texture2D" uid="uid://dc7wq6xxos1cr" path="res://sprites/Grouded.png" id="10_fcyp3"]
@@ -18,19 +18,18 @@
 [ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="16_e27yk"]
 [ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="17_jqk76"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="18_3tgdw"]
-[ext_resource type="Script" uid="uid://dc2o2f2d7ehnr" path="res://scripts/Button3.cs" id="19_g1wqg"]
+[ext_resource type="Script" uid="uid://bw4ukcthkxid1" path="res://gd_scripts/Button3.gd" id="19_rj35a"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="20_q0f4g"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="21_kt42d"]
 [ext_resource type="Script" uid="uid://cqqcmcu3yd6oj" path="res://gd_scripts/Button2.gd" id="22_u553q"]
-[ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://scenes/player.tscn" id="23_qf2e0"]
-[ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="24_3lrh2"]
+[ext_resource type="PackedScene" uid="uid://crvre5ihegud6" path="res://scenes/player.tscn" id="23_qf2e0"]
 [ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="25_cs572"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://scenes/layout.tscn" id="26_xyg83"]
 [ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="27_v72xw"]
 [ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="28_jaitq"]
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="29_ubny0"]
 [ext_resource type="Script" uid="uid://dhnedrpxsisqp" path="res://gd_scripts/Thorn.gd" id="30_dy161"]
-[ext_resource type="PackedScene" uid="uid://dqardypu0bmae" path="res://scenes/scene5.tscn" id="31_cacqa"]
+[ext_resource type="PackedScene" uid="uid://brxu7fwi0xlu2" path="res://scenes/scene5.tscn" id="31_cacqa"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="32_stnf8"]
 [ext_resource type="Script" uid="uid://dcnjww4kjla4x" path="res://gd_scripts/Fade.gd" id="33_15jo5"]
 
@@ -1551,7 +1550,7 @@ position = Vector2(-57, 0)
 texture = ExtResource("6_2fd8t")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
-script = ExtResource("7_c3itq")
+script = ExtResource("7_rj35a")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D"]
 texture_filter = 1
@@ -1564,7 +1563,7 @@ shape = SubResource("RectangleShape2D_g41qa")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-280, 0)
-script = ExtResource("7_c3itq")
+script = ExtResource("7_rj35a")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D2"]
 texture_filter = 1
@@ -1577,7 +1576,7 @@ shape = SubResource("RectangleShape2D_g41qa")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-206, 0)
-script = ExtResource("7_c3itq")
+script = ExtResource("7_rj35a")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D3"]
 texture_filter = 1
@@ -1590,7 +1589,7 @@ shape = SubResource("RectangleShape2D_g41qa")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-108, 0)
-script = ExtResource("7_c3itq")
+script = ExtResource("7_rj35a")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D4"]
 texture_filter = 1
@@ -1694,10 +1693,10 @@ texture = ExtResource("18_3tgdw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Balance"]
 shape = SubResource("RectangleShape2D_n4oe5")
 
-[node name="Button" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button" type="Area2D" parent="." node_paths=PackedStringArray("chao")]
 position = Vector2(329, 280)
-script = ExtResource("19_g1wqg")
-Chao = NodePath("../Level Design/InvisibleGround")
+script = ExtResource("19_rj35a")
+chao = NodePath("../Level Design/InvisibleGround")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button"]
 sprite_frames = SubResource("SpriteFrames_hxclo")
@@ -1709,10 +1708,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_kd3kf")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button2" type="Area2D" parent="." node_paths=PackedStringArray("chao")]
 position = Vector2(184, 216)
-script = ExtResource("19_g1wqg")
-Chao = NodePath("../Level Design/InvisibleGround2")
+script = ExtResource("19_rj35a")
+chao = NodePath("../Level Design/InvisibleGround2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button2"]
 sprite_frames = SubResource("SpriteFrames_hxclo")
@@ -1724,10 +1723,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_kd3kf")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button3" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button3" type="Area2D" parent="." node_paths=PackedStringArray("chao")]
 position = Vector2(184, 152)
-script = ExtResource("19_g1wqg")
-Chao = NodePath("../Level Design/InvisibleGround3")
+script = ExtResource("19_rj35a")
+chao = NodePath("../Level Design/InvisibleGround3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button3"]
 sprite_frames = SubResource("SpriteFrames_hxclo")
@@ -1739,10 +1738,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_kd3kf")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button4" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button4" type="Area2D" parent="." node_paths=PackedStringArray("chao")]
 position = Vector2(184, 88)
-script = ExtResource("19_g1wqg")
-Chao = NodePath("../Level Design/InvisibleGround4")
+script = ExtResource("19_rj35a")
+chao = NodePath("../Level Design/InvisibleGround4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button4"]
 sprite_frames = SubResource("SpriteFrames_hxclo")
@@ -1754,10 +1753,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_kd3kf")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button5" type="Area2D" parent="." node_paths=PackedStringArray("Chao")]
+[node name="Button5" type="Area2D" parent="." node_paths=PackedStringArray("chao")]
 position = Vector2(297, 40)
-script = ExtResource("19_g1wqg")
-Chao = NodePath("../Level Design/InvisibleGround5")
+script = ExtResource("19_rj35a")
+chao = NodePath("../Level Design/InvisibleGround5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button5"]
 sprite_frames = SubResource("SpriteFrames_hxclo")
@@ -1786,17 +1785,11 @@ debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("23_qf2e0")]
 position = Vector2(30, 328)
-script = ExtResource("24_3lrh2")
 clone = ExtResource("25_cs572")
 layout_scene = ExtResource("26_xyg83")
 max_clones = 5
 move_speed = 100.0
 jump_force = 300.0
-gravity = 1000.0
-max_fall_speed = 1000.0
-jump_cut_multiplier = 0.5
-clones_current = 0
-clones_max = 0
 
 [node name="Mouse" type="CharacterBody2D" parent="." node_paths=PackedStringArray("grid") groups=["EnemyGroup"]]
 position = Vector2(315, 280)

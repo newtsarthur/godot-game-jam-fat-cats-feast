@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=4 uid="uid://bary52efr52te"]
+[gd_scene load_steps=89 format=4 uid="uid://bary52efr52te"]
 
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="1_k8jou"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="2_t0bel"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="6_mx7rr"]
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="7_tyrlo"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="8_256qt"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="9_4n6px"]
+[ext_resource type="Script" uid="uid://dradn66v45iod" path="res://gd_scripts/BabyCat.gd" id="9_k8jou"]
 [ext_resource type="Texture2D" uid="uid://cii4hibh23w1x" path="res://sprites/Leaf.png" id="10_crrhb"]
 [ext_resource type="Script" uid="uid://cqqcmcu3yd6oj" path="res://gd_scripts/Button2.gd" id="11_sy50t"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="12_hiywf"]
@@ -22,11 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="20_k1b8b"]
 [ext_resource type="Script" uid="uid://bw4ukcthkxid1" path="res://gd_scripts/Button3.gd" id="21_nndxp"]
 [ext_resource type="Script" uid="uid://bc63if51rqceh" path="res://gd_scripts/button4.gd" id="22_dwugd"]
-[ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://scenes/player.tscn" id="23_bjuj1"]
+[ext_resource type="PackedScene" uid="uid://crvre5ihegud6" path="res://scenes/player.tscn" id="23_bjuj1"]
 [ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="24_v1ro7"]
 [ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="25_dl8b1"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://scenes/layout.tscn" id="26_cp5qq"]
-[ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="27_wg7l2"]
 [ext_resource type="Texture2D" uid="uid://du4hbyuvqp22d" path="res://sprites/stem2.png" id="28_trh2p"]
 [ext_resource type="Texture2D" uid="uid://b3co5x53qgxxq" path="res://sprites/stem3.png" id="29_7oewo"]
 [ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="30_8jdsk"]
@@ -1684,7 +1683,7 @@ position = Vector2(-57, 0)
 texture = ExtResource("8_256qt")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
-script = ExtResource("9_4n6px")
+script = ExtResource("9_k8jou")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D"]
 texture_filter = 1
@@ -1697,7 +1696,7 @@ shape = SubResource("RectangleShape2D_ick5v")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-280, 0)
-script = ExtResource("9_4n6px")
+script = ExtResource("9_k8jou")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D2"]
 texture_filter = 1
@@ -1710,7 +1709,7 @@ shape = SubResource("RectangleShape2D_ick5v")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-206, 0)
-script = ExtResource("9_4n6px")
+script = ExtResource("9_k8jou")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D3"]
 texture_filter = 1
@@ -1723,7 +1722,7 @@ shape = SubResource("RectangleShape2D_ick5v")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-108, 0)
-script = ExtResource("9_4n6px")
+script = ExtResource("9_k8jou")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D4"]
 texture_filter = 1
@@ -1899,7 +1898,6 @@ clones_max = 0
 [node name="MovingPlataform" type="CharacterBody2D" parent="." groups=["Ground"]]
 position = Vector2(105, 257)
 motion_mode = 1
-script = ExtResource("27_wg7l2")
 
 [node name="Sprite2D" type="Sprite2D" parent="MovingPlataform"]
 position = Vector2(4, 0)

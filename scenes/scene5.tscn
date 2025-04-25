@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://dqardypu0bmae"]
+[gd_scene load_steps=99 format=4 uid="uid://brxu7fwi0xlu2"]
 
 [ext_resource type="Script" uid="uid://4lgosbna75jx" path="res://gd_scripts/Scene.gd" id="1_pkcpp"]
 [ext_resource type="Texture2D" uid="uid://drihtt6v38cko" path="res://tileset/Balance1.png" id="2_hbwvr"]
@@ -7,20 +7,19 @@
 [ext_resource type="Script" uid="uid://bcvusxpjy5dac" path="res://gd_scripts/Cutscene.gd" id="5_ncbdo"]
 [ext_resource type="Texture2D" uid="uid://coy7hy2j628qy" path="res://sprites/BabyCat3.png" id="6_cvjla"]
 [ext_resource type="Texture2D" uid="uid://bk2svju8yesky" path="res://sprites/BabyCat.png" id="7_6mpio"]
-[ext_resource type="Script" uid="uid://bv011yru2ab22" path="res://scripts/BabyCat.cs" id="8_pk3k1"]
+[ext_resource type="Script" uid="uid://dradn66v45iod" path="res://gd_scripts/BabyCat.gd" id="8_pkcpp"]
 [ext_resource type="Texture2D" uid="uid://dr5uyi0qgjmca" path="res://sprites/BabyCat2.png" id="9_tvccc"]
 [ext_resource type="Texture2D" uid="uid://bla3j35145c1m" path="res://sprites/BabyCat4.png" id="10_ofjl4"]
-[ext_resource type="Script" uid="uid://dc2o2f2d7ehnr" path="res://scripts/Button3.cs" id="11_ykpog"]
+[ext_resource type="Script" uid="uid://bw4ukcthkxid1" path="res://gd_scripts/Button3.gd" id="11_16af1"]
 [ext_resource type="Texture2D" uid="uid://bir05sf5qdysd" path="res://sprites/Button2.png" id="12_tpdak"]
 [ext_resource type="Texture2D" uid="uid://ckd6tjrqrnasw" path="res://sprites/Button.png" id="13_my6es"]
 [ext_resource type="Script" uid="uid://cqqcmcu3yd6oj" path="res://gd_scripts/Button2.gd" id="14_mns0d"]
-[ext_resource type="Script" uid="uid://cbyrlsi662prr" path="res://scripts/MovingPlataform.cs" id="15_ft2hs"]
 [ext_resource type="Texture2D" uid="uid://b3co5x53qgxxq" path="res://sprites/stem3.png" id="16_fsu53"]
 [ext_resource type="Texture2D" uid="uid://cvrwin7vu542o" path="res://sprites/stem.png" id="17_tden1"]
 [ext_resource type="Script" uid="uid://cobmtechre3r5" path="res://gd_scripts/Mouse.gd" id="18_poudh"]
 [ext_resource type="Texture2D" uid="uid://ivg3ca0dfdh0" path="res://sprites/Ratatong.png" id="19_sbagm"]
 [ext_resource type="Texture2D" uid="uid://bp28m1xg6ai2m" path="res://sprites/Mouse2.png" id="20_5yxuo"]
-[ext_resource type="Script" uid="uid://bebnios2xc2io" path="res://scripts/Mouse4.cs" id="21_6g5tp"]
+[ext_resource type="PackedScene" uid="uid://yx1iv7nc46qv" path="res://scenes/scene6.tscn" id="22_7grdh"]
 [ext_resource type="Texture2D" uid="uid://co3o7pdx7oxnl" path="res://tileset/mock-grass.png" id="22_v0utc"]
 [ext_resource type="Script" uid="uid://b7vgsxc4d013j" path="res://gd_scripts/Thorn2.gd" id="23_et433"]
 [ext_resource type="Texture2D" uid="uid://b1lmv37lqcosf" path="res://sprites/Thorn.png" id="24_eadsi"]
@@ -34,8 +33,7 @@
 [ext_resource type="Script" uid="uid://dqmx6vgthpkom" path="res://gd_scripts/Balance.gd" id="32_afwxf"]
 [ext_resource type="Shader" uid="uid://dxnw56kbdolhj" path="res://shader/blink.gdshader" id="33_b03cy"]
 [ext_resource type="Texture2D" uid="uid://cc0sryh8cqrvo" path="res://sprites/IngAng.png" id="34_fk7hq"]
-[ext_resource type="PackedScene" uid="uid://4nupo0ajs8qm" path="res://scenes/player.tscn" id="35_qsi0f"]
-[ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="36_7cml7"]
+[ext_resource type="PackedScene" uid="uid://crvre5ihegud6" path="res://scenes/player.tscn" id="35_qsi0f"]
 [ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="37_ew1sg"]
 [ext_resource type="PackedScene" uid="uid://bbwcxc76hiumj" path="res://scenes/layout.tscn" id="38_0xxnx"]
 [ext_resource type="FontFile" uid="uid://dqpwtsvxy0bcy" path="res://fonts/Minecraft.ttf" id="39_7ukym"]
@@ -1869,7 +1867,7 @@ position = Vector2(-57, 0)
 texture = ExtResource("7_6mpio")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
-script = ExtResource("8_pk3k1")
+script = ExtResource("8_pkcpp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D"]
 texture_filter = 1
@@ -1882,7 +1880,7 @@ shape = SubResource("RectangleShape2D_u1jg5")
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-280, 0)
-script = ExtResource("8_pk3k1")
+script = ExtResource("8_pkcpp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D2"]
 texture_filter = 1
@@ -1895,7 +1893,7 @@ shape = SubResource("RectangleShape2D_u1jg5")
 
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-206, 0)
-script = ExtResource("8_pk3k1")
+script = ExtResource("8_pkcpp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D3"]
 texture_filter = 1
@@ -1908,7 +1906,7 @@ shape = SubResource("RectangleShape2D_u1jg5")
 
 [node name="CharacterBody2D4" type="CharacterBody2D" parent="Level Design/Cutscene/Cutscene Caracters" groups=["BabyCatGroup"]]
 position = Vector2(-108, 0)
-script = ExtResource("8_pk3k1")
+script = ExtResource("8_pkcpp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Cutscene/Cutscene Caracters/CharacterBody2D4"]
 texture_filter = 1
@@ -1949,10 +1947,10 @@ tile_set = SubResource("TileSet_a57w3")
 [node name="InvisibleGround5" type="TileMapLayer" parent="Level Design"]
 tile_set = SubResource("TileSet_a57w3")
 
-[node name="Button" type="Area2D" parent="Level Design" node_paths=PackedStringArray("Chao")]
+[node name="Button" type="Area2D" parent="Level Design" node_paths=PackedStringArray("chao")]
 position = Vector2(176, 296)
-script = ExtResource("11_ykpog")
-Chao = NodePath("../InvisibleGround")
+script = ExtResource("11_16af1")
+chao = NodePath("../InvisibleGround")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Button"]
 sprite_frames = SubResource("SpriteFrames_4id1h")
@@ -1964,10 +1962,10 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_ffiul")
 debug_color = Color(0.63639, 0.526663, 0, 0.42)
 
-[node name="Button2" type="Area2D" parent="Level Design" node_paths=PackedStringArray("Chao")]
+[node name="Button2" type="Area2D" parent="Level Design" node_paths=PackedStringArray("chao")]
 position = Vector2(176, 232)
-script = ExtResource("11_ykpog")
-Chao = NodePath("../InvisibleGround2")
+script = ExtResource("11_16af1")
+chao = NodePath("../InvisibleGround2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Button2"]
 sprite_frames = SubResource("SpriteFrames_4id1h")
@@ -1997,7 +1995,6 @@ debug_color = Color(0.63639, 0.526663, 0, 0.42)
 [node name="MovingPlataform" type="CharacterBody2D" parent="Level Design" groups=["Ground"]]
 position = Vector2(280, 189)
 motion_mode = 1
-script = ExtResource("15_ft2hs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/MovingPlataform"]
 position = Vector2(4, 0)
@@ -2010,7 +2007,6 @@ shape = SubResource("RectangleShape2D_qtgef")
 [node name="MovingPlataform2" type="CharacterBody2D" parent="Level Design" groups=["Ground"]]
 position = Vector2(131, 88)
 motion_mode = 1
-script = ExtResource("15_ft2hs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/MovingPlataform2"]
 position = Vector2(4, 0)
@@ -2023,7 +2019,6 @@ shape = SubResource("RectangleShape2D_qtgef")
 [node name="MovingPlataform3" type="CharacterBody2D" parent="Level Design" groups=["Ground"]]
 position = Vector2(40, 188)
 motion_mode = 1
-script = ExtResource("15_ft2hs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/MovingPlataform3"]
 position = Vector2(4, 0)
@@ -2036,6 +2031,7 @@ shape = SubResource("RectangleShape2D_aioai")
 [node name="Mouse3" type="CharacterBody2D" parent="Level Design" groups=["EnemyGroup"]]
 position = Vector2(323, 264)
 script = ExtResource("18_poudh")
+player_node = NodePath("../../Player")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Mouse3"]
 material = SubResource("ShaderMaterial_xws1k")
@@ -2053,10 +2049,10 @@ position = Vector2(-1.5, 5)
 shape = SubResource("RectangleShape2D_18cm1")
 debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
 
-[node name="Mouse4" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("Grid") groups=["EnemyGroup"]]
+[node name="Mouse4" type="CharacterBody2D" parent="Level Design" groups=["EnemyGroup"]]
 position = Vector2(298, 77)
-script = ExtResource("21_6g5tp")
-Grid = NodePath("../Grid")
+script = ExtResource("18_poudh")
+player_node = NodePath("../../Player")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Mouse4"]
 material = SubResource("ShaderMaterial_xws1k")
@@ -2074,10 +2070,10 @@ position = Vector2(-1.5, 5)
 shape = SubResource("RectangleShape2D_18cm1")
 debug_color = Color(0.92775, 3.5713e-05, 0.66734, 0.42)
 
-[node name="Mouse5" type="CharacterBody2D" parent="Level Design" node_paths=PackedStringArray("Grid") groups=["EnemyGroup"]]
+[node name="Mouse5" type="CharacterBody2D" parent="Level Design" groups=["EnemyGroup"]]
 position = Vector2(87, 195)
-script = ExtResource("21_6g5tp")
-Grid = NodePath("../Grid")
+script = ExtResource("18_poudh")
+player_node = NodePath("../../Player")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Design/Mouse5"]
 material = SubResource("ShaderMaterial_xws1k")
@@ -2108,6 +2104,7 @@ animated = NodePath("../Cutscene/AnimationPlayer4")
 fade_node = NodePath("../../Fade")
 cutscene_node = NodePath("../Cutscene")
 button_node = NodePath("../Button88")
+next_scene = ExtResource("22_7grdh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Level Design/Thorn"]
 rotation = 3.14159
@@ -2213,17 +2210,11 @@ shape = SubResource("RectangleShape2D_ptb7q")
 
 [node name="Player" parent="." groups=["PlayerGroup"] instance=ExtResource("35_qsi0f")]
 position = Vector2(30, 296)
-script = ExtResource("36_7cml7")
 clone = ExtResource("37_ew1sg")
 layout_scene = ExtResource("38_0xxnx")
 max_clones = 3
 move_speed = 100.0
 jump_force = 300.0
-gravity = 1000.0
-max_fall_speed = 1000.0
-jump_cut_multiplier = 0.5
-clones_current = 0
-clones_max = 0
 
 [node name="Cutscene Initial" type="Node2D" parent="."]
 

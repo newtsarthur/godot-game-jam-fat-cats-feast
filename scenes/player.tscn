@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://4nupo0ajs8qm"]
+[gd_scene load_steps=10 format=3 uid="uid://crvre5ihegud6"]
 
-[ext_resource type="Script" uid="uid://dopwibu8s42cp" path="res://scripts/Player.cs" id="1_qlg0r"]
-[ext_resource type="PackedScene" uid="uid://b2rkakww600vu" path="res://scenes/clone.tscn" id="2_tuyoq"]
+[ext_resource type="Script" uid="uid://dl4wdhpnlsni5" path="res://gd_scripts/Player.gd" id="1_dqkch"]
 [ext_resource type="Shader" uid="uid://du80vuwb5fjjw" path="res://shader/node_2d.tres" id="3_fjrip"]
 [ext_resource type="Texture2D" uid="uid://bqi08xbt8bccb" path="res://player/Cat.png" id="4_smehm"]
 [ext_resource type="Texture2D" uid="uid://daw1kevh3irmt" path="res://player/Cat2.png" id="5_ur7pv"]
@@ -36,8 +35,7 @@ animations = [{
 size = Vector2(12, 10)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_qlg0r")
-Clone = ExtResource("2_tuyoq")
+script = ExtResource("1_dqkch")
 
 [node name="Anim" type="AnimatedSprite2D" parent="." groups=["PlayerGroup"]]
 texture_filter = 1

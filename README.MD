@@ -4,6 +4,10 @@ This game was created specifically for the **[Gamedev.js Jam 2025](https://itch.
 The theme of the jam was **“Balance”**, and *Sprout Shadow* was developed from scratch during that period using the **Godot Engine**, focusing on balance-based mechanics and puzzle-solving.  
 All the game's source code is open source and available in this repository.
 
+## Engine
+
+This game was built using Godot Engine 4.4.1.
+
 ## Description
 
 In *Sprout Shadow*, you play as a small plant-cat in an enchanted forest, standing up to a tyrant who has been stealing food from the local kittens. Solve environmental puzzles, use clones, and carefully balance your jumps to progress through each level.
